@@ -1,0 +1,73 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+/*---------------------- FONTS Variables ----------------------*/
+#reviews-title {
+  margin-top: 150px;
+}
+
+/*---------------------- REVIEW LIST Settings ----------------------*/
+.reviews-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  height: 71vh;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 40px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/*---------------------- REVIEW CARD Settings ----------------------*/
+.review-user-avatar {
+  background: url("../content/components-icons/user-sample.jpg");
+  min-width: 163px;
+  width: 163px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  gap: 10px;
+  padding: 20px;
+  background-color: #FEFEFE;
+  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+  border-radius: 40px;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-txt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-user-name {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.review-txt {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.review-date {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #6E6E73;
+}/*# sourceMappingURL=reviews.css.map */

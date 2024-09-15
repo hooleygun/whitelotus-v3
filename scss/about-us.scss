@@ -1,0 +1,215 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+$white: #FEFEFE;
+$accent-color: #46BF76;
+$dark-color: #1D1D1F;
+$grey-color: #6E6E73;
+$light-grey-color: #C7C7C7;
+$disabled-accent-color: #73CD97;
+$red-color: #D14A41;
+$blured-white: rgba(254, 254, 254, .25);
+$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blur-fx: blur(100px);
+
+
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$border-radius-h1: 40px;
+$border-radius-h2: 20px;
+$border-radius-buttons: 20px;
+$bubble-radius: 25px;
+
+/*---------------------- FONTS Variables ----------------------*/
+
+$main-font: "NT Somic";
+
+$h1-size: 150px;
+$h1-weight: 400;
+$h1-height: 100%;
+
+$h2-size: 48px;
+$h2-weight: 800;
+$h2-height: 100%;
+
+$h3-size: 28px;
+$h3-weight: 600;
+$h3-height: 140%;
+
+$p-size: 17px;
+$p-weight: 400;
+$p-height: 150%;
+
+$t1-size: 17px;
+$t1-weight: 400;
+$t1-line-height: 150%;
+
+$t2-size: 14px;
+$t2-weight: 400;
+$t2-line-height: 150%;
+
+$bubble-txt-size: 17px;
+$bubble-txt-weight: 400;
+$bubble-txt-height: 100%;
+
+$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-weight: 600;
+$bubble-addition-txt-height: 100%;
+
+/*-------------- HERO Settings --------------*/
+.hero-container {
+  text-align: center;
+  height: 1000px;
+  align-content: center;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#hero-logo {
+  width: 300px;
+  user-select: none;
+}
+
+#logo-subtitle {
+  font-size: 90px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+#logo-title {
+  margin-top: 10px;
+  font-size: 130px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+#logo-slogan {
+  font-size: 52px;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+/*---------------------- CRADS GRID Settings ----------------------*/
+.description-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* Full size */
+  width: 100%;
+  max-width: 2000px;
+  margin: 90px 0;
+  padding: 0 10px;
+
+  /* 1000px width */
+  /*width: 1000px;
+  margin: 90px auto;*/
+}
+
+.description-card-xl {
+  background-image: url("/img/test/test.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  aspect-ratio: 27/21;
+  width: 100%;
+  max-width: 990px;
+  border-radius: 20px;
+  box-shadow: $shadow;
+}
+
+.card-inscription-xl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid $blured-white;
+  border-radius: 20px;
+  background-color: $blured-white;
+  backdrop-filter: blur(65px);
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  /* Dependet geight */
+  height: 25%;
+  justify-content: center;
+}
+
+/*-------------- CARDS INDIVIDUAL settings --------------*/
+#new-hotel-card-xl {
+  background-image: url("../content/images/description-cards/hotel_view.jpg");
+  grid-column-start: 1;
+  grid-column-end: 3;
+  aspect-ratio: 54/21;
+  max-width: 1980px;
+}
+
+#bathroom-card-xl {
+  background-image: url("../content/images/description-cards/bathroom.jpg");
+}
+
+#grill-zone-card-xl {
+  background-image: url("../content/images/description-cards/grill-zone.jpg");
+}
+
+#w-fi-card-xl {
+  background-image: url("../content/images/description-cards/wi-fi.jpg");
+}
+
+#w-fi-card-xl > .card-inscription-xl{
+  background: none;
+  backdrop-filter: none;
+  border: none;
+}
+
+#parking-zone-card-xl {
+  background-image: url("../content/images/description-cards/parking-zone.jpg");
+}
+
+#parking-zone-card-xl > .card-inscription-xl{
+  background: none;
+  backdrop-filter: none;
+  border: none;
+}
+
+#coffe-card-xl {
+  background-image: url("../content/images/description-cards/coffe.jpg");
+}
+
+#terrace-card-xl {
+  background-image: url("../content/images/description-cards/terrace.jpg");
+}
+
+#kids-zone-card-xl {
+  background-image: url("../content/images/description-cards/kids-zone.jpg");
+}
+
+#kitchen-card-xl {
+  background-image: url("../content/images/description-cards/kitchen.jpg");
+}
+
+#beach-card-xl {
+  background-image: url("../content/images/description-cards/beach.jpg");
+}
+
+#room-card-xl {
+  background-image: url("../content/images/description-cards/room.jpg");
+}
+
+/*-------------- SERVICES Settings --------------*/
+#services {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: 90px auto;
+  align-items: center;
+  gap: 60px;
+}
+
+#services-lists-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

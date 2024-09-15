@@ -1,0 +1,359 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+$white: #FEFEFE;
+$accent-color: #46BF76;
+$dark-color: #1D1D1F;
+$grey-color: #6E6E73;
+$light-grey-color: #C7C7C7;
+$disabled-accent-color: #73CD97;
+$red-color: #D14A41;
+$blured-white: rgba(254, 254, 254, .25);
+$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blur-fx: blur(100px);
+
+
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$border-radius-h1: 40px;
+$border-radius-h2: 20px;
+$border-radius-buttons: 17px;
+$bubble-radius: 25px;
+
+/*---------------------- FONTS Variables ----------------------*/
+
+$main-font: "NT Somic", "Arial";
+
+$h1-size: 150px;
+$h1-weight: 400;
+$h1-height: 100%;
+
+$h2-size: 48px;
+$h2-weight: 800;
+$h2-height: 100%;
+
+$h3-size: 28px;
+$h3-weight: 600;
+$h3-height: 140%;
+
+$p-size: 17px;
+$p-weight: 400;
+$p-height: 150%;
+
+$t1-size: 17px;
+$t1-weight: 400;
+$t1-line-height: 150%;
+
+$t2-size: 14px;
+$t2-weight: 400;
+$t2-line-height: 150%;
+
+$bubble-txt-size: 17px;
+$bubble-txt-weight: 400;
+$bubble-txt-height: 100%;
+
+$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-weight: 600;
+$bubble-addition-txt-height: 100%;
+
+/*---------------------- FONTFACE Settings ----------------------*/
+@font-face {
+  font-weight: 800;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic-bold.eot");
+  src: local("NT Somic Bd"), url("../../fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"), url("../../fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"), url("../../fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
+  font-display: swap;
+  font-display: foft;
+}
+@font-face {
+  font-weight: 600;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic_medium.eot");
+  src: local("NT Somic Med"), url("../../fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic_medium.woff") format("web"), url("../../fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"), url("../../fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic_regular.eot");
+  src: local("NT Somic"), url("../../fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic_regular.woff") format("web"), url("../../fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"), url("../../fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic_regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/*---------------------- GENERAL Settings ----------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  color: $white;
+  background-color: $accent-color;
+}
+
+html, body {
+  position: absolute;
+  background-color: $white;
+  width: 100%;
+  color: $dark-color;
+  font-family: $main-font;
+  scroll-behavior: smooth;
+  animation: appear 1s;
+}
+
+/*--- Appear animation ---*/
+@keyframes appear{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*---------------------- TITLES Settings ----------------------*/
+h1 {
+  font-size: $h1-size;
+  line-height: $h1-height;
+  font-weight: $h1-weight;
+}
+
+h2 {
+  font-size: $h2-size;
+  font-weight: $h2-weight;
+  line-height: $h2-height;
+}
+
+h3 {
+  font-size: $h3-size;
+  font-weight: $h3-weight;
+  line-height: $h3-height;
+}
+
+p {
+  font-size: $p-size;
+  font-weight: $p-weight;
+  line-height: $p-height;
+}
+
+/*---------------------- BUTTONS Settings ----------------------*/
+button {
+  background-color: $accent-color;
+  border-radius: $border-radius-buttons;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  max-height: 48px;
+  cursor: pointer;
+  transition: box-shadow .1s ease;
+}
+
+button:hover {
+  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
+}
+
+button:active {
+  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
+}
+
+#txt-button {
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  color: $white;
+}
+
+#icon-button {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bordered-button{
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border: 3px solid $accent-color;
+}
+
+.icon-btn-container {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------------- HEADER Settings ----------------------*/
+header {
+  z-index: 5;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 30px;
+  border-radius: 27px;
+  width: 1000px;
+  margin: 35px auto 0 auto;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a{
+  text-decoration: none;
+  color: $dark-color;
+  font-size: $t2-size;
+  font-weight: $t2-weight;
+  line-height: $t2-line-height;
+  text-wrap: nowrap;
+}
+
+.navi {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: fit-content;
+  width: fit-content;
+}
+
+/*---------------------- FOOTER Settings ----------------------*/
+footer {
+  background-color: $accent-color;
+  display: flex;
+  justify-content: space-evenly;
+  height: fit-content;
+  width: 100%;
+  padding: 30px 0;
+  font-size: $t2-size;
+  line-height: $t2-line-height;
+  font-weight: $t2-weight;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1020px;
+  padding: 0 10px;
+  width: 100%;
+  height: fit-content;
+}
+
+.footer-copyright-container {
+  height: 100%;
+  align-self: flex-end;
+}
+
+.footer-copyright-container a{
+  text-decoration: none;
+  color: $white;
+}
+
+.footer-copyright-container a::selection {
+  color: $accent-color;
+  background-color: $white;
+}
+
+.footer-social-media-icons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: 100%;
+  align-self: flex-end;
+  user-select: none;
+}
+
+.footer-social-media-icons-container a {
+  height: fit-content;
+  line-height: 0;
+}
+
+.footer-social-media-icons-container img{
+  width: 35px;
+}
+
+.footer-contacts-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  text-align: right;
+  text-wrap: wrap;
+  align-self: flex-end;
+}
+
+.footer-contacts-container a{
+  text-decoration: none;
+  color: $white;
+}
+
+.footer-contacts-container a::selection {
+  color: $accent-color;
+  background-color: $white;
+}
+
+
+
+/*---------------------- BUBBLE LIST Settings ----------------------*/
+.bubbles-list {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 10px;
+}
+
+.list-dot {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border: 2px solid $accent-color;
+  border-radius: $bubble-radius;
+  width: fit-content;
+  font-size: $bubble-txt-size;
+  font-weight: $bubble-txt-weight;
+  line-height: $bubble-txt-height;
+}
+
+.list-text {
+  margin: 4px 10px 6px 10px;
+}
+
+.list-dot-addition {
+  background-color: $accent-color;
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: $bubble-radius;
+  margin-right: -1px;
+  align-content: center;
+  color: $white;
+  font-size: $bubble-addition-txt-size;
+  font-weight: $bubble-addition-txt-weight;
+  line-height: $bubble-addition-txt-height;
+  margin-left: 10px;
+}
+
+.list-dot-addition::selection {
+  color: $accent-color;
+  background-color: $white;
+}

@@ -1,0 +1,106 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+$white: #FEFEFE;
+$accent-color: #46BF76;
+$dark-color: #1D1D1F;
+$grey-color: #6E6E73;
+$light-grey-color: #C7C7C7;
+$disabled-accent-color: #73CD97;
+$red-color: #D14A41;
+$blured-white: rgba(254, 254, 254, .25);
+$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blur-fx: blur(100px);
+
+
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$border-radius-h1: 40px;
+$border-radius-h2: 20px;
+$border-radius-buttons: 17px;
+$bubble-radius: 25px;
+
+/*---------------------- FONTS Variables ----------------------*/
+
+$main-font: "NT Somic";
+
+$h1-size: 150px;
+$h1-weight: 400;
+$h1-height: 100%;
+
+$h2-size: 48px;
+$h2-weight: 800;
+$h2-height: 100%;
+
+$h3-size: 28px;
+$h3-weight: 600;
+$h3-height: 140%;
+
+$p-size: 17px;
+$p-weight: 400;
+$p-height: 150%;
+
+$t1-size: 17px;
+$t1-weight: 400;
+$t1-line-height: 150%;
+
+$t2-size: 14px;
+$t2-weight: 400;
+$t2-line-height: 150%;
+
+$bubble-txt-size: 17px;
+$bubble-txt-weight: 400;
+$bubble-txt-height: 100%;
+
+$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-weight: 600;
+$bubble-addition-txt-height: 100%;
+
+
+/*---------------------- CONTACTS Settings ----------------------*/
+.contacts-container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 140px auto 0 auto;
+}
+
+/*---------------------- MAP Settings ----------------------*/
+.map-block {
+  border-radius: $border-radius-h2;
+  box-shadow: $shadow;
+}
+
+/*---------------------- CONTACTS BLOCK Settings ----------------------*/
+.contacts-txt-container {
+  background-color: $white;
+  box-shadow: $shadow;
+  padding: 30px;
+  border-radius: $border-radius-h1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts-txt-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.contacts-title{
+  color: $accent-color;
+  font-size: $h3-height;
+  font-weight: $h3-weight;
+  line-height: $h3-height;
+}
+
+.contacts-text {
+  font-size: $t1-size;
+  font-weight: $t1-weight;
+  line-height: $t1-line-height;
+  cursor: pointer;
+  text-decoration: none;
+  color: $dark-color;
+}

@@ -1,0 +1,337 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+/*---------------------- FONTS Variables ----------------------*/
+/*---------------------- FONTFACE Settings ----------------------*/
+@font-face {
+  font-weight: 800;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic-bold.eot");
+  src: local("NT Somic Bd"), url("../../fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"), url("../../fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"), url("../../fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
+  font-display: swap;
+  font-display: foft;
+}
+@font-face {
+  font-weight: 600;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic_medium.eot");
+  src: local("NT Somic Med"), url("../../fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic_medium.woff") format("web"), url("../../fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"), url("../../fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: "NT Somic";
+  font-style: normal;
+  src: url("../../fonts/nt_somic/eot/ntsomic_regular.eot");
+  src: local("NT Somic"), url("../../fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"), url("../../fonts/nt_somic/woff/ntsomic_regular.woff") format("web"), url("../../fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"), url("../../fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"), url("../../fonts/nt_somic/ttf/ntsomic_regular.ttf") format("truetype");
+  font-display: swap;
+}
+/*---------------------- GENERAL Settings ----------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::-moz-selection {
+  color: #FEFEFE;
+  background-color: #46BF76;
+}
+
+*::selection {
+  color: #FEFEFE;
+  background-color: #46BF76;
+}
+
+html, body {
+  position: absolute;
+  background-color: #FEFEFE;
+  width: 100%;
+  color: #1D1D1F;
+  font-family: "NT Somic", "Arial";
+  scroll-behavior: smooth;
+  animation: appear 1s;
+}
+
+/*--- Appear animation ---*/
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*---------------------- TITLES Settings ----------------------*/
+h1 {
+  font-size: 150px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/*---------------------- BUTTONS Settings ----------------------*/
+button {
+  background-color: #46BF76;
+  border-radius: 17px;
+  border: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-height: 48px;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease;
+}
+
+button:hover {
+  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, 0.2);
+}
+
+button:active {
+  box-shadow: inset 0 5px 7px rgba(20, 63, 37, 0.2);
+}
+
+#txt-button {
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #FEFEFE;
+}
+
+#icon-button {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bordered-button {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFEFE;
+  border: 3px solid #46BF76;
+}
+
+.icon-btn-container {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------------- HEADER Settings ----------------------*/
+header {
+  z-index: 5;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FEFEFE;
+  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 30px;
+  border-radius: 27px;
+  width: 1000px;
+  margin: 35px auto 0 auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #1D1D1F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  text-wrap: nowrap;
+}
+
+.navi {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/*---------------------- FOOTER Settings ----------------------*/
+footer {
+  background-color: #46BF76;
+  display: flex;
+  justify-content: space-evenly;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 30px 0;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1020px;
+  padding: 0 10px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.footer-copyright-container {
+  height: 100%;
+  align-self: flex-end;
+}
+
+.footer-copyright-container a {
+  text-decoration: none;
+  color: #FEFEFE;
+}
+
+.footer-copyright-container a::-moz-selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}
+
+.footer-copyright-container a::selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}
+
+.footer-social-media-icons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: 100%;
+  align-self: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.footer-social-media-icons-container a {
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 0;
+}
+
+.footer-social-media-icons-container img {
+  width: 35px;
+}
+
+.footer-contacts-container {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: right;
+  text-wrap: wrap;
+  align-self: flex-end;
+}
+
+.footer-contacts-container a {
+  text-decoration: none;
+  color: #FEFEFE;
+}
+
+.footer-contacts-container a::-moz-selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}
+
+.footer-contacts-container a::selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}
+
+/*---------------------- BUBBLE LIST Settings ----------------------*/
+.bubbles-list {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+}
+
+.list-dot {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border: 2px solid #46BF76;
+  border-radius: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.list-text {
+  margin: 4px 10px 6px 10px;
+}
+
+.list-dot-addition {
+  background-color: #46BF76;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: 25px;
+  margin-right: -1px;
+  align-content: center;
+  color: #FEFEFE;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 100%;
+  margin-left: 10px;
+}
+
+.list-dot-addition::-moz-selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}
+
+.list-dot-addition::selection {
+  color: #46BF76;
+  background-color: #FEFEFE;
+}/*# sourceMappingURL=main.css.map */

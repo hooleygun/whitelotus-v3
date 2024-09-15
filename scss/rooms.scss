@@ -1,0 +1,343 @@
+/*---------------------------- COLORS Variables ---------------------------*/
+$white: #FEFEFE;
+$accent-color: #46BF76;
+$dark-color: #1D1D1F;
+$grey-color: #6E6E73;
+$light-grey-color: #C7C7C7;
+$disabled-accent-color: #73CD97;
+$red-color: #D14A41;
+$blured-white: rgba(254, 254, 254, .25);
+$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blur-fx: blur(100px);
+
+
+/*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$border-radius-h1: 40px;
+$border-radius-h2: 20px;
+$border-radius-buttons: 17px;
+$bubble-radius: 25px;
+
+/*---------------------- FONTS Variables ----------------------*/
+
+$main-font: "NT Somic";
+
+$h1-size: 150px;
+$h1-weight: 400;
+$h1-height: 100%;
+
+$h2-size: 48px;
+$h2-weight: 800;
+$h2-height: 100%;
+
+$h3-size: 28px;
+$h3-weight: 600;
+$h3-height: 140%;
+
+$p-size: 17px;
+$p-weight: 400;
+$p-height: 150%;
+
+$t1-size: 17px;
+$t1-weight: 400;
+$t1-line-height: 150%;
+
+$t2-size: 14px;
+$t2-weight: 400;
+$t2-line-height: 150%;
+
+$bubble-txt-size: 17px;
+$bubble-txt-weight: 400;
+$bubble-txt-height: 100%;
+
+$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-weight: 600;
+$bubble-addition-txt-height: 100%;
+
+/*---------------------- ROOMS NAVIGATION Settings ----------------------*/
+.rooms-navigation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 140px auto 20px auto;
+  gap: 20px;
+}
+
+.rooms-buttons-chain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: fit-content;
+  width: fit-content;
+  gap: 20px;
+  user-select: none;
+}
+
+.rooms-dot {
+  background-color: $disabled-accent-color;
+}
+
+.rooms-dot.active {
+  background-color: $accent-color;
+}
+
+/*---------------------- ROOM GALERY Settings ----------------------*/
+.room-info-container {
+  width: fit-content;
+  margin: 0 auto 80px auto;
+  animation: appear 1s;
+}
+
+/*--- Appear animation ---*/
+@keyframes appear{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.room-galery-container {
+  width: 1000px;
+  padding: 20px;
+  border-radius: 60px;
+  box-shadow: $shadow;
+}
+
+.room-card-galery-container {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: $border-radius-h1;
+  box-shadow: $shadow;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+/*---------------------- SWIPER Settings ----------------------*/
+.room-swiper {
+  width: 960px;
+  height: 618px;
+  border-radius: $border-radius-h2;
+}
+
+#room-swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.swiper-button-next {
+  background-color: $accent-color;
+  border-radius: $border-radius-buttons;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  max-height: 48px;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  background-color: $accent-color;
+  border-radius: $border-radius-buttons;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  max-height: 48px;
+  cursor: pointer;
+}
+
+.swiper-button-next:hover {
+  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
+}
+
+.swiper-button-next:active {
+  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
+}
+
+.swiper-button-prev:hover {
+  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
+}
+
+.swiper-button-prev:active {
+  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
+}
+
+#icon-button::after {
+  content: none;
+}
+
+.swiper-button-next {
+  background-color: $accent-color;
+  user-select: none;
+}
+
+.swiper-button-prev {
+  background-color: $accent-color;
+  user-select: none;
+}
+
+#room-swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: $blured-white;
+  backdrop-filter: $blur-fx;
+  border-radius: $bubble-radius;
+  padding: 10px;
+}
+
+/*---------------------- ROOM DESCRIPTION Settings ----------------------*/
+.room-txt-container {
+  z-index: 3;
+  background-color: $white;
+  border: 2px solid $light-grey-color;
+  border-radius: 40px;
+  box-shadow: $shadow;
+  position: absolute;
+  transform: translateY(-95%);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.15, 0.35, 0.2, 0.95);
+
+  /*--- 2nd variant ---*/
+  border: none;
+  border-radius: 30px;
+  width: 940px;
+  left: 10px;
+}
+
+.room-description-grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#room-subtitle {
+  background-color: $accent-color;
+  border-radius: $bubble-radius;
+  width: 100%;
+  padding: 6px 10px 8px 10px;
+  color: $white;
+  font-family: $main-font;
+  font-size: $bubble-txt-size;
+  font-weight: $bubble-txt-weight;
+  line-height: $bubble-txt-height;
+  text-align: center;
+}
+
+#room-description-list-dot {
+  background-color: $white;
+  //border: none;
+  margin-bottom: 0;
+}
+#room-description-list-dot-addition {
+  margin-left: 0;
+}
+
+.open-room-description-btn {
+  background: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 100%;
+  display: flex;
+  padding: 5px 10px 10px 10px;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  user-select: none;
+  color: $white;
+  cursor: pointer;
+}
+
+.open-room-description-btn:hover {
+  box-shadow: none;
+}
+
+.open-room-description-btn:active {
+  box-shadow: none;
+}
+
+
+/*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
+.room-action-elements-container {
+  width: 940px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  left: 10px;
+}
+
+.room-order-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: $white;
+  box-shadow: $shadow;
+}
+
+.room-price-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  min-width: 220px;
+  background-color: $accent-color;
+  border-radius: 30px;
+  background-color: $white;
+  box-shadow: $shadow;
+  padding: 20px;
+}
+
+.room-old-price-container {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.room-old-price {
+  font-size: $t1-size;
+  font-weight: $t1-weight;
+  line-height: $t1-line-height;
+  color: $grey-color;
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.room-discount {
+  font-size: $t1-size;
+  font-weight: 800;
+  line-height: $t1-line-height;
+  color: $red-color;
+}
+
+.room-current-price {
+  font-size: $h2-size;
+  font-weight: $h2-weight;
+  line-height: $h2-height;
+  color: $accent-color;
+}

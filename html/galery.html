@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/swiper_bundle.css">
+  <link rel="stylesheet" href="../css/galery.css">
+  <!-- Fonts preload -->
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_regular.woff2" type="font/woff2">
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_medium.woff2" type="font/woff2">
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_bold.woff2" type="font/woff2">
+  <title>Отель Белый Лотос</title>
+</head>
+
+<body>
+  <header>
+    <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
+    <div class="navi">
+      <a href="about-us.html">О НАС</a>
+      <a href="rooms.html">НОМЕРА</a>
+      <a href="reviews.html">ОТЗЫВЫ</a>
+      <a href="galery.html" style="font-weight: 600; color: #46BF76;">ГАЛЕРЕЯ</a>
+      <a href="contacts.html">КОНТАКТЫ</a>
+    </div>
+    <a href="tel:+79822201010">+7 (982) 220-10-10</a>
+    <button id="txt-button">Забронировать</button>
+  </header>
+
+  <div class="galery-container">
+    <h2>Галерея</h2>
+    <div class="swiper" id="galery-swiper">
+      <div class="swiper-wrapper" id="galery-swiper-wrapper">
+        <div class="swiper-slide" id="galery-swiper-slide"><img src="../content/images/rooms/standart/bedroom_1.jpg"></div>
+        <div class="swiper-slide" id="galery-swiper-slide"><img src="../content/images/rooms/standart/hall.jpg"></div>
+        <div class="swiper-slide" id="galery-swiper-slide"><img src="../content/images/rooms/standart/bedroom_2.jpg"></div>
+        <div class="swiper-slide" id="galery-swiper-slide"><img src="../content/images/rooms/standart/bedroom_3.jpg"></div>
+        <div class="swiper-slide" id="galery-swiper-slide"><img src="../content/images/rooms/standart/bathroom.jpg"></div>
+      </div>
+      <div class="swiper-pagination" id="galery-swiper-pagination"></div>
+      <div class="swiper-button-prev" id="icon-button">
+        <div class="icon-btn-container">
+          <img src="../content/components-icons/buttons/prev-icon.svg">
+        </div>
+      </div>
+      <div class="swiper-button-next" id="icon-button">
+        <div class="icon-btn-container">
+          <img src="../content/components-icons/buttons/next-icon.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-copyright-container">
+        <a href="about-us.html">© Белый Лотос, 2024г. - официальный сайт</a>
+      </div>
+      <div class="footer-social-media-icons-container">
+        <a href="https://vk.com/whitelotushotel" class="social-media-link"><img src="../content/components-icons/social-media/vk-icon.svg" alt="Вконтакте"></a>
+        <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img src="../content/components-icons/social-media/ya-icon.svg" alt="Яндекс.Карты"></a>
+        <a href="https://wa.me/+79822201010" class="social-media-link"><img src="../content/components-icons/social-media/wa-icon.svg" alt="WhatsApp"></a>
+      </div>
+      <div class="footer-contacts-container">
+        <a href="tel:+79822201010">+7 (982) 220-10-10</a>
+        <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
+        <a href="https://yandex.ru/maps/-/CDWFyZo7">Краснодарский край, Кучугуры, ул. Благополучия 13</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/swiper_bundle.js"></script>
+  <script src="../js/galery.js"></script>
+</body>
+</html>
