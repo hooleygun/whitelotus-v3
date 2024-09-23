@@ -6,16 +6,16 @@ $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
 $disabled-accent-color: #73CD97;
 $red-color: #D14A41;
-$blured-white: rgba(254, 254, 254, .25);
-$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blured-white: rgba(254, 254, 254, .50);
+$blured-white-border: 2px solid rgba(254, 254, 254, .75);
 $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 $shadow: 0 0 10px rgba(20, 63, 37, .2);
-$border-radius-h1: 40px;
-$border-radius-h2: 20px;
-$border-radius-buttons: 17px;
+$border-radius-h1: 35px;
+$border-radius-h2: 25px;
+$border-radius-buttons: 15px;
 $bubble-radius: 25px;
 
 /*---------------------- FONTS Variables ----------------------*/
@@ -54,13 +54,23 @@ $bubble-addition-txt-size: 17px;
 $bubble-addition-txt-weight: 600;
 $bubble-addition-txt-height: 100%;
 
+
+.rooms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 120px 0 80px 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 /*---------------------- ROOMS NAVIGATION Settings ----------------------*/
 .rooms-navigation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: fit-content;
-  margin: 140px auto 20px auto;
   gap: 20px;
 }
 
@@ -99,12 +109,12 @@ $bubble-addition-txt-height: 100%;
   }
 }
 
-.room-galery-container {
+/*.room-galery-container {
   width: 1000px;
   padding: 20px;
   border-radius: 60px;
   box-shadow: $shadow;
-}
+}*/
 
 .room-card-galery-container {
   display: flex;
@@ -119,9 +129,10 @@ $bubble-addition-txt-height: 100%;
 
 /*---------------------- SWIPER Settings ----------------------*/
 .room-swiper {
-  width: 960px;
-  height: 618px;
+  width: 1000px;
+  height: 625px;
   border-radius: $border-radius-h2;
+  box-shadow: $shadow;
 }
 
 #room-swiper-wrapper {
@@ -194,26 +205,22 @@ $bubble-addition-txt-height: 100%;
 }
 
 /*---------------------- ROOM DESCRIPTION Settings ----------------------*/
-.room-txt-container {
-  z-index: 3;
+.room-description-container {
+  z-index: 100;
   background-color: $white;
-  border: 2px solid $light-grey-color;
-  border-radius: 40px;
+  border: none;
+  border-radius: $border-radius-h2;
   box-shadow: $shadow;
   position: absolute;
-  transform: translateY(-95%);
+  transform: translateY(-100%);
   display: flex;
-  width: 100%;
   flex-direction: column;
-  text-wrap: wrap;
   gap: 10px;
   padding: 20px;
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.15, 0.35, 0.2, 0.95);
 
-  /*--- 2nd variant ---*/
-  border: none;
-  border-radius: 30px;
+  /*--- 2nd variant (needs fix) ---*/
   width: 940px;
   left: 10px;
 }
@@ -226,52 +233,12 @@ $bubble-addition-txt-height: 100%;
   gap: 10px;
 }
 
-#room-subtitle {
-  background-color: $accent-color;
-  border-radius: $bubble-radius;
-  width: 100%;
-  padding: 6px 10px 8px 10px;
-  color: $white;
-  font-family: $main-font;
-  font-size: $bubble-txt-size;
-  font-weight: $bubble-txt-weight;
-  line-height: $bubble-txt-height;
-  text-align: center;
-}
-
-#room-description-list-dot {
-  background-color: $white;
-  //border: none;
-  margin-bottom: 0;
-}
-#room-description-list-dot-addition {
-  margin-left: 0;
-}
-
-.open-room-description-btn {
-  background: none;
+.open-description-button {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 100%;
-  display: flex;
-  padding: 5px 10px 10px 10px;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-  user-select: none;
-  color: $white;
-  cursor: pointer;
+  top: calc(100% + 10px);
 }
-
-.open-room-description-btn:hover {
-  box-shadow: none;
-}
-
-.open-room-description-btn:active {
-  box-shadow: none;
-}
-
 
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
 .room-action-elements-container {

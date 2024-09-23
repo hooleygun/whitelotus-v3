@@ -6,16 +6,16 @@ $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
 $disabled-accent-color: #73CD97;
 $red-color: #D14A41;
-$blured-white: rgba(254, 254, 254, .25);
-$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blured-white: rgba(254, 254, 254, .50);
+$blured-white-border: 2px solid rgba(254, 254, 254, .75);
 $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 $shadow: 0 0 10px rgba(20, 63, 37, .2);
-$border-radius-h1: 40px;
-$border-radius-h2: 20px;
-$border-radius-buttons: 17px;
+$border-radius-h1: 35px;
+$border-radius-h2: 25px;
+$border-radius-buttons: 15px;
 $bubble-radius: 25px;
 
 /*---------------------- FONTS Variables ----------------------*/
@@ -60,7 +60,8 @@ $bubble-addition-txt-height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 140px;
+  height: 100%;
+  margin: 120px 0 80px 0;
 }
 
 /*---------------------- SWIPER Variables ----------------------*/

@@ -6,16 +6,16 @@ $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
 $disabled-accent-color: #73CD97;
 $red-color: #D14A41;
-$blured-white: rgba(254, 254, 254, .25);
-$blured-white-border: 2px solid rgba(254, 254, 254, .95);
+$blured-white: rgba(254, 254, 254, .50);
+$blured-white-border: 2px solid rgba(254, 254, 254, .75);
 $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 $shadow: 0 0 10px rgba(20, 63, 37, .2);
-$border-radius-h1: 40px;
-$border-radius-h2: 20px;
-$border-radius-buttons: 17px;
+$border-radius-h1: 35px;
+$border-radius-h2: 25px;
+$border-radius-buttons: 15px;
 $bubble-radius: 25px;
 
 /*---------------------- FONTS Variables ----------------------*/
@@ -65,10 +65,9 @@ $bubble-addition-txt-height: 100%;
   align-items: center;
   gap: 20px;
   padding: 20px;
-  height: 71vh;
+  height: 100%;
   width: fit-content;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 120px auto 0 auto;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -76,10 +75,10 @@ $bubble-addition-txt-height: 100%;
 /*---------------------- REVIEW CARD Settings ----------------------*/
 .review-user-avatar {
   background: url("../content/components-icons/user-sample.jpg");
-  min-width: 163px;;
+  min-width: 163px;
   width: 163px;
   aspect-ratio: 1 / 1;
-  border-radius: $border-radius-h2;
+  border-radius: $border-radius-buttons;
 }
 
 .review-card {
@@ -87,10 +86,10 @@ $bubble-addition-txt-height: 100%;
   flex-direction: row;
   width: 1000px;
   gap: 10px;
-  padding: 20px;
+  padding: 10px;
   background-color: $white;
   box-shadow: $shadow;
-  border-radius: $border-radius-h1;
+  border-radius: $border-radius-h2;
 }
 
 .review-content {
@@ -121,5 +120,5 @@ $bubble-addition-txt-height: 100%;
   font-size: $t1-size;
   font-weight: $t1-weight;
   line-height: $t1-line-height;
-  color: $grey-color;
+  color: $light-grey-color;
 }

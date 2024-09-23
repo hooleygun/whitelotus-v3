@@ -5,7 +5,7 @@ function roomDescriptionAnimation(roomIndex) {
     descriptionBox.style.transform = 'translateY(10px)'; //translateY(0%)
     downUpIcon.style.transform = 'rotate(180deg)';
   } else {
-    descriptionBox.style.transform = 'translateY(-95%)';
+    descriptionBox.style.transform = 'translateY(-100%)';
     downUpIcon.style.transform = 'rotate(0deg)';
   }
 }

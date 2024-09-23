@@ -1,14 +1,39 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 /*---------------------- FONTS Variables ----------------------*/
+/*---------------------- BACKGROUND VIDEO Settings ----------------------*/
+#background-video {
+  width: 100vw;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  position: absolute;
+  z-index: 0;
+  animation: blur 2s linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+/*--- Appear animation ---*/
+@keyframes blur {
+  from {
+    filter: blur(0) opacity(100%);
+  }
+  to {
+    filter: blur(25px) opacity(65%);
+  }
+}
 /*-------------- HERO Settings --------------*/
 .hero-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15vh auto;
+  height: 1200px;
+  width: 100vw;
   text-align: center;
-  height: 1000px;
-  align-content: center;
-  width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 #hero-logo {
@@ -44,11 +69,11 @@
 .description-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 20px;
   /* Full size */
   width: 100%;
-  max-width: 2000px;
-  margin: 90px 0;
+  max-width: 1700px;
+  margin: 80px 0;
   padding: 0 10px;
   /* 1000px width */
   /*width: 1000px;
@@ -56,13 +81,16 @@
 }
 
 .description-card-xl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url("/img/test/test.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   aspect-ratio: 27/21;
   width: 100%;
-  max-width: 990px;
+  max-width: 840px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
 }
@@ -72,9 +100,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid rgba(254, 254, 254, 0.25);
+  border: 2px solid rgba(254, 254, 254, 0.5);
   border-radius: 20px;
-  background-color: rgba(254, 254, 254, 0.25);
+  background-color: rgba(254, 254, 254, 0.5);
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
   width: 100%;
@@ -85,13 +113,18 @@
   justify-content: center;
 }
 
+.description-card-xl button {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 /*-------------- CARDS INDIVIDUAL settings --------------*/
 #new-hotel-card-xl {
   background-image: url("../content/images/description-cards/hotel_view.jpg");
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 54/21;
-  max-width: 1980px;
+  max-width: 1660px;
 }
 
 #bathroom-card-xl {
@@ -149,13 +182,13 @@
 }
 
 /*-------------- SERVICES Settings --------------*/
-#services {
+.services-container {
   display: flex;
   flex-direction: column;
   width: 1000px;
-  margin: 90px auto;
+  margin: 80px auto;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
 }
 
 #services-lists-wrapper {

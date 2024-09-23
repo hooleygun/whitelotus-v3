@@ -6,15 +6,16 @@
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
+  height: 100%;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin: 140px auto 0 auto;
+  margin: 120px auto 80px auto;
 }
 
 /*---------------------- MAP Settings ----------------------*/
 .map-block {
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
 }
 
@@ -23,7 +24,7 @@
   background-color: #FEFEFE;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
   width: 100%;

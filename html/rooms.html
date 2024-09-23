@@ -18,19 +18,19 @@
   <header>
     <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
     <div class="navi">
-      <a href="about-us.html">О НАС</a>
-      <a href="rooms.html" style="font-weight: 600; color: #46BF76;">НОМЕРА</a>
-      <a href="reviews.html">ОТЗЫВЫ</a>
-      <a href="galery.html">ГАЛЕРЕЯ</a>
-      <a href="contacts.html">КОНТАКТЫ</a>
+      <a href="about-us.html">Об отеле</a>
+      <a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="galery.html">Галерея</a>
+      <a href="contacts.html">Контакты</a>
     </div>
     <a href="tel:+79822201010">+7 (982) 220-10-10</a>
     <button id="txt-button">Забронировать</button>
   </header>
 
-
+  <div class="rooms-container">
   <div class="rooms-navigation-container">
-    <h2>Номера</h2>
+    <!--<h2>Номера</h2>-->
     <div class="rooms-buttons-chain">
       <button class="rooms-dot" id="txt-button" onclick="currentRoom(1)">Стандарт</button>
       <button class="rooms-dot" id="txt-button" onclick="currentRoom(2)">Стандарт+</button>
@@ -40,59 +40,58 @@
   </div>
   
   <div class="room-info-container"  id="room-index-1">
-    <div class="room-galery-container">
       <div class="swiper" id="room-swiper">
-        <div class="room-txt-container" id="room-txt-container-1">
+        <div class="room-description-container" id="room-txt-container-1">
           <h2>Стандарт</h2>
-          <p id="room-subtitle">Однокомнатный двухместный номер</p>
+          <div class="list-dot list-dot-c-no-l">Однокомнатный двухместный номер</div>
           <div class="room-description-grid">
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Двухместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Кондиционер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">LED телевизор 32″</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Холодильник</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Сушилка для белья</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Туалетный столик или комод</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Санузел с душевой кабиной</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Фен</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Летние стол и стулья на лоджии</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Шкаф и вешалка с обувницей</div>
             </div>
           </div>
-          <button onclick="roomDescriptionAnimation('1')" class="open-room-description-btn">
+          <button onclick="roomDescriptionAnimation('1')" class="open-description-button" id="text-icon-button">
             <p>Описание</p>
-            <img id="description-donwup-icon-1" src="../content/components-icons/buttons/down-cion.svg" width="20px">
+            <div class="s-icon-container"><img id="description-donwup-icon-1" src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
-          <div class="room-order-container">
-            <button id="txt-button">Забронировать</button>
-            <button id="bordered-button"><img src="../content/components-icons/buttons/accented-icons/calendar_icon.svg"></button>
-          </div>
           <div class="room-price-container">
             <div class="room-old-price-container">
               <p class="room-old-price">3850 ₽</p>
               <p class="room-discount">10%</p>
             </div>
             <p class="room-current-price">3500 ₽</p>
+          </div>
+          <div class="room-order-container">
+            <button id="txt-button">Забронировать</button>
+            <button id="bordered-button"><img src="../content/components-icons/buttons/accent/large/calendar_icon-l-g.svg"></button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -104,82 +103,80 @@
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/prev-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
         <div class="swiper-button-next" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/next-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
         </div>
       </div>
-    </div>
   </div>
   
   <div class="room-info-container"  id="room-index-2">
-    <div class="room-galery-container">
       <div class="swiper" id="room-swiper">
-        <div class="room-txt-container" id="room-txt-container-2">
+        <div class="room-description-container" id="room-txt-container-2">
           <h2>Стандарт+</h2>
-          <p id="room-subtitle">Двухкомнатный трехместный номер</p>
+          <div class="list-dot list-dot-c-no-l">Двухкомнатный трехместный номер</div>
           <div class="room-description-grid">
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Двухместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Одноместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Кондиционер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">LED телевизор 32″</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Холодильник</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Туалетный столик</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Пуф-трансформер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Санузел с душевой кабиной</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Фен</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Сушилка для белья</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Летние стол и стулья на лоджии</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Шкаф и вешалка с обувницей</div>
             </div>
           </div>
-          <button onclick="roomDescriptionAnimation('2')" class="open-room-description-btn">
+          <button onclick="roomDescriptionAnimation('2')" class="open-description-button" id="text-icon-button">
             <p>Описание</p>
-            <img id="description-donwup-icon-2" src="../content/components-icons/buttons/down-cion.svg" width="20px">
+            <div class="s-icon-container"><img id="description-donwup-icon-2" src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
-          <div class="room-order-container">
-            <button id="txt-button">Забронировать</button>
-            <button id="bordered-button"><img src="../content/components-icons/buttons/accented-icons/calendar_icon.svg"></button>
-          </div>
           <div class="room-price-container">
             <div class="room-old-price-container">
               <p class="room-old-price">4950 ₽</p>
               <p class="room-discount">10%</p>
             </div>
             <p class="room-current-price">4500 ₽</p>
+          </div>
+          <div class="room-order-container">
+            <button id="txt-button">Забронировать</button>
+            <button id="bordered-button"><img src="../content/components-icons/buttons/accent/large/calendar_icon-l-g.svg"></button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -191,83 +188,81 @@
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/prev-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
         <div class="swiper-button-next" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/next-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
         </div>
       </div>
-    </div>
   </div>
   
   <div class="room-info-container"  id="room-index-3">
-    <div class="room-galery-container">
       <div class="swiper" id="room-swiper">
-        <div class="room-txt-container" id="room-txt-container-3">
+        <div class="room-description-container" id="room-txt-container-3">
           <h2>Семейный</h2>
-          <p id="room-subtitle">Двухкомнатный четырехместный номер</p>
+          <div class="list-dot list-dot-c-no-l">Двухкомнатный четырехместный номер</div>
           <div class="room-description-grid">
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Двухместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Одноместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Кондиционер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">LED телевизор 32″</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Холодильник</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Туалетный столик</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Пуф-трансформер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Санузел с душевой кабиной</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Фен</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Сушилка для белья</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Летние стол и стулья на лоджии</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Шкаф и вешалка с обувницей</div>
             </div>
           </div>
-          <button onclick="roomDescriptionAnimation('3')" class="open-room-description-btn">
+          <button onclick="roomDescriptionAnimation('3')" class="open-description-button" id="text-icon-button">
             <p>Описание</p>
-            <img id="description-donwup-icon-3" src="../content/components-icons/buttons/down-cion.svg" width="20px">
+            <div class="s-icon-container"><img id="description-donwup-icon-3" src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
-          <div class="room-order-container">
-            <button id="txt-button">Забронировать</button>
-            <button id="bordered-button"><img src="../content/components-icons/buttons/accented-icons/calendar_icon.svg"></button>
-          </div>
           <div class="room-price-container">
             <div class="room-old-price-container">
               <p class="room-old-price">5940 ₽</p>
               <p class="room-discount">10%</p>
             </div>
             <p class="room-current-price">5400 ₽</p>
+          </div>
+          <div class="room-order-container">
+            <button id="txt-button">Забронировать</button>
+            <button id="bordered-button"><img src="../content/components-icons/buttons/accent/large/calendar_icon-l-g.svg"></button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -280,83 +275,81 @@
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/prev-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
         <div class="swiper-button-next" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/next-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
         </div>
       </div>
-    </div>
   </div>
   
   <div class="room-info-container"  id="room-index-4">
-    <div class="room-galery-container">
       <div class="swiper" id="room-swiper">
-        <div class="room-txt-container" id="room-txt-container-4">
+        <div class="room-description-container" id="room-txt-container-4">
           <h2>Семейный+</h2>
-          <p id="room-subtitle">Двухкомнатный четырехместный номер 40 м²</p>
+          <div class="list-dot list-dot-c-no-l">Двухкомнатный четырехместный номер 40 м²</div>
           <div class="room-description-grid">
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Двухместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Одноместная кровать</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Кондиционер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">LED телевизор 32″</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Холодильник</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Туалетный столик</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
-              <div class="list-dot-addition" id="room-description-list-dot-addition">2шт.</div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-dot-addition">2шт.</div>
               <div class="list-text">Пуф-трансформер</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Санузел с душевой кабиной</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Фен</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Сушилка для белья</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Летние стол и стулья на лоджии</div>
             </div>
-            <div class="list-dot" id="room-description-list-dot">
+            <div class="list-dot list-dot-l-no-s">
               <div class="list-text">Шкаф и вешалка с обувницей</div>
             </div>
           </div>
-          <button onclick="roomDescriptionAnimation('4')" class="open-room-description-btn">
+          <button onclick="roomDescriptionAnimation('4')" class="open-description-button" id="text-icon-button">
             <p>Описание</p>
-            <img  id="description-donwup-icon-4" src="../content/components-icons/buttons/down-cion.svg" width="20px">
+            <div class="s-icon-container"><img  id="description-donwup-icon-4" src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
-          <div class="room-order-container">
-            <button id="txt-button">Забронировать</button>
-            <button id="bordered-button"><img src="../content/components-icons/buttons/accented-icons/calendar_icon.svg"></button>
-          </div>
           <div class="room-price-container">
             <div class="room-old-price-container">
               <p class="room-old-price">6600 ₽</p>
               <p class="room-discount">10%</p>
             </div>
             <p class="room-current-price">6000 ₽</p>
+          </div>
+          <div class="room-order-container">
+            <button id="txt-button">Забронировать</button>
+            <button id="bordered-button"><img src="../content/components-icons/buttons/accent/large/calendar_icon-l-g.svg"></button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -368,18 +361,18 @@
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/prev-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
         <div class="swiper-button-next" id="icon-button">
-          <div class="icon-btn-container">
-            <img src="../content/components-icons/buttons/next-icon.svg">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
         </div>
       </div>
-    </div>
   </div>
+</div>
 
 <footer>
   <div class="footer-content">
@@ -387,9 +380,9 @@
       <a href="about-us.html">© Белый Лотос, 2024г. - официальный сайт</a>
     </div>
     <div class="footer-social-media-icons-container">
-      <a href="https://vk.com/whitelotushotel" class="social-media-link"><img src="../content/components-icons/social-media/vk-icon.svg" alt="Вконтакте"></a>
-      <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img src="../content/components-icons/social-media/ya-icon.svg" alt="Яндекс.Карты"></a>
-      <a href="https://wa.me/+79822201010" class="social-media-link"><img src="../content/components-icons/social-media/wa-icon.svg" alt="WhatsApp"></a>
+      <a href="https://vk.com/whitelotushotel" class="social-media-link"><img src="../content/components-icons/social-media/white/vk-icon-w.svg" alt="Вконтакте"></a>
+      <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img src="../content/components-icons/social-media/white/ya-icon-w.svg" alt="Яндекс.Карты"></a>
+      <a href="https://wa.me/+79822201010" class="social-media-link"><img src="../content/components-icons/social-media/white/wa-icon-w.svg" alt="WhatsApp"></a>
     </div>
     <div class="footer-contacts-container">
       <a href="tel:+79822201010">+7 (982) 220-10-10</a>
