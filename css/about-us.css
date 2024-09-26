@@ -4,9 +4,11 @@
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
   width: 100vw;
-  height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  height: 1182px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
   position: absolute;
   z-index: 0;
   animation: blur 2s linear;
@@ -27,9 +29,8 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  margin: 15vh auto;
-  height: 1200px;
-  width: 100vw;
+  margin: 300px;
+  width: 1275px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -72,9 +73,10 @@
   gap: 20px;
   /* Full size */
   width: 100%;
-  max-width: 1700px;
+  max-width: 2550px;
   margin: 80px 0;
   padding: 0 10px;
+  z-index: 1;
   /* 1000px width */
   /*width: 1000px;
   margin: 90px auto;*/
@@ -90,7 +92,7 @@
   background-position: bottom;
   aspect-ratio: 27/21;
   width: 100%;
-  max-width: 840px;
+  max-width: 1255px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
 }
@@ -113,6 +115,10 @@
   justify-content: center;
 }
 
+.card-inscription-xl p {
+  max-width: 700px;
+}
+
 .description-card-xl button {
   margin-bottom: 10px;
   margin-left: 10px;
@@ -124,7 +130,7 @@
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 54/21;
-  max-width: 1660px;
+  max-width: 2530px;
 }
 
 #bathroom-card-xl {

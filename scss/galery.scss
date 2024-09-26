@@ -1,10 +1,10 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 $white: #FEFEFE;
-$accent-color: #46BF76;
+$accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
-$disabled-accent-color: #73CD97;
+$disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
 $blured-white: rgba(254, 254, 254, .50);
 $blured-white-border: 2px solid rgba(254, 254, 254, .75);
@@ -26,19 +26,19 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 48px;
+$h2-size: 40px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 28px;
+$h3-size: 21px;
 $h3-weight: 600;
 $h3-height: 140%;
 
-$p-size: 17px;
+$p-size: 14px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 17px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
@@ -46,17 +46,17 @@ $t2-size: 14px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$bubble-txt-size: 17px;
+$bubble-txt-size: 14px;
 $bubble-txt-weight: 400;
 $bubble-txt-height: 100%;
 
-$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-size: 14px;
 $bubble-addition-txt-weight: 600;
 $bubble-addition-txt-height: 100%;
 
 .galery-container {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@ $bubble-addition-txt-height: 100%;
 /*---------------------- SWIPER Variables ----------------------*/
 #galery-swiper {
   width: 1000px;
-  height: 658px;
+  height: 580px;
   border-radius: $border-radius-h2;
   margin-bottom: 80px;
 }

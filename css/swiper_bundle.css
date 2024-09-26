@@ -54,9 +54,9 @@
   z-index: 1;
   display: block;
   /* My settings */
-  width: 960px;
-  height: 618px;
-  border-radius: 40px;
+  width: 1000px;
+  height: 625px;
+  border-radius: 35px;
 }
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
@@ -336,6 +336,7 @@
   letter-spacing: 0;
   font-variant: initial;
   line-height: 1;
+  display: none;
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {

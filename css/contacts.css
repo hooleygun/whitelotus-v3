@@ -6,6 +6,7 @@
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
+  align-items: center;
   height: 100%;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +24,7 @@
 .contacts-txt-container {
   background-color: #FEFEFE;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
-  padding: 30px;
+  padding: 20px 40px;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -39,14 +40,14 @@
 }
 
 .contacts-title {
-  color: #46BF76;
-  font-size: 140%;
+  color: #42D07A;
+  font-size: 21px;
   font-weight: 600;
   line-height: 140%;
 }
 
 .contacts-text {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   cursor: pointer;

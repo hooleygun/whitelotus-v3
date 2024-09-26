@@ -3,7 +3,7 @@
 /*---------------------- FONTS Variables ----------------------*/
 .galery-container {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@
 /*---------------------- SWIPER Variables ----------------------*/
 #galery-swiper {
   width: 1000px;
-  height: 658px;
+  height: 580px;
   border-radius: 25px;
   margin-bottom: 80px;
 }
@@ -28,7 +28,7 @@
 }
 
 .swiper-button-next {
-  background-color: #46BF76;
+  background-color: #42D07A;
   border-radius: 15px;
   border: none;
   height: -moz-fit-content;
@@ -40,7 +40,7 @@
 }
 
 .swiper-button-prev {
-  background-color: #46BF76;
+  background-color: #42D07A;
   border-radius: 15px;
   border: none;
   height: -moz-fit-content;
@@ -72,14 +72,14 @@
 }
 
 .swiper-button-next {
-  background-color: #46BF76;
+  background-color: #42D07A;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 
 .swiper-button-prev {
-  background-color: #46BF76;
+  background-color: #42D07A;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

@@ -43,12 +43,12 @@
 
 *::-moz-selection {
   color: #FEFEFE;
-  background-color: #46BF76;
+  background-color: #42D07A;
 }
 
 *::selection {
   color: #FEFEFE;
-  background-color: #46BF76;
+  background-color: #42D07A;
 }
 
 html, body {
@@ -58,7 +58,8 @@ html, body {
   color: #1D1D1F;
   font-family: "NT Somic";
   scroll-behavior: smooth;
-  animation: appear 1s;
+  animation: appear 1.5s;
+  animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /*--- Appear animation ---*/
@@ -89,26 +90,26 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 800;
   line-height: 100%;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 21px;
   font-weight: 800;
   line-height: 140%;
 }
 
 p {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
 }
 
 /*---------------------- BUTTONS Settings ----------------------*/
 button {
-  background-color: #46BF76;
+  background-color: #42D07A;
   border-radius: 15px;
   border: none;
   height: -moz-fit-content;
@@ -116,47 +117,56 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  transition: box-shadow 0.1s ease;
+  transition: all 0.1s ease;
 }
 
-button:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, 0.2);
-}
-
-button:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, 0.2);
-}
-
-#txt-button {
+.text-button {
   padding: 11px 21px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 155%;
   color: #FEFEFE;
 }
 
-#icon-button {
+.icon-button {
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
+  border-radius: 15px;
   justify-content: center;
   align-items: center;
   padding: 12px;
 }
 
-#bordered-button {
-  height: 46px;
-  width: 46px;
+.bordered-button {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FEFEFE;
-  border: 3px solid #46BF76;
+  border: 3px solid #42D07A;
 }
 
-#text-icon-button {
+.icon-bordered-button {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFEFE;
+  border: 3px solid #42D07A;
+}
+
+.text-icon-button {
   padding: 11px 21px;
   display: flex;
   gap: 5px;
@@ -178,6 +188,24 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button:hover {
+  background-color: #49e085;
+}
+
+button:active {
+  background-color: #3cbb6f;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #49e085;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: #3cbb6f;
 }
 
 /*---------------------- HEADER Settings ----------------------*/
@@ -231,14 +259,14 @@ header a:hover {
 
 /*---------------------- FOOTER Settings ----------------------*/
 footer {
-  background-color: #46BF76;
+  background-color: #42D07A;
   display: flex;
   justify-content: space-evenly;
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   padding: 30px 0;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 150%;
   font-weight: 400;
 }
@@ -266,12 +294,12 @@ footer {
 }
 
 .footer-copyright-container a::-moz-selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
 .footer-copyright-container a::selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
@@ -312,12 +340,12 @@ footer {
 }
 
 .footer-contacts-container a::-moz-selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
 .footer-contacts-container a::selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
@@ -343,14 +371,14 @@ footer {
 .list-dot {
   display: flex;
   flex-direction: row;
-  border: 1px solid #46BF76;
+  border: 1px solid #42D07A;
   border-radius: 30px;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   padding: 8px 15px;
@@ -358,14 +386,14 @@ footer {
 }
 
 .list-dot-addition {
-  background-color: #46BF76;
+  background-color: #42D07A;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 30px;
   color: #FEFEFE;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 150%;
   padding: 8px 15px;
@@ -374,12 +402,12 @@ footer {
 }
 
 .list-dot-addition::-moz-selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
 .list-dot-addition::selection {
-  color: #46BF76;
+  color: #42D07A;
   background-color: #FEFEFE;
 }
 
@@ -404,13 +432,24 @@ footer {
 }
 
 .list-dot-c-no-l {
-  background-color: #46BF76;
+  background-color: #42D07A;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: #FEFEFE;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
+}
+
+.swiper {
+  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+}
+
+/*---------------------- TEST ----------------------*/
+@media screen and (max-height: 880px) {
+  #page-title {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

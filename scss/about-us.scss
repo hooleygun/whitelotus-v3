@@ -1,10 +1,10 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 $white: #FEFEFE;
-$accent-color: #46BF76;
+$accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
-$disabled-accent-color: #73CD97;
+$disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
 $blured-white: rgba(254, 254, 254, .50);
 $blured-white-border: 2px solid rgba(254, 254, 254, .75);
@@ -26,19 +26,19 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 48px;
+$h2-size: 40px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 28px;
+$h3-size: 21px;
 $h3-weight: 600;
 $h3-height: 140%;
 
-$p-size: 17px;
+$p-size: 14px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 17px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
@@ -46,19 +46,20 @@ $t2-size: 14px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$bubble-txt-size: 17px;
+$bubble-txt-size: 14px;
 $bubble-txt-weight: 400;
 $bubble-txt-height: 100%;
 
-$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-size: 14px;
 $bubble-addition-txt-weight: 600;
 $bubble-addition-txt-height: 100%;
 
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
   width: 100vw;
-  height: 100%;
-  object-fit: fill;
+  height: 1182px;
+  object-fit: cover;
+  object-position: bottom;
   position: absolute;
   z-index: 0;
   animation: blur 2s linear;
@@ -80,9 +81,8 @@ $bubble-addition-txt-height: 100%;
 .hero-container {
   display: flex;
   flex-direction: column;
-  margin: 15vh auto;
-  height: 1200px;
-  width: 100vw;
+  margin: 300px;
+  width: 1275px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -123,9 +123,10 @@ $bubble-addition-txt-height: 100%;
   gap: 20px;
   /* Full size */
   width: 100%;
-  max-width: 1700px;
+  max-width: 2550px;
   margin: 80px 0;
   padding: 0 10px;
+  z-index: 1;
 
   /* 1000px width */
   /*width: 1000px;
@@ -142,7 +143,7 @@ $bubble-addition-txt-height: 100%;
   background-position: bottom;
   aspect-ratio: 27/21;
   width: 100%;
-  max-width: 840px;
+  max-width: 1255px;
   border-radius: 20px;
   box-shadow: $shadow;
 }
@@ -156,12 +157,16 @@ $bubble-addition-txt-height: 100%;
   border-radius: 20px;
   background-color: $blured-white;
   backdrop-filter: blur(65px);
-  width: 100%;
+  width: 100%;;
   padding-left: 40px;
   padding-right: 40px;
   /* Dependet geight */
   height: 25%;
   justify-content: center;
+}
+
+.card-inscription-xl p{
+  max-width: 700px;
 }
 
 .description-card-xl button{
@@ -175,7 +180,7 @@ $bubble-addition-txt-height: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 54/21;
-  max-width: 1660px;
+  max-width: 2530px;
 }
 
 #bathroom-card-xl {

@@ -1,10 +1,10 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 $white: #FEFEFE;
-$accent-color: #46BF76;
+$accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
-$disabled-accent-color: #73CD97;
+$disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
 $blured-white: rgba(254, 254, 254, .50);
 $blured-white-border: 2px solid rgba(254, 254, 254, .75);
@@ -26,19 +26,19 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 48px;
+$h2-size: 40px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 28px;
+$h3-size: 21px;
 $h3-weight: 600;
 $h3-height: 140%;
 
-$p-size: 17px;
+$p-size: 14px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 17px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
@@ -46,11 +46,11 @@ $t2-size: 14px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$bubble-txt-size: 17px;
+$bubble-txt-size: 14px;
 $bubble-txt-weight: 400;
 $bubble-txt-height: 100%;
 
-$bubble-addition-txt-size: 17px;
+$bubble-addition-txt-size: 14px;
 $bubble-addition-txt-weight: 600;
 $bubble-addition-txt-height: 100%;
 
@@ -96,13 +96,14 @@ $bubble-addition-txt-height: 100%;
 .room-info-container {
   width: fit-content;
   margin: 0 auto 80px auto;
-  animation: appear 1s;
+  animation: appear .4s;
+  animation-timing-function:cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /*--- Appear animation ---*/
 @keyframes appear{
   from {
-    opacity: 0;
+    opacity: .1;
   }
   to {
     opacity: 1;
@@ -128,6 +129,12 @@ $bubble-addition-txt-height: 100%;
 }
 
 /*---------------------- SWIPER Settings ----------------------*/
+.swiper{
+  height: calc(100vh - 200px);
+  max-height: 625px;
+  min-height: 520px;
+}
+
 .room-swiper {
   width: 1000px;
   height: 625px;
@@ -141,7 +148,12 @@ $bubble-addition-txt-height: 100%;
   user-select: none;
 }
 
-.swiper-button-next {
+/*.swiper-wrapper img{
+  object-fit: cover;
+  object-position: 50% 100%;
+}*/
+
+/*.swiper-button-next {
   background-color: $accent-color;
   border-radius: $border-radius-buttons;
   border: none;
@@ -159,23 +171,7 @@ $bubble-addition-txt-height: 100%;
   width: fit-content;
   max-height: 48px;
   cursor: pointer;
-}
-
-.swiper-button-next:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
-}
-
-.swiper-button-next:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
-}
-
-.swiper-button-prev:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
-}
-
-.swiper-button-prev:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
-}
+}*/
 
 #icon-button::after {
   content: none;
@@ -215,14 +211,24 @@ $bubble-addition-txt-height: 100%;
   transform: translateY(-100%);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
   padding: 20px;
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.15, 0.35, 0.2, 0.95);
-
-  /*--- 2nd variant (needs fix) ---*/
-  width: 940px;
+  width: 100%;
+  max-width: 980px;
+  height: calc(100% - 20px);
+  min-height: 500px;
+  max-height: 605px;
   left: 10px;
+}
+
+.room-description-content-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  gap: 15px;
 }
 
 .room-description-grid {
@@ -238,6 +244,11 @@ $bubble-addition-txt-height: 100%;
   left: 50%;
   transform: translate(-50%, 0);
   top: calc(100% + 10px);
+}
+
+#room-description-calendar-list {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
@@ -258,53 +269,32 @@ $bubble-addition-txt-height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 10px;
   height: fit-content;
   width: fit-content;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: $border-radius-h2;
   background-color: $white;
   box-shadow: $shadow;
 }
 
-.room-price-container {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  height: fit-content;
-  min-width: 220px;
-  background-color: $accent-color;
-  border-radius: 30px;
-  background-color: $white;
-  box-shadow: $shadow;
-  padding: 20px;
+#room-slider-order-button {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  left: 20px;
 }
 
-.room-old-price-container {
+#calendar-description-list-dot {
+  width: 400px;
+  gap: 0;
+  justify-content: space-between; 
+}
+
+.action-elements-room-description-container {
   display: flex;
   flex-direction: row;
-  gap: 7px;
-}
-
-.room-old-price {
-  font-size: $t1-size;
-  font-weight: $t1-weight;
-  line-height: $t1-line-height;
-  color: $grey-color;
-  text-decoration: line-through;
-  text-decoration-thickness: 1.5px;
-}
-
-.room-discount {
-  font-size: $t1-size;
-  font-weight: 800;
-  line-height: $t1-line-height;
-  color: $red-color;
-}
-
-.room-current-price {
-  font-size: $h2-size;
-  font-weight: $h2-weight;
-  line-height: $h2-height;
-  color: $accent-color;
+  height: fit-content;
+  width: 100%;
+  align-items: end;
 }

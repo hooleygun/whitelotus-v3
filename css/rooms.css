@@ -36,11 +36,11 @@
 }
 
 .rooms-dot {
-  background-color: #73CD97;
+  background-color: #84E0A8;
 }
 
 .rooms-dot.active {
-  background-color: #46BF76;
+  background-color: #42D07A;
 }
 
 /*---------------------- ROOM GALERY Settings ----------------------*/
@@ -48,13 +48,14 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 80px auto;
-  animation: appear 1s;
+  animation: appear 0.4s;
+  animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /*--- Appear animation ---*/
 @keyframes appear {
   from {
-    opacity: 0;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
@@ -80,6 +81,12 @@
 }
 
 /*---------------------- SWIPER Settings ----------------------*/
+.swiper {
+  height: calc(100vh - 200px);
+  max-height: 625px;
+  min-height: 520px;
+}
+
 .room-swiper {
   width: 1000px;
   height: 625px;
@@ -95,59 +102,42 @@
           user-select: none;
 }
 
-.swiper-button-next {
-  background-color: #46BF76;
-  border-radius: 15px;
+/*.swiper-wrapper img{
+  object-fit: cover;
+  object-position: 50% 100%;
+}*/
+/*.swiper-button-next {
+  background-color: $accent-color;
+  border-radius: $border-radius-buttons;
   border: none;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   max-height: 48px;
   cursor: pointer;
 }
 
 .swiper-button-prev {
-  background-color: #46BF76;
-  border-radius: 15px;
+  background-color: $accent-color;
+  border-radius: $border-radius-buttons;
   border: none;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   max-height: 48px;
   cursor: pointer;
-}
-
-.swiper-button-next:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, 0.2);
-}
-
-.swiper-button-next:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, 0.2);
-}
-
-.swiper-button-prev:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, 0.2);
-}
-
-.swiper-button-prev:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, 0.2);
-}
-
+}*/
 #icon-button::after {
   content: none;
 }
 
 .swiper-button-next {
-  background-color: #46BF76;
+  background-color: #42D07A;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 
 .swiper-button-prev {
-  background-color: #46BF76;
+  background-color: #42D07A;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -179,13 +169,25 @@
   transform: translateY(-100%);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
   padding: 20px;
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.15, 0.35, 0.2, 0.95);
-  /*--- 2nd variant (needs fix) ---*/
-  width: 940px;
+  width: 100%;
+  max-width: 980px;
+  height: calc(100% - 20px);
+  min-height: 500px;
+  max-height: 605px;
   left: 10px;
+}
+
+.room-description-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 15px;
 }
 
 .room-description-grid {
@@ -201,6 +203,11 @@
   left: 50%;
   transform: translate(-50%, 0);
   top: calc(100% + 10px);
+}
+
+#room-description-calendar-list {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
@@ -222,57 +229,35 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 10px;
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: 25px;
   background-color: #FEFEFE;
   box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
 }
 
-.room-price-container {
-  display: flex;
-  flex-direction: column;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-width: 220px;
-  background-color: #46BF76;
-  border-radius: 30px;
-  background-color: #FEFEFE;
-  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
-  padding: 20px;
+#room-slider-order-button {
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  left: 20px;
 }
 
-.room-old-price-container {
+#calendar-description-list-dot {
+  width: 400px;
+  gap: 0;
+  justify-content: space-between;
+}
+
+.action-elements-room-description-container {
   display: flex;
   flex-direction: row;
-  gap: 7px;
-}
-
-.room-old-price {
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 150%;
-  color: #6E6E73;
-  text-decoration: line-through;
-  text-decoration-thickness: 1.5px;
-}
-
-.room-discount {
-  font-size: 17px;
-  font-weight: 800;
-  line-height: 150%;
-  color: #D14A41;
-}
-
-.room-current-price {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 100%;
-  color: #46BF76;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  align-items: end;
 }/*# sourceMappingURL=rooms.css.map */

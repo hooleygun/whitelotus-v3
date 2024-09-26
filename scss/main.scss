@@ -1,10 +1,10 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 $white: #FEFEFE;
-$accent-color: #46BF76;
+$accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
-$disabled-accent-color: #73CD97;
+$disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
 $blured-white: rgba(254, 254, 254, .50);
 $blured-white-border: 2px solid rgba(254, 254, 254, .75);
@@ -60,27 +60,27 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 48px;
+$h2-size: 40px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 28px;
+$h3-size: 21px;
 $h3-weight: 800;
 $h3-height: 140%;
 
-$p-size: 17px;
+$p-size: 14px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 17px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
-$t2-size: 17px;
+$t2-size: 14px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$list-txt-size: 17px;
+$list-txt-size: 14px;
 $list-txt-weight: 400;
 $list-txt-height: 150%;
 $list-addition-txt-weight: 600;
@@ -104,7 +104,8 @@ html, body {
   color: $dark-color;
   font-family: $main-font;
   scroll-behavior: smooth;
-  animation: appear 1s;
+  animation: appear 1.5s;
+  animation-timing-function:cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 /*--- Appear animation ---*/
@@ -160,37 +161,31 @@ button {
   height: fit-content;
   width: fit-content;
   cursor: pointer;
-  transition: box-shadow .1s ease;
+  transition: all .1s ease;
 }
 
-button:hover {
-  box-shadow: inset 0 -5px 7px rgba(20, 63, 37, .2);
-}
-
-button:active {
-  box-shadow: inset 0 5px 7px rgba(20, 63, 37, .2);
-}
-
-#txt-button {
+.text-button {
   padding: 11px 21px;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 155%;
   color: $white;
 }
 
-#icon-button {
+.icon-button {
   height: fit-content;
   width: fit-content;
   display: flex;
+  border-radius: $border-radius-buttons;
   justify-content: center;
   align-items: center;
   padding: 12px;
 }
 
-#bordered-button{
-  height: 46px;
-  width: 46px;
+.bordered-button{
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,7 +193,18 @@ button:active {
   border: 3px solid $accent-color;
 }
 
-#text-icon-button {
+.icon-bordered-button{
+  height: fit-content;
+  width: fit-content;
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border: 3px solid $accent-color;
+}
+
+.text-icon-button {
   padding: 11px 21px;
   display: flex;
   gap: 5px;
@@ -220,6 +226,24 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button:hover {
+  background-color: #49e085;
+}
+
+button:active {
+  background-color: #3cbb6f;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #49e085;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: #3cbb6f;
 }
 
 /*---------------------- HEADER Settings ----------------------*/
@@ -425,4 +449,16 @@ footer {
   font-size: $list-txt-size;
   font-weight: $list-txt-weight;
   line-height: $list-txt-height;
+}
+
+.swiper{
+  box-shadow: $shadow;
+}
+
+
+/*---------------------- TEST ----------------------*/
+@media screen and (max-height: 880px){
+  #page-title{
+    display: none;
+  }
 }
