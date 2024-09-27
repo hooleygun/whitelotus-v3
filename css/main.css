@@ -42,18 +42,18 @@
 }
 
 *::-moz-selection {
-  color: #F9F9FB;
+  color: #F0F0F0;
   background-color: #42D07A;
 }
 
 *::selection {
-  color: #F9F9FB;
+  color: #F0F0F0;
   background-color: #42D07A;
 }
 
 html, body {
   position: absolute;
-  background-color: #F9F9FB;
+  background-color: #F7F7F7;
   width: 100%;
   color: #1D1D1F;
   font-family: "NT Somic";
@@ -83,15 +83,15 @@ body {
 }
 
 .neumorphism-l1 {
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #D4D4D5, -10px -10px 15px #FFFFFF;
 }
 
 .neumorphism-l2 {
-  box-shadow: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
+  box-shadow: 5px 5px 10px #D4D4D5, -5px -5px 10px #FFFFFF;
 }
 
 .neumorphism-l2-green {
-  box-shadow: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
+  box-shadow: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
 }
 
 /*---------------------- TITLES Settings ----------------------*/
@@ -123,7 +123,7 @@ p {
 button {
   background-color: #42D07A;
   border-radius: 15px;
-  color: #F9F9FB;
+  color: #F0F0F0;
   border: none;
   height: -moz-fit-content;
   height: fit-content;
@@ -134,9 +134,9 @@ button {
 }
 
 button.disabled {
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
   color: #6E6E73;
-  box-shadow: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
+  box-shadow: 5px 5px 10px #D4D4D5, -5px -5px 10px #FFFFFF;
 }
 
 button.active {
@@ -145,10 +145,10 @@ button.active {
 
 .text-button {
   padding: 11px 21px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 155%;
-  color: #F9F9FB;
+  color: #F0F0F0;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
@@ -176,7 +176,7 @@ button.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
   border: 3px solid #42D07A;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
@@ -191,7 +191,7 @@ button.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
   border: 3px solid #42D07A;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
@@ -202,13 +202,16 @@ button.active {
   display: flex;
   gap: 5px;
   align-items: center;
-  color: #F9F9FB;
+  color: #F0F0F0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 155%;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
 
 .close-window-button {
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
   position: absolute;
   right: 10px;
   top: 10px;
@@ -273,7 +276,7 @@ header {
   top: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
   display: flex;
   flex-direction: row;
   padding: 10px 10px 10px 30px;
@@ -347,17 +350,17 @@ footer {
 
 .footer-copyright-container a {
   text-decoration: none;
-  color: #F9F9FB;
+  color: #F0F0F0;
 }
 
 .footer-copyright-container a::-moz-selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 .footer-copyright-container a::selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 .footer-social-media-icons-container {
@@ -393,17 +396,17 @@ footer {
 
 .footer-contacts-container a {
   text-decoration: none;
-  color: #F9F9FB;
+  color: #F0F0F0;
 }
 
 .footer-contacts-container a::-moz-selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 .footer-contacts-container a::selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 /*---------------------- list LIST Settings ----------------------*/
@@ -422,14 +425,14 @@ footer {
   flex-direction: column;
   width: -moz-fit-content;
   width: fit-content;
-  gap: 10px;
+  gap: 15px;
 }
 
 .list-dot {
   display: flex;
   flex-direction: row;
-  background-color: #F9F9FB;
-  box-shadow: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
+  background-color: #F0F0F0;
+  box-shadow: 3px 3px 7px #D4D4D5, -3px -3px 7px #FFFFFF;
   border-radius: 30px;
   width: -moz-fit-content;
   width: fit-content;
@@ -450,7 +453,7 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 30px;
-  color: #F9F9FB;
+  color: #F0F0F0;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -461,12 +464,12 @@ footer {
 
 .list-dot-addition::-moz-selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 .list-dot-addition::selection {
   color: #42D07A;
-  background-color: #F9F9FB;
+  background-color: #F0F0F0;
 }
 
 .list-dot-l-no-s {
@@ -501,14 +504,14 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: #F9F9FB;
+  color: #F0F0F0;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
 }
 
 .swiper {
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #D4D4D5, -10px -10px 15px #FFFFFF;
 }
 
 /*---------------------- TEST ----------------------*/

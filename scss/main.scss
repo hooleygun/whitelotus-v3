@@ -1,6 +1,6 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: #F9F9FB;
-$background-white: #F9F9FB;
+$white: #F0F0F0;
+$background-white: #F7F7F7;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
@@ -13,10 +13,10 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
-$shadow-l2: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
-$shadow-l3: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
-$shadow-green-l2: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
+$shadow-l1: 10px 10px 15px #D4D4D5, -10px -10px 15px #FFFFFF;
+$shadow-l2: 5px 5px 10px #D4D4D5, -5px -5px 10px #FFFFFF;
+$shadow-l3: 3px 3px 7px #D4D4D5, -3px -3px 7px #FFFFFF;
+$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -193,7 +193,7 @@ button.active {
 
 .text-button {
   padding: 11px 21px;
-  font-size: $t1-size;
+  font-size: 14px;
   font-weight: $t1-weight;
   line-height: 155%;
   color: $white;
@@ -245,6 +245,9 @@ button.active {
   gap: 5px;
   align-items: center;
   color: $white;
+  font-size: 14px;
+  font-weight: $t1-weight;
+  line-height: 155%;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
@@ -444,7 +447,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  gap: 10px;
+  gap: 15px;
 }
 
 .list-dot {
@@ -506,9 +509,6 @@ footer {
 
 .list-dot-c-1-s .list-dot-addition{
   margin: 0 -1px 0 5px;
-}
-
-.list-dot-c-no-s {
 }
 
 .list-dot-c-no-l {

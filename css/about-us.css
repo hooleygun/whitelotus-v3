@@ -94,7 +94,7 @@
   width: 100%;
   max-width: 1255px;
   border-radius: 20px;
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
 }
 
 .card-inscription-xl {

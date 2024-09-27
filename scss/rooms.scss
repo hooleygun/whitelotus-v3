@@ -13,7 +13,7 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+$shadow-l1: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
 $shadow-l2: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
 $shadow-l3: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
 $shadow-green-l2: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
@@ -234,7 +234,7 @@ $list-addition-txt-weight: 600;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .open-description-button {

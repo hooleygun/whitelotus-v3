@@ -46,6 +46,7 @@ function showRoom(m){
         else {
             rooms[i].style.display = "none";
             rooms[i].querySelector("div.room-info-container div.room-description-container").style.transform = 'translateY(-100%)';
+            rooms[i].querySelector("div.room-info-container .room-description-downup-icon").style.transform ='rotate(0deg)';
             roomsDots[i].classList.remove("active", "neumorphism-l2-green");
             roomsDots[i].classList.add("disabled", "neumorphism-l2-green");
         }

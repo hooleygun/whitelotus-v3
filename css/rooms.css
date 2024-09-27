@@ -65,7 +65,7 @@
   height: fit-content;
   padding: 20px;
   border-radius: 35px;
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
   margin: 0 auto;
   margin-top: 300px;
 }
@@ -191,7 +191,7 @@
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .open-description-button {

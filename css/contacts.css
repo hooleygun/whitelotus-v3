@@ -17,13 +17,13 @@
 /*---------------------- MAP Settings ----------------------*/
 .map-block {
   border-radius: 25px;
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
 }
 
 /*---------------------- CONTACTS BLOCK Settings ----------------------*/
 .contacts-txt-container {
   background-color: #F9F9FB;
-  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
   padding: 20px 40px;
   border-radius: 25px;
   display: flex;
