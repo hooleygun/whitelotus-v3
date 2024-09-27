@@ -39,7 +39,6 @@
 .room-info-container {
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 80px auto;
   animation: appear 0.4s;
   animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
