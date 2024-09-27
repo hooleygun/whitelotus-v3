@@ -17,13 +17,13 @@
 /*---------------------- MAP Settings ----------------------*/
 .map-block {
   border-radius: 25px;
-  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
 }
 
 /*---------------------- CONTACTS BLOCK Settings ----------------------*/
 .contacts-txt-container {
-  background-color: #FEFEFE;
-  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+  background-color: #F9F9FB;
+  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
   padding: 20px 40px;
   border-radius: 25px;
   display: flex;
@@ -41,13 +41,13 @@
 
 .contacts-title {
   color: #42D07A;
-  font-size: 21px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 800;
   line-height: 140%;
 }
 
 .contacts-text {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 150%;
   cursor: pointer;

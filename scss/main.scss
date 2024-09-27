@@ -1,5 +1,6 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: #FEFEFE;
+$white: #F9F9FB;
+$background-white: #F9F9FB;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
@@ -12,7 +13,10 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$shadow-l1: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+$shadow-l2: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
+$shadow-l3: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
+$shadow-green-l2: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -60,27 +64,27 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 40px;
+$h2-size: 42px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 21px;
+$h3-size: 24px;
 $h3-weight: 800;
 $h3-height: 140%;
 
-$p-size: 14px;
+$p-size: 16px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 14px;
+$t1-size: 16px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
-$t2-size: 14px;
+$t2-size: 16px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$list-txt-size: 14px;
+$list-txt-size: 16px;
 $list-txt-weight: 400;
 $list-txt-height: 150%;
 $list-addition-txt-weight: 600;
@@ -99,7 +103,7 @@ $list-addition-txt-weight: 600;
 
 html, body {
   position: absolute;
-  background-color: $white;
+  background-color: $background-white;
   width: 100%;
   color: $dark-color;
   font-family: $main-font;
@@ -126,6 +130,18 @@ body {
   align-items: center;
   min-height: 100vh;
   height: 100%;
+}
+
+.neumorphism-l1{
+  box-shadow: $shadow-l1;
+}
+
+.neumorphism-l2{
+  box-shadow: $shadow-l2;
+}
+
+.neumorphism-l2-green{
+  box-shadow: $shadow-green-l2;
 }
 
 /*---------------------- TITLES Settings ----------------------*/
@@ -157,19 +173,32 @@ p {
 button {
   background-color: $accent-color;
   border-radius: $border-radius-buttons;
+  color: $white;
   border: none;
   height: fit-content;
   width: fit-content;
   cursor: pointer;
-  transition: all .1s ease;
+  transition: all .15s ease-out;
+}
+
+button.disabled {
+  background-color: $white;
+  color: $grey-color;
+  box-shadow: $shadow-l2;
+}
+
+button.active {
+  background-color: $accent-color;
 }
 
 .text-button {
   padding: 11px 21px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: $t1-size;
+  font-weight: $t1-weight;
   line-height: 155%;
   color: $white;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .icon-button {
@@ -180,6 +209,8 @@ button {
   justify-content: center;
   align-items: center;
   padding: 12px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .bordered-button{
@@ -191,6 +222,8 @@ button {
   align-items: center;
   background-color: $white;
   border: 3px solid $accent-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .icon-bordered-button{
@@ -202,6 +235,8 @@ button {
   align-items: center;
   background-color: $white;
   border: 3px solid $accent-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .text-icon-button {
@@ -210,6 +245,45 @@ button {
   gap: 5px;
   align-items: center;
   color: $white;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.close-window-button{
+  background-color: $white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
+.text-button:hover {
+  transform: scale(1.05);
+}
+
+#button-txt-down-icon:hover .s-icon-container{
+  transform: translateY(3px);
+}
+
+#button-left-icon:hover .l-icon-container{
+  transform: translateX(-2px);
+}
+
+#button-right-icon:hover .l-icon-container{
+  transform: translateX(2px);
+}
+
+#button-left-icon:active .l-icon-container{
+  transform: translateX(-4px);
+}
+
+#button-right-icon:active .l-icon-container{
+  transform: translateX(4px);
+}
+
+.icon-button:hover .l-icon-container{
+  transform: scale(1.25,1.25);
 }
 
 .s-icon-container {
@@ -218,6 +292,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateZ(0);
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 .l-icon-container {
@@ -226,24 +303,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  transform: translateZ(0);
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 
-button:hover {
-  background-color: #49e085;
-}
-
-button:active {
-  background-color: #3cbb6f;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: #49e085;
-}
-
-.swiper-button-next:active,
-.swiper-button-prev:active {
-  background-color: #3cbb6f;
 }
 
 /*---------------------- HEADER Settings ----------------------*/
@@ -254,7 +317,6 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
-  box-shadow: $shadow;
   display: flex;
   flex-direction: row;
   padding: 10px 10px 10px 30px;
@@ -388,7 +450,8 @@ footer {
 .list-dot {
   display: flex;
   flex-direction: row;
-  border: 1px solid $accent-color;
+  background-color: $white;
+  box-shadow: $shadow-l3;
   border-radius: $list-radius;
   width: fit-content;
   height: fit-content;
@@ -396,7 +459,7 @@ footer {
   font-size: $list-txt-size;
   font-weight: $list-txt-weight;
   line-height: $list-txt-height;
-  padding: 8px 15px;
+  padding: 5px 15px;
   gap: 5px;
 }
 
@@ -409,7 +472,7 @@ footer {
   font-size: $list-txt-size;
   font-weight: $list-addition-txt-weight;
   line-height: $list-txt-height;
-  padding: 8px 15px;
+  padding: 5px 15px;
   margin-left: 5px;
   margin-right: -1px;
 }
@@ -420,23 +483,32 @@ footer {
 }
 
 .list-dot-l-no-s{
-  padding: 8px 15px;
+  padding: 5px 15px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .list-dot-l-1-s {
   padding: 0 0 0 15px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .list-dot-l-2-s{
   padding: 0 0 0 15px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .list-dot-c-1-s {
-  padding: 0 15px 0 0;
+  padding: 0 0 0 15px;
 }
 
 .list-dot-c-1-s .list-dot-addition{
-  margin: 0 5px 0 -1px;
+  margin: 0 -1px 0 5px;
+}
+
+.list-dot-c-no-s {
 }
 
 .list-dot-c-no-l {
@@ -452,7 +524,7 @@ footer {
 }
 
 .swiper{
-  box-shadow: $shadow;
+  box-shadow: $shadow-l1;
 }
 
 

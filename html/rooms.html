@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="neumorphism-l1">
     <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
     <div class="navi">
       <a href="about-us.html">Об отеле</a>
@@ -34,51 +34,53 @@
     <div class="rooms-navigation-container">
       <h2 id="page-title">Номера</h2>
       <div class="rooms-buttons-chain">
-        <button class="rooms-dot text-button" onclick="currentRoom(1)">Стандарт</button>
-        <button class="rooms-dot text-button" onclick="currentRoom(2)">Стандарт+</button>
-        <button class="rooms-dot text-button" onclick="currentRoom(3)">Семейный</button>
-        <button class="rooms-dot text-button" onclick="currentRoom(4)">Семейный+</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(1)">Стандарт</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(2)">Стандарт+</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(3)">Семейный</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(4)">Семейный+</button>
       </div>
     </div>
 
     <div class="room-info-container" id="room-index-1">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-1">
-          <button onclick="roomDescriptionAnimation('1')" class="icon-button"
-            style="position: absolute; right: 20px; background-color: #D14A41;"><img
-              src="/content/components-icons/buttons/white/large/x-icon-l-w.svg"></button>
+          <button onclick="roomDescriptionAnimation('1')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+            </button>
           <h2>Стандарт</h2>
           <div class="room-description-content-container">
             <h3>Однокомнатный двухместный номер</h3>
             <div class="room-description-grid">
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Двухместная кровать</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Кондиционер</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">LED телевизор 32″</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Холодильник</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Сушилка для белья</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Туалетный столик или комод</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Санузел с душевой кабиной</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Фен</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Летние стол и стулья на лоджии</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Шкаф и вешалка с обувницей</div>
               </div>
             </div>
@@ -105,9 +107,9 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button">Забронировать</button>
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('1')" class="open-description-button text-icon-button">
+          <button onclick="roomDescriptionAnimation('1')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             <p>Описание</p>
             <div class="s-icon-container"><img id="description-donwup-icon-1"
                 src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
@@ -130,12 +132,12 @@
           </div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button">
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
-        <div class="swiper-button-next icon-button">
+        <div class="swiper-button-next icon-button" id="button-right-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
@@ -146,50 +148,52 @@
     <div class="room-info-container" id="room-index-2">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-2">
-          <button onclick="roomDescriptionAnimation('2')" class="icon-button"
-            style="position: absolute; right: 20px; background-color: #D14A41;"><img
-              src="/content/components-icons/buttons/white/large/x-icon-l-w.svg"></button>
+          <button onclick="roomDescriptionAnimation('2')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+            <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
           <h2>Стандарт+</h2>
           <div class="room-description-content-container">
             <h3>Двухкомнатный трехместный номер</h3>
             <div class="room-description-grid">
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Двухместная кровать</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Холодильник</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Туалетный столик</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Пуф-трансформер</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Санузел с душевой кабиной</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Фен</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Сушилка для белья</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Летние стол и стулья на лоджии</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Шкаф и вешалка с обувницей</div>
               </div>
             </div>
@@ -216,9 +220,9 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button">Забронировать</button>
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('2')" class="open-description-button text-icon-button">
+          <button onclick="roomDescriptionAnimation('2')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             <p>Описание</p>
             <div class="s-icon-container"><img id="description-donwup-icon-2"
                 src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
@@ -242,12 +246,12 @@
           </div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button">
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
-        <div class="swiper-button-next icon-button">
+        <div class="swiper-button-next icon-button" id="button-right-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
@@ -258,51 +262,53 @@
     <div class="room-info-container" id="room-index-3">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-3">
-          <button onclick="roomDescriptionAnimation('3')" class="icon-button"
-            style="position: absolute; right: 20px; background-color: #D14A41;"><img
-              src="/content/components-icons/buttons/white/large/x-icon-l-w.svg"></button>
+          <button onclick="roomDescriptionAnimation('3')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
           <h2>Семейный</h2>
           <div class="room-description-content-container">
             <h3>Двухкомнатный четырехместный номер</h3>
             <div class="room-description-grid">
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Двухместная кровать</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Холодильник</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Туалетный столик</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Пуф-трансформер</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Санузел с душевой кабиной</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Фен</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Сушилка для белья</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Летние стол и стулья на лоджии</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Шкаф и вешалка с обувницей</div>
               </div>
             </div>
@@ -329,9 +335,9 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button">Забронировать</button>
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('3')" class="open-description-button text-icon-button">
+          <button onclick="roomDescriptionAnimation('3')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             <p>Описание</p>
             <div class="s-icon-container"><img id="description-donwup-icon-3"
                 src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
@@ -356,12 +362,12 @@
           <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bathroom.jpg"></div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button">
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
-        <div class="swiper-button-next icon-button">
+        <div class="swiper-button-next icon-button" id="button-right-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>
@@ -372,51 +378,53 @@
     <div class="room-info-container" id="room-index-4">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-4">
-          <button onclick="roomDescriptionAnimation('4')" class="icon-button"
-            style="position: absolute; right: 20px; background-color: #D14A41;"><img
-              src="/content/components-icons/buttons/white/large/x-icon-l-w.svg"></button>
+          <button onclick="roomDescriptionAnimation('4')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
           <h2>Семейный+</h2>
           <div class="room-description-content-container">
             <h3>Двухкомнатный четырехместный номер 40 м²</h3>
             <div class="room-description-grid">
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Двухместная кровать</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Холодильник</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Туалетный столик</div>
               </div>
               <div class="list-dot list-dot-c-1-s">
-                <div class="list-dot-addition">2шт.</div>
                 <div class="list-text">Пуф-трансформер</div>
+                <div class="list-dot-addition">2шт.</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Санузел с душевой кабиной</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Фен</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Сушилка для белья</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Летние стол и стулья на лоджии</div>
               </div>
-              <div class="list-dot list-dot-l-no-s">
+              <div class="list-dot list-dot-c-no-s">
                 <div class="list-text">Шкаф и вешалка с обувницей</div>
               </div>
             </div>
@@ -443,9 +451,9 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button">Забронировать</button>
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('4')" class="open-description-button text-icon-button">
+          <button onclick="roomDescriptionAnimation('4')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             <p>Описание</p>
             <div class="s-icon-container"><img id="description-donwup-icon-4"
                 src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
@@ -469,12 +477,12 @@
           </div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button">
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
           </div>
         </div>
-        <div class="swiper-button-next icon-button">
+        <div class="swiper-button-next icon-button" id="button-right-icon">
           <div class="l-icon-container">
             <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
           </div>

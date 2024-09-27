@@ -25,7 +25,6 @@ var roomsDots = document.getElementsByClassName("rooms-dot");
 rooms_base();
 
 function rooms_base(){
-
     for (i = 0; i < rooms.length; i++){
         roomsId.push(rooms[i].id);
     };
@@ -38,16 +37,17 @@ function currentRoom(n){
 }
 
 function showRoom(m){
-    for (i = 0; i < roomsDots.length; i++){
-        roomsDots[i].className = roomsDots[i].className.replace("active","");
-    }
     for(i = 0; i < rooms.length; i++){
         if (i + 1 == Number(m.slice(-1))){
             rooms[i].style.display = "block";
-            roomsDots[i].className += " active";
+            roomsDots[i].classList.remove("disabled", "neumorphism-l2-green");
+            roomsDots[i].classList.add("active", "neumorphism-l2-green");
         }
         else {
             rooms[i].style.display = "none";
+            rooms[i].querySelector("div.room-info-container div.room-description-container").style.transform = 'translateY(-100%)';
+            roomsDots[i].classList.remove("active", "neumorphism-l2-green");
+            roomsDots[i].classList.add("disabled", "neumorphism-l2-green");
         }
     };
 }

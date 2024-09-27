@@ -3,8 +3,8 @@
 /*---------------------- FONTS Variables ----------------------*/
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
-  width: 100vw;
-  height: 1182px;
+  width: 100%;
+  height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
@@ -29,7 +29,7 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  margin: 300px;
+  margin: 20vh 0;
   width: 1275px;
   text-align: center;
   align-items: center;
@@ -94,7 +94,7 @@
   width: 100%;
   max-width: 1255px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(20, 63, 37, 0.2);
+  box-shadow: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
 }
 
 .card-inscription-xl {

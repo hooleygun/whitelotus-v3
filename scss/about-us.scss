@@ -1,5 +1,6 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: #FEFEFE;
+$white: #F9F9FB;
+$background-white: #F9F9FB;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
@@ -12,11 +13,14 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow: 0 0 10px rgba(20, 63, 37, .2);
+$shadow-l1: 10px 10px 20px #d4d4d5, -10px -10px 20px #FFFFFF;
+$shadow-l2: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
+$shadow-l3: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
+$shadow-green-l2: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
-$bubble-radius: 25px;
+$list-radius: 30px;
 
 /*---------------------- FONTS Variables ----------------------*/
 
@@ -26,38 +30,35 @@ $h1-size: 150px;
 $h1-weight: 400;
 $h1-height: 100%;
 
-$h2-size: 40px;
+$h2-size: 42px;
 $h2-weight: 800;
 $h2-height: 100%;
 
-$h3-size: 21px;
-$h3-weight: 600;
+$h3-size: 24px;
+$h3-weight: 800;
 $h3-height: 140%;
 
-$p-size: 14px;
+$p-size: 16px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 14px;
+$t1-size: 16px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
-$t2-size: 14px;
+$t2-size: 16px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$bubble-txt-size: 14px;
-$bubble-txt-weight: 400;
-$bubble-txt-height: 100%;
-
-$bubble-addition-txt-size: 14px;
-$bubble-addition-txt-weight: 600;
-$bubble-addition-txt-height: 100%;
+$list-txt-size: 16px;
+$list-txt-weight: 400;
+$list-txt-height: 150%;
+$list-addition-txt-weight: 600;
 
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
-  width: 100vw;
-  height: 1182px;
+  width: 100%;
+  height: 80vh;
   object-fit: cover;
   object-position: bottom;
   position: absolute;
@@ -81,7 +82,7 @@ $bubble-addition-txt-height: 100%;
 .hero-container {
   display: flex;
   flex-direction: column;
-  margin: 300px;
+  margin: 20vh 0;
   width: 1275px;
   text-align: center;
   align-items: center;
@@ -145,7 +146,7 @@ $bubble-addition-txt-height: 100%;
   width: 100%;
   max-width: 1255px;
   border-radius: 20px;
-  box-shadow: $shadow;
+  box-shadow: $shadow-l1;
 }
 
 .card-inscription-xl {
