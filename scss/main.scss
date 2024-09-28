@@ -1,6 +1,7 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: #F0F0F0;
-$background-white: #F7F7F7;
+$white: whitesmoke; //#EBEBEB
+$background-white: #F5F5F5;
+$text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
@@ -13,9 +14,9 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 15px #D4D4D5, -10px -10px 15px #FFFFFF;
-$shadow-l2: 5px 5px 10px #D4D4D5, -5px -5px 10px #FFFFFF;
-$shadow-l3: 3px 3px 7px #D4D4D5, -3px -3px 7px #FFFFFF;
+$shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
+$shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
+$shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
 $shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
@@ -97,7 +98,7 @@ $list-addition-txt-weight: 600;
 }
 
 *::selection {
-  color: $white;
+  color: $text-white;
   background-color: $accent-color;
 }
 
@@ -173,7 +174,7 @@ p {
 button {
   background-color: $accent-color;
   border-radius: $border-radius-buttons;
-  color: $white;
+  color: $text-white;
   border: none;
   height: fit-content;
   width: fit-content;
@@ -196,7 +197,7 @@ button.active {
   font-size: 14px;
   font-weight: $t1-weight;
   line-height: 155%;
-  color: $white;
+  color: $text-white;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
@@ -244,7 +245,7 @@ button.active {
   display: flex;
   gap: 5px;
   align-items: center;
-  color: $white;
+  color: $text-white;
   font-size: 14px;
   font-weight: $t1-weight;
   line-height: 155%;
@@ -316,17 +317,17 @@ button.active {
 header {
   z-index: 5;
   position: fixed;
-  top: 20px;
+  top: 57px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
   display: flex;
   flex-direction: row;
-  padding: 10px 10px 10px 30px;
+  padding: 10px 10px 10px 25px;
   border-radius: 27px;
   width: 100%;
   max-width: 1000px;
-  margin: 35px auto 0 auto;
+  min-width: 834px;
   height: fit-content;
   justify-content: space-between;
   align-items: center;
@@ -344,7 +345,7 @@ header a{
 .navi {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 10px;
   height: fit-content;
   width: fit-content;
 }
@@ -364,7 +365,7 @@ footer {
   height: fit-content;
   width: 100%;
   padding: 30px 0;
-  font-size: $t2-size;
+  font-size: 14px;
   line-height: $t2-line-height;
   font-weight: $t2-weight;
 }
@@ -378,6 +379,7 @@ footer {
   padding: 0 10px;
   width: 100%;
   height: fit-content;
+  gap: 20px;
 }
 
 .footer-copyright-container {
@@ -387,7 +389,7 @@ footer {
 
 .footer-copyright-container a{
   text-decoration: none;
-  color: $white;
+  color: $text-white;
 }
 
 .footer-copyright-container a::selection {
@@ -424,7 +426,7 @@ footer {
 
 .footer-contacts-container a{
   text-decoration: none;
-  color: $white;
+  color: $text-white;
 }
 
 .footer-contacts-container a::selection {
@@ -443,10 +445,14 @@ footer {
   gap: 20px;
 }
 
+.list-container h3{
+  margin-left: 15px;
+}
+
 .bubbles-list {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 100%;
   gap: 15px;
 }
 
@@ -454,6 +460,7 @@ footer {
   display: flex;
   flex-direction: row;
   background-color: $white;
+  color: $grey-color;
   box-shadow: $shadow-l3;
   border-radius: $list-radius;
   width: fit-content;
@@ -466,18 +473,38 @@ footer {
   gap: 5px;
 }
 
+#calendar-description-list-dot{
+  text-overflow: ellipsis;
+  min-width: 190px;
+}
+
+.list-text{
+  height: fit-content;
+}
+
+.list-2-dot-addition-container{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  height: 100%;
+  gap: 5px;
+}
+
 .list-dot-addition {
   background-color: $accent-color;
   width: fit-content;
-  height: fit-content;
+  height: 100%;
+  align-content: center;
   border-radius: $list-radius;
-  color: $white;
+  color: $text-white;
   font-size: $list-txt-size;
   font-weight: $list-addition-txt-weight;
   line-height: $list-txt-height;
-  padding: 5px 15px;
+  padding: 1px 15px;
   margin-left: 5px;
-  margin-right: -1px;
+  text-wrap: nowrap;
 }
 
 .list-dot-addition::selection {
@@ -492,23 +519,23 @@ footer {
 }
 
 .list-dot-l-1-s {
-  padding: 0 0 0 15px;
+  padding: 4px 4px 4px 15px;
   width: 100%;
   justify-content: space-between;
 }
 
 .list-dot-l-2-s{
-  padding: 0 0 0 15px;
+  padding: 4px 4px 4px 15px;
   width: 100%;
   justify-content: space-between;
 }
 
 .list-dot-c-1-s {
-  padding: 0 0 0 15px;
+  padding: 4px 4px 4px 15px;
 }
 
 .list-dot-c-1-s .list-dot-addition{
-  margin: 0 -1px 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .list-dot-c-no-l {
@@ -517,20 +544,28 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: $white;
+  color: $text-white;
   font-size: $list-txt-size;
   font-weight: $list-txt-weight;
   line-height: $list-txt-height;
 }
 
-.swiper{
-  box-shadow: $shadow-l1;
-}
-
-
 /*---------------------- TEST ----------------------*/
 @media screen and (max-height: 880px){
   #page-title{
     display: none;
+  }
+}
+
+/*---------------------- ADAPTIVITY Settings ----------------------*/
+
+@media (max-width: 1020px){
+  header{
+    top: 20px;
+    left: 0;
+    transform: none;
+    margin: 0 10px;
+    width: 100%;
+    max-width: calc(100% - 20px);
   }
 }

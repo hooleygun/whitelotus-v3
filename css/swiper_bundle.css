@@ -53,10 +53,6 @@
   /* Fix of Webkit flickering */
   z-index: 1;
   display: block;
-  /* My settings */
-  width: 1000px;
-  height: 625px;
-  border-radius: 35px;
 }
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
@@ -73,7 +69,6 @@
   height: 100%;
 }
 .swiper-wrapper img {
-  aspect-ratio: 27 / 21;
   width: 100%;
 }
 .swiper-android .swiper-slide,
@@ -392,7 +387,7 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: var(--swiper-pagination-bottom, 8px);
+  bottom: var(--swiper-pagination-bottom, 10px);
   top: var(--swiper-pagination-top, auto);
   left: 0;
   width: 100%;

@@ -37,8 +37,10 @@
 
 /*---------------------- ROOM GALERY Settings ----------------------*/
 .room-info-container {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  max-width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
   animation: appear 0.4s;
   animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
@@ -52,11 +54,6 @@
     opacity: 1;
   }
 }
-/*.room-galery-container {
-  width: 1000px;
-  padding: 20px;
-  border-radius: 60px;
-}*/
 .room-card-galery-container {
   display: flex;
   width: -moz-fit-content;
@@ -65,16 +62,18 @@
   height: fit-content;
   padding: 20px;
   border-radius: 35px;
-  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
   margin: 0 auto;
   margin-top: 300px;
 }
 
 /*---------------------- SWIPER Settings ----------------------*/
 .swiper {
-  height: calc(100vh - 200px);
-  max-height: 625px;
-  min-height: 520px;
+  border-radius: 35px;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16/10;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
 }
 
 .room-swiper {
@@ -91,29 +90,6 @@
           user-select: none;
 }
 
-/*.swiper-wrapper img{
-  object-fit: cover;
-  object-position: 50% 100%;
-}*/
-/*.swiper-button-next {
-  background-color: $accent-color;
-  border-radius: $border-radius-buttons;
-  border: none;
-  height: fit-content;
-  width: fit-content;
-  max-height: 48px;
-  cursor: pointer;
-}
-
-.swiper-button-prev {
-  background-color: $accent-color;
-  border-radius: $border-radius-buttons;
-  border: none;
-  height: fit-content;
-  width: fit-content;
-  max-height: 48px;
-  cursor: pointer;
-}*/
 #icon-button::after {
   content: none;
 }
@@ -140,7 +116,7 @@
   width: fit-content;
   left: 50%;
   transform: translate(-50%);
-  background-color: #F9F9FB;
+  background-color: whitesmoke;
   border-radius: 30px;
   padding: 10px;
 }
@@ -158,7 +134,7 @@
 /*---------------------- ROOM DESCRIPTION Settings ----------------------*/
 .room-description-container {
   z-index: 100;
-  background-color: #F9F9FB;
+  background-color: whitesmoke;
   border: none;
   border-radius: 25px;
   position: absolute;
@@ -167,13 +143,11 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  gap: 20px;
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.15, 0.35, 0.2, 0.95);
-  width: 100%;
-  max-width: 980px;
+  width: calc(100% - 20px);
   height: calc(100% - 20px);
-  min-height: 500px;
-  max-height: 605px;
   left: 10px;
 }
 
@@ -201,12 +175,18 @@
   top: calc(100% + 10px);
 }
 
-@media (max-height: 880px) {
-  #room-description-calendar-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.mobile-description {
+  display: none;
+  background-color: whitesmoke;
+  width: calc(100% - 20px);
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: translateY(0);
+  position: relative;
+  top: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
 }
+
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
 .room-action-elements-container {
   width: 940px;
@@ -233,7 +213,7 @@
   width: fit-content;
   padding: 10px;
   border-radius: 25px;
-  background-color: #F9F9FB;
+  background-color: whitesmoke;
 }
 
 #room-slider-order-button {
@@ -244,7 +224,8 @@
 }
 
 #calendar-description-list-dot {
-  width: 400px;
+  width: calc(50% - 10px);
+  min-width: 355px;
   gap: 0;
   justify-content: space-between;
 }
@@ -256,4 +237,32 @@
   height: fit-content;
   width: 100%;
   align-items: end;
+}
+
+/*---------------------- ADAPTIVITY Settings ----------------------*/
+@media (max-width: 1020px) {
+  .rooms-container {
+    height: auto;
+  }
+  .room-info-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 20px;
+  }
+  .room-description-container {
+    display: none;
+  }
+  .mobile-description {
+    display: flex;
+  }
+}
+@media (max-width: 1000px) {
+  #room-description-calendar-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap: nowrap;
+  }
 }/*# sourceMappingURL=rooms.css.map */

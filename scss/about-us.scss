@@ -83,7 +83,7 @@ $list-addition-txt-weight: 600;
   display: flex;
   flex-direction: column;
   margin: 20vh 0;
-  width: 1275px;
+  width: fit-content;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -92,6 +92,7 @@ $list-addition-txt-weight: 600;
 
 #hero-logo {
   width: 300px;
+  height: 100%;
   user-select: none;
 }
 
@@ -159,10 +160,9 @@ $list-addition-txt-weight: 600;
   background-color: $blured-white;
   backdrop-filter: blur(65px);
   width: 100%;;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 20px;
   /* Dependet geight */
-  height: 25%;
+  height: 30%;
   justify-content: center;
 }
 
@@ -240,7 +240,8 @@ $list-addition-txt-weight: 600;
 .services-container {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 80px auto;
   align-items: center;
   gap: 40px;
@@ -251,4 +252,51 @@ $list-addition-txt-weight: 600;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.list-container {
+  width: 100%;
+}
+
+@media (max-width: 1020px){
+  #hero-logo {
+    width: 25.7vw; //300px
+  }
+  
+  #logo-subtitle {
+    font-size: 8.3vw; //90px
+  }
+  
+  #logo-title {
+    font-size: 12vw; //130px
+  }
+  
+  #logo-slogan {
+    font-size: 4.8vw; //52px
+  }
+  .card-inscription-xl{
+    height: 35%;
+  }
+}
+
+@media (max-width: 1020px){
+  #services-lists-wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 937px){
+  #services-lists-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+  .list-container{
+    align-items: center;
+    max-width: 500px;
+    min-width: 449px;
+  }
+  .list-dot-l-no-s{
+    justify-content: center;
+  }
 }
