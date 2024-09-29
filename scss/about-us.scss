@@ -1,6 +1,7 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: #F9F9FB;
-$background-white: #F9F9FB;
+$white: whitesmoke;
+$background-white: #F5F5F5;
+$text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
 $grey-color: #6E6E73;
@@ -13,10 +14,10 @@ $blur-fx: blur(100px);
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
-$shadow-l2: 5px 5px 10px #d4d4d5, -5px -5px 10px #FFFFFF;
-$shadow-l3: 3px 3px 7px #d4d4d5, -3px -3px 7px #FFFFFF;
-$shadow-green-l2: 5px 5px 15px #A1D0B4, -5px -5px 15px #FFFFFF;
+$shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
+$shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
+$shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
+$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -278,11 +279,11 @@ $list-addition-txt-weight: 600;
   .card-inscription-xl{
     height: 35%;
   }
-}
-
-@media (max-width: 1020px){
   #services-lists-wrapper {
     padding: 0 10px;
+  }
+  .description-cards-grid, .services-container  {
+    margin: 40px 0;
   }
 }
 
@@ -290,6 +291,7 @@ $list-addition-txt-weight: 600;
   #services-lists-wrapper{
     flex-direction: column;
     align-items: center;
+    gap: 40px;
   }
   .list-container{
     align-items: center;
@@ -298,5 +300,52 @@ $list-addition-txt-weight: 600;
   }
   .list-dot-l-no-s{
     justify-content: center;
+  }
+}
+
+@media (max-width: 767px){
+  .description-cards-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #new-hotel-card-xl{
+    grid-column: auto;
+    aspect-ratio: 27 / 24;
+  }
+  .description-card-xl{
+    aspect-ratio: 27 / 24;
+  }
+}
+
+@media (max-width: 479px){
+  .hero-container{
+    margin: 30vh 0;
+  }
+  .list-container{
+    min-width: 0;
+    box-shadow: $shadow-l2;
+    padding: 10px;
+    border-radius: $border-radius-h2;
+  }
+  .list-dot{
+    justify-content: space-between;
+    height: 80px;
+    border-radius: 21px;
+  }
+  .list-dot-l-2-s{
+    height: 109px;
+  }
+  .list-2-dot-addition-container{
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .list-2-dot-addition-container .list-dot-addition{
+    height: 48px;
+  }
+  .list-container h3{
+    margin: 0;
+  }
+  .description-card-xl, #new-hotel-card-xl{
+    aspect-ratio: 45  /60;
   }
 }

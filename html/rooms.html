@@ -18,16 +18,39 @@
 
 <body>
   <header>
-    <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
-    <div class="navi">
-      <a href="about-us.html">Об отеле</a>
-      <a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a>
+    <button class="mobile-header-button" id="mobile-navi-element">
+      <div class="l-icon-container"><img src="/content/components-icons/navi/logotype-icon.svg"></div>
+    </button>
+    <a href="mailto:contact@whitelotus.ru" id="desktop-navi-element">contact@whitelotus.ru</a>
+    <div class="navi" id="desktop-navi-element">
+      <a href="about-us.html" style="font-weight: 600; color: #46BF76;">Об отеле</a>
+      <a href="rooms.html">Номера</a>
       <a href="reviews.html">Отзывы</a>
       <a href="galery.html">Галерея</a>
       <a href="contacts.html">Контакты</a>
     </div>
-    <a href="tel:+79822201010">+7 (982) 220-10-10</a>
-    <button class="text-button neumorphism-l2-green">Забронировать</button>
+    <a href="tel:+79822201010" id="desktop-navi-element">+7 (982) 220-10-10</a>
+    <button class="text-button neumorphism-l2-green" id="desktop-navi-element">Забронировать</button>
+    <div class="right-navi-container">
+      <button class="mobile-header-button" id="mobile-navi-element">
+        <div id="l-icon-container"><img src="/content/components-icons/navi/order-icon.svg"></div>
+      </button>
+      <div class="burger-container" id="mobile-navi-element">
+        <div id="burger">
+          <div class="bar topBar"></div>
+          <div class="bar btmBar"></div>
+        </div>   
+      </div>
+    </div>
+    <ul class="mobile-menu">
+      <li class="mobile-menu-item"><a href="about-us.html">Об отеле</a></li>
+      <li class="mobile-menu-item"><a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a></li>
+      <li class="mobile-menu-item"><a href="reviews.html">Отзывы</a></li>
+      <li class="mobile-menu-item"><a href="galery.html">Галерея</a></li>
+      <li class="mobile-menu-item"><a href="contacts.html">Контакты</a></li>
+      <li class="mobile-menu-item"><a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a></li>
+      <li class="mobile-menu-item"><a href="tel:+79822201010">+7 (982) 220-10-10</a></li>
+    </ul>
   </header>
 
   <div class="rooms-container">
@@ -121,15 +144,11 @@
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_1.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/hall.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_2.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_3.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bathroom.jpg">
-          </div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/hall.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_3.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bathroom.jpg" loading="lazy"></div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev icon-button" id="button-left-icon">
@@ -297,16 +316,11 @@
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/standart_plus/bedroom_1.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/standart_plus/bedroom_1_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/standart_plus/bedroom_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/standart_plus/bedroom_2_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/hall.jpg">
-          </div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/hall.jpg" loading="lazy"></div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev icon-button" id="button-left-icon">
@@ -484,17 +498,12 @@
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1_rev.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/family/bedroom_1_rev_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2_rev.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bathroom.jpg"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1_rev_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bathroom.jpg" loading="lazy"></div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev icon-button" id="button-left-icon">
@@ -673,16 +682,11 @@
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_1.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/family_plus/bedroom_1_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_2.jpg">
-          </div>
-          <div class="swiper-slide" id="room-swiper-slide"><img
-              src="../content/images/rooms/family_plus/bedroom_2_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bathroom.jpg">
-          </div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bathroom.jpg" loading="lazy"></div>
         </div>
         <div class="swiper-pagination" id="room-swiper-pagination"></div>
         <div class="swiper-button-prev icon-button" id="button-left-icon">
@@ -796,5 +800,5 @@
 <script src="../js/swiper_bundle.js"></script>
 <script src="../js/room-swiper.js"></script>
 <script src="../js/room_description_animation.js"></script>
-
+<script src="../js/burger-animation.js"></script>
 </html>

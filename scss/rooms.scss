@@ -1,5 +1,5 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: whitesmoke; //#EBEBEB
+$white: whitesmoke;
 $background-white: #F5F5F5;
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
@@ -17,7 +17,7 @@ $blur-fx: blur(100px);
 $shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
 $shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
-$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
+$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -151,7 +151,7 @@ $list-addition-txt-weight: 600;
   user-select: none;
 }
 
-#room-swiper-pagination {
+#room-swiper-pagination { //#galery-swiper-pagination
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,15 +163,6 @@ $list-addition-txt-weight: 600;
   padding: 10px;
 }
 
-.swiper-pagination-bullet{
-  background-color: $grey-color;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-}
-
-.swiper-pagination-bullet-active{
-  background-color: $accent-color;
-}
 
 /*---------------------- ROOM DESCRIPTION Settings ----------------------*/
 .room-description-container {
@@ -183,6 +174,7 @@ $list-addition-txt-weight: 600;
   transform: translateY(-100%);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
@@ -196,6 +188,7 @@ $list-addition-txt-weight: 600;
 .room-description-content-container{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   height: fit-content;
   gap: 15px;
@@ -219,17 +212,18 @@ $list-addition-txt-weight: 600;
 .mobile-description {
   display: none;
   background-color: $white;
-  width: calc(100% - 20px);
+  width: 100%;
   height: fit-content;
   transform: translateY(0);
   position: relative;
   top: 40px;
+  left: 0;
   box-shadow: $shadow-l2;
 }
 
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
 .room-action-elements-container {
-  width: 940px;
+  width: calc(100% - 20px);
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -280,6 +274,7 @@ $list-addition-txt-weight: 600;
 @media (max-width: 1020px){
   .rooms-container {
     height: auto;
+    margin: 80px 0;
   }
   .room-info-container{
     display: flex;
@@ -290,9 +285,13 @@ $list-addition-txt-weight: 600;
   }
   .room-description-container{
     display: none;
+    z-index: 1;
   }
   .mobile-description{
     display: flex;
+  }
+  .swiper{
+    border-radius: $border-radius-h2;
   }
 }
 
@@ -301,5 +300,120 @@ $list-addition-txt-weight: 600;
     flex-direction: row;
     flex-wrap: wrap;
     text-wrap: nowrap;
+  }
+}
+
+@media (max-width: 767px){
+  .swiper{
+    aspect-ratio: 16 / 12;
+  }
+  .room-description-grid{
+    flex-direction: column;
+  }
+  .mobile-description{
+    top: 20px;
+    gap: 40px;
+  }
+  .room-description-content-container h3, .mobile-description h2{
+    text-align: start;
+  }
+  .room-order-container{
+    background: none;
+    padding: 0;
+  }
+  #calendar-description-list-dot{
+    width: 100%;
+  }
+}
+
+@media (max-width: 525px){
+  .rooms-navigation-container{
+    width: 100%;
+  }
+  .rooms-buttons-chain{
+    gap: 0;
+    border-radius: $border-radius-buttons;
+    overflow: hidden;
+    box-shadow: $shadow-l2;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+  }
+  .rooms-dot, .rooms-dot.disabled{
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+  }
+  .rooms-dot{
+    background: linear-gradient(145deg, #47df83, #3bbb6e);
+  }
+  .rooms-dot.disabled{
+    background: $white  ;
+  }
+}
+
+@media (max-width: 479px){
+  .list-container{
+    min-width: 0;
+  }
+  .list-container h3{
+    margin: 0;
+  }
+
+  .list-dot{
+    justify-content: space-between;
+    height: 80px;
+    border-radius: 21px;
+    width: 100%;
+  }
+
+  .list-dot-l-1-s .list-text{
+    text-wrap: wrap;
+  }
+
+  #calendar-description-list-dot{
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rooms-buttons-chain{
+    flex-wrap: wrap;
+  }
+  .rooms-dot{
+    max-width: 100%;
+  }
+  .swiper{
+    aspect-ratio: 16/17;
+  }
+  .room-action-elements-container{
+    display: none;
+  }
+  .room-description-container{
+    padding: 10px;
+  }
+  .action-elements-room-description-container{
+    justify-content: center;
+  }
+  .swiper-wrapper img{
+    width: auto;
+    height: 100%;
+  }
+  .mobile-description, .room-description-content-container{
+    align-items: center;
+  }
+  .room-description-content-container h3, .mobile-description h2{
+    text-align: center;
+  }
+
+  .mobile-description{
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .room-description-content-container{
+    min-width: 0;
+    width: 100%;
+    box-shadow: $shadow-l2;
+    padding: 10px;
+    border-radius: $border-radius-h2;
   }
 }

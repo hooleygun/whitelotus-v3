@@ -96,7 +96,7 @@
   width: 100%;
   max-width: 1255px;
   border-radius: 20px;
-  box-shadow: 10px 10px 15px #d4d4d5, -10px -10px 15px #FFFFFF;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
 }
 
 .card-inscription-xl {
@@ -227,16 +227,18 @@
   .card-inscription-xl {
     height: 35%;
   }
-}
-@media (max-width: 1020px) {
   #services-lists-wrapper {
     padding: 0 10px;
+  }
+  .description-cards-grid, .services-container {
+    margin: 40px 0;
   }
 }
 @media (max-width: 937px) {
   #services-lists-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
   }
   .list-container {
     align-items: center;
@@ -245,5 +247,49 @@
   }
   .list-dot-l-no-s {
     justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .description-cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #new-hotel-card-xl {
+    grid-column: auto;
+    aspect-ratio: 27/24;
+  }
+  .description-card-xl {
+    aspect-ratio: 27/24;
+  }
+}
+@media (max-width: 479px) {
+  .hero-container {
+    margin: 30vh 0;
+  }
+  .list-container {
+    min-width: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  .list-dot {
+    justify-content: space-between;
+    height: 80px;
+    border-radius: 21px;
+  }
+  .list-dot-l-2-s {
+    height: 109px;
+  }
+  .list-2-dot-addition-container {
+    flex-direction: column;
+    align-items: end;
+  }
+  .list-2-dot-addition-container .list-dot-addition {
+    height: 48px;
+  }
+  .list-container h3 {
+    margin: 0;
+  }
+  .description-card-xl, #new-hotel-card-xl {
+    aspect-ratio: 45/60;
   }
 }/*# sourceMappingURL=about-us.css.map */

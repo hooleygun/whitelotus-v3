@@ -1,5 +1,5 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: whitesmoke; //#EBEBEB
+$white: whitesmoke;
 $background-white: #F5F5F5;
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
@@ -17,7 +17,7 @@ $blur-fx: blur(100px);
 $shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
 $shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
-$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
+$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -125,5 +125,38 @@ $list-addition-txt-weight: 600;
 @media (max-width: 1020px){
   .contacts-container{
     width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 767px){
+  .map-block{
+    aspect-ratio: 11 / 8;
+  }
+  .contacts-txt-container{
+    flex-direction: column;
+  }
+}
+@media (max-width: 479px){
+  .contacts-txt-container{
+    //display: none;
+    position: absolute;
+    min-height: 41vh;
+    bottom: 219px;
+    gap: 20px;
+    justify-content: flex-start;
+    box-shadow: none;
+    border-radius: 25px 25px 0 0;
+  }
+  .contacts-container{
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .map-block{
+    border-radius: 0;
+  }
+  .map-block .map-widget-layout-view__top-right-controls,.map-block .layout-control-group._side_right{
+    display: none;
   }
 }

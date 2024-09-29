@@ -72,4 +72,35 @@
   .contacts-container {
     width: calc(100% - 20px);
   }
+}
+@media (max-width: 767px) {
+  .map-block {
+    aspect-ratio: 11/8;
+  }
+  .contacts-txt-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 479px) {
+  .contacts-txt-container {
+    position: absolute;
+    min-height: 41vh;
+    bottom: 219px;
+    gap: 20px;
+    justify-content: flex-start;
+    box-shadow: none;
+    border-radius: 25px 25px 0 0;
+  }
+  .contacts-container {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .map-block {
+    border-radius: 0;
+  }
+  .map-block .map-widget-layout-view__top-right-controls, .map-block .layout-control-group._side_right {
+    display: none;
+  }
 }/*# sourceMappingURL=contacts.css.map */

@@ -2,11 +2,11 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
-  /*pagination: {
+  pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    //dynamicBullets: true,
-  },*/
+    dynamicBullets: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

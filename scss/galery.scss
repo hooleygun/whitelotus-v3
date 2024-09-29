@@ -1,5 +1,5 @@
 /*---------------------------- COLORS Variables ---------------------------*/
-$white: whitesmoke; //#EBEBEB
+$white: whitesmoke;
 $background-white: #F5F5F5;
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
@@ -17,7 +17,7 @@ $blur-fx: blur(100px);
 $shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
 $shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
-$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #F3F9F3;
+$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
 $border-radius-h1: 35px;
 $border-radius-h2: 25px;
 $border-radius-buttons: 15px;
@@ -117,16 +117,17 @@ $list-addition-txt-weight: 600;
 }
 
 #galery-swiper-pagination {
-  display: flex;
+  display: none;
+  width: 85px !important;
   justify-content: center;
   align-items: center;
+  align-content: center;
   width: fit-content;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: $blured-white;
-  backdrop-filter: $blur-fx;
+  //left: 50%;
+  //transform: translate(-50%);
+  background-color: $white;
   border-radius: $list-radius;
-  padding: 10px;
+  padding: 10px 30px 10px 5px;
 }
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/
@@ -134,5 +135,25 @@ $list-addition-txt-weight: 600;
 @media (max-width: 1020px){
   #galery-swiper{
     width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 767px){
+  #galery-swiper{
+    aspect-ratio: 16 / 12;
+  }
+  #galery-swiper-pagination {
+    display: block;
+  }
+}
+
+@media (max-width: 479px){
+  .galery-container{
+    margin: auto;
+  }
+  #galery-swiper{
+    aspect-ratio: auto;
+    width: 100%;
+    border-radius: 0;
   }
 }
