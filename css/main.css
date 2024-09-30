@@ -36,6 +36,8 @@
 /*---------------------- FONTS Variables ----------------------*/
 /*---------------------- GENERAL Settings ----------------------*/
 * {
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
