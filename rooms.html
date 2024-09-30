@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/swiper_bundle.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/rooms.css">
+  <!-- Fonts preload -->
+  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_regular.woff2"
+    type="font/woff2">
+  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_medium.woff2"
+    type="font/woff2">
+  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_bold.woff2" type="font/woff2">
+  <title>Отель Белый Лотос</title>
+</head>
+
+<body>
+  <header>
+    <button class="mobile-header-button" id="mobile-navi-element">
+      <div class="l-icon-container"><img src="/content/components-icons/navi/logotype-icon.svg" style="margin-top: 1px;"></div>
+    </button>
+    <a class="navi-contact" href="mailto:contact@whitelotus.ru" id="desktop-navi-element">contact@whitelotus.ru</a>
+    <div class="navi" id="desktop-navi-element">
+      <a href="about-us.html">Об отеле</a>
+      <a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a>
+      <!--<a href="reviews.html">Отзывы</a>-->
+      <a href="galery.html">Галерея</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <a class="navi-contact" href="tel:+79822201010" id="desktop-navi-element">+7 (982) 220-10-10</a>
+    <button class="text-button neumorphism-l2-green" id="desktop-navi-element">Забронировать</button>
+    <div class="right-navi-container">
+      <button class="mobile-header-button" id="mobile-navi-element">
+        <div id="l-icon-container"><img src="/content/components-icons/navi/order-icon.svg" style="margin-top: 2px;"></div>
+      </button>
+      <div class="burger-container" id="mobile-navi-element">
+        <div id="burger">
+          <div class="bar topBar"></div>
+          <div class="bar btmBar"></div>
+        </div>   
+      </div>
+    </div>
+    <ul class="mobile-menu">
+      <li class="mobile-menu-item"><a href="about-us.html">Об отеле</a></li>
+      <li class="mobile-menu-item"><a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a></li>
+      <!--<li class="mobile-menu-item"><a href="reviews.html">Отзывы</a></li>-->
+      <li class="mobile-menu-item"><a href="galery.html">Галерея</a></li>
+      <li class="mobile-menu-item"><a href="contacts.html">Контакты</a></li>
+      <li class="mobile-menu-item"><a class="navi-contact" href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a></li>
+      <li class="mobile-menu-item"><a class="navi-contact" href="tel:+79822201010">+7 (982) 220-10-10</a></li>
+    </ul>
+  </header>
+
+  <div class="rooms-container">
+    <div class="rooms-navigation-container">
+      <h2 id="page-title">Номера</h2>
+      <div class="rooms-buttons-chain">
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(1)">Стандарт</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(2)">Стандарт+</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(3)">Семейный</button>
+        <button class="rooms-dot text-button disabled" onclick="currentRoom(4)">Семейный+</button>
+      </div>
+    </div>
+
+    <div class="room-info-container" id="room-index-1">
+      <div class="swiper" id="room-swiper">
+        <div class="room-description-container" id="room-txt-container-1">
+          <button onclick="roomDescriptionAnimation('1')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+            </button>
+          <h2>Стандарт</h2>
+          <div class="room-description-content-container">
+            <h3>Однокомнатный двухместный номер</h3>
+            <div class="room-description-grid">
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Двухместная кровать</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Кондиционер</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">LED телевизор 32″</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Холодильник</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Сушилка для белья</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Туалетный столик или комод</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Фен</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+              </div>
+            </div>
+          </div>
+          <div class="room-description-content-container">
+            <h3>Календарь цен</h3>
+            <ul class="bubbles-list" id="room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июня - 30 июня</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июля - 31 июля</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 августа - 31 августа</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 сентября - 30 сентября</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="action-elements-room-description-container">
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
+          </div>
+          <button onclick="roomDescriptionAnimation('1')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+            Описание
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-1"
+                src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+          </button>
+        </div>
+        <div class="room-action-elements-container">
+          <div class="room-order-container">
+            <button class="text-button">Забронировать</button>
+          </div>
+        </div>
+        <div class="swiper-wrapper" id="room-swiper-wrapper">
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/hall.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bedroom_3.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart/bathroom.jpg" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination" id="room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+          </div>
+        </div>
+        <div class="swiper-button-next icon-button" id="button-right-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="room-description-container mobile-description">
+        <h2>Стандарт</h2>
+        <div class="room-description-content-container">
+          <h3>Однокомнатный двухместный номер</h3>
+          <div class="room-description-grid">
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Двухместная кровать</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Кондиционер</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">LED телевизор 32″</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Холодильник</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Сушилка для белья</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Туалетный столик или комод</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Фен</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+            </div>
+          </div>
+        </div>
+        <div class="room-description-content-container">
+          <h3>Календарь цен</h3>
+          <ul class="bubbles-list" id="room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июня - 30 июня</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июля - 31 июля</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 августа - 31 августа</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 сентября - 30 сентября</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="action-elements-room-description-container">
+          <button class="text-button neumorphism-l2-green">Забронировать</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-info-container" id="room-index-2">
+      <div class="swiper" id="room-swiper">
+        <div class="room-description-container" id="room-txt-container-2">
+          <button onclick="roomDescriptionAnimation('2')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+            <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
+          <h2>Стандарт+</h2>
+          <div class="room-description-content-container">
+            <h3>Двухкомнатный трехместный номер</h3>
+            <div class="room-description-grid">
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Двухместная кровать</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Холодильник</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Туалетный столик</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Пуф-трансформер</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Фен</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Сушилка для белья</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+              </div>
+            </div>
+          </div>
+          <div class="room-description-content-container">
+            <h3>Календарь цен</h3>
+            <ul class="bubbles-list" id="room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июня - 30 июня</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июля - 31 июля</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 августа - 31 августа</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 сентября - 30 сентября</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="action-elements-room-description-container">
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
+          </div>
+          <button onclick="roomDescriptionAnimation('2')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+            Описание
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-2"
+                src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+          </button>
+        </div>
+        <div class="room-action-elements-container">
+          <div class="room-order-container">
+            <button class="text-button">Забронировать</button>
+          </div>
+        </div>
+        <div class="swiper-wrapper" id="room-swiper-wrapper">
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/standart_plus/hall.jpg" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination" id="room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+          </div>
+        </div>
+        <div class="swiper-button-next icon-button" id="button-right-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="room-description-container mobile-description">
+        <h2>Стандарт+</h2>
+        <div class="room-description-content-container">
+          <h3>Двухкомнатный трехместный номер</h3>
+          <div class="room-description-grid">
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Двухместная кровать</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Одноместная кровать</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Кондиционер</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">LED телевизор 32″</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Холодильник</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Туалетный столик</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Пуф-трансформер</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Фен</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Сушилка для белья</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+            </div>
+          </div>
+        </div>
+        <div class="room-description-content-container">
+          <h3>Календарь цен</h3>
+          <ul class="bubbles-list" id="room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июня - 30 июня</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июля - 31 июля</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 августа - 31 августа</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 сентября - 30 сентября</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="action-elements-room-description-container">
+          <button class="text-button neumorphism-l2-green">Забронировать</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-info-container" id="room-index-3">
+      <div class="swiper" id="room-swiper">
+        <div class="room-description-container" id="room-txt-container-3">
+          <button onclick="roomDescriptionAnimation('3')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
+          <h2>Семейный</h2>
+          <div class="room-description-content-container">
+            <h3>Двухкомнатный четырехместный номер</h3>
+            <div class="room-description-grid">
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Двухместная кровать</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Холодильник</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Туалетный столик</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Пуф-трансформер</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Фен</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Сушилка для белья</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+              </div>
+            </div>
+          </div>
+          <div class="room-description-content-container">
+            <h3>Календарь цен</h3>
+            <ul class="bubbles-list" id="room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июня - 30 июня</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июля - 31 июля</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 августа - 31 августа</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 сентября - 30 сентября</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="action-elements-room-description-container">
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
+          </div>
+          <button onclick="roomDescriptionAnimation('3')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+            Описание
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-3"
+                src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+          </button>
+        </div>
+        <div class="room-action-elements-container">
+          <div class="room-order-container">
+            <button class="text-button">Забронировать</button>
+          </div>
+        </div>
+        <div class="swiper-wrapper" id="room-swiper-wrapper">
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_1_rev_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family/bathroom.jpg" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination" id="room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+          </div>
+        </div>
+        <div class="swiper-button-next icon-button" id="button-right-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="room-description-container mobile-description">
+        <h2>Семейный</h2>
+        <div class="room-description-content-container">
+          <h3>Двухкомнатный четырехместный номер</h3>
+          <div class="room-description-grid">
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Двухместная кровать</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Одноместная кровать</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Кондиционер</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">LED телевизор 32″</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Холодильник</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Туалетный столик</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Пуф-трансформер</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Фен</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Сушилка для белья</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+            </div>
+          </div>
+        </div>
+        <div class="room-description-content-container">
+          <h3>Календарь цен</h3>
+          <ul class="bubbles-list" id="room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июня - 30 июня</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июля - 31 июля</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 августа - 31 августа</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 сентября - 30 сентября</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="action-elements-room-description-container">
+          <button class="text-button neumorphism-l2-green">Забронировать</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-info-container" id="room-index-4">
+      <div class="swiper" id="room-swiper">
+        <div class="room-description-container" id="room-txt-container-4">
+          <button onclick="roomDescriptionAnimation('4')" class="icon-button close-window-button neumorphism-l2">
+            <div class="l-icon-container">
+              <img src="/content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            </div>
+          </button>
+          <h2>Семейный+</h2>
+          <div class="room-description-content-container">
+            <h3>Двухкомнатный четырехместный номер 40 м²</h3>
+            <div class="room-description-grid">
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Двухместная кровать</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Одноместная кровать</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Кондиционер</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">LED телевизор 32″</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Холодильник</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Туалетный столик</div>
+              </div>
+              <div class="list-dot list-dot-c-1-s">
+                <div class="list-text">Пуф-трансформер</div>
+                <div class="list-dot-addition">2шт.</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Фен</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Сушилка для белья</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+              </div>
+              <div class="list-dot list-dot-c-no-s">
+                <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+              </div>
+            </div>
+          </div>
+          <div class="room-description-content-container">
+            <h3>Календарь цен</h3>
+            <ul class="bubbles-list" id="room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июня - 30 июня</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 июля - 31 июля</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 августа - 31 августа</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+                <div class="list-text">1 сентября - 30 сентября</div>
+                <div class="list-dot-addition">3000 ₽ / сут.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="action-elements-room-description-container">
+            <button class="text-button neumorphism-l2-green">Забронировать</button>
+          </div>
+          <button onclick="roomDescriptionAnimation('4')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+            Описание
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-4"
+                src="../content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+          </button>
+        </div>
+        <div class="room-action-elements-container">
+          <div class="room-order-container">
+            <button class="text-button">Забронировать</button>
+          </div>
+        </div>
+        <div class="swiper-wrapper" id="room-swiper-wrapper">
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_1.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_1_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_2.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bedroom_2_rev.jpg" loading="lazy"></div>
+          <div class="swiper-slide" id="room-swiper-slide"><img src="../content/images/rooms/family_plus/bathroom.jpg" loading="lazy"></div>
+        </div>
+        <div class="swiper-pagination" id="room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button" id="button-left-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+          </div>
+        </div>
+        <div class="swiper-button-next icon-button" id="button-right-icon">
+          <div class="l-icon-container">
+            <img src="../content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="room-description-container mobile-description">
+        <h2>Семейный+</h2>
+        <div class="room-description-content-container">
+          <h3>Двухкомнатный четырехместный номер 40 м²</h3>
+          <div class="room-description-grid">
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Двухместная кровать</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Одноместная кровать</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Кондиционер</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">LED телевизор 32″</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Холодильник</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Туалетный столик</div>
+            </div>
+            <div class="list-dot list-dot-c-1-s">
+              <div class="list-text">Пуф-трансформер</div>
+              <div class="list-dot-addition">2шт.</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Санузел с&nbsp;душевой кабиной</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Фен</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Сушилка для белья</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Летние стол и&nbsp;стулья на&nbsp;лоджии</div>
+            </div>
+            <div class="list-dot list-dot-c-no-s">
+              <div class="list-text">Шкаф и&nbsp;вешалка с&nbsp;обувницей</div>
+            </div>
+          </div>
+        </div>
+        <div class="room-description-content-container">
+          <h3>Календарь цен</h3>
+          <ul class="bubbles-list" id="room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июня - 30 июня</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 июля - 31 июля</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 августа - 31 августа</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <div class="list-text">1 сентября - 30 сентября</div>
+              <div class="list-dot-addition">3000 ₽ / сут.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="action-elements-room-description-container">
+          <button class="text-button neumorphism-l2-green">Забронировать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-copyright-container">
+        <a href="about-us.html">©&nbsp;Белый&nbsp;Лотос,&nbsp;2024г. -&nbsp;официальный&nbsp;сайт</a>
+      </div>
+      <div class="footer-social-media-icons-container">
+        <a href="https://vk.com/whitelotushotel" class="social-media-link"><img
+            src="../content/components-icons/social-media/white/vk-icon-w.svg" alt="Вконтакте"></a>
+        <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img
+            src="../content/components-icons/social-media/white/ya-icon-w.svg" alt="Яндекс.Карты"></a>
+        <a href="https://wa.me/+79822201010" class="social-media-link"><img
+            src="../content/components-icons/social-media/white/wa-icon-w.svg" alt="WhatsApp"></a>
+      </div>
+      <div class="footer-contacts-container">
+        <a href="tel:+79822201010">+7&nbsp;(982)&nbsp;220-10-10</a>
+        <a href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
+        <a href="https://yandex.ru/maps/-/CDWFyZo7">Краснодарский&nbsp;край, Кучугуры, ул.&nbsp;Благополучия&nbsp;13</a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../js/swiper_bundle.js"></script>
+<script src="../js/room-swiper.js"></script>
+<script src="../js/room_description_animation.js"></script>
+<script src="../js/burger-animation.js"></script>
+</html>
