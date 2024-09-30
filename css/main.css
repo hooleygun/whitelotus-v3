@@ -1,5 +1,17 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
+.neumorphism-l1 {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
+}
+
+.neumorphism-l2 {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
+}
+
+.neumorphism-l2-green {
+  box-shadow: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
+}
+
 /*---------------------- FONTFACE Settings ----------------------*/
 @font-face {
   font-weight: 800;
@@ -62,6 +74,15 @@ html, body {
   animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*---------------------- ANIMATIONS Settings ----------------------*/
 /*--- Appear animation ---*/
 @keyframes appear {
   from {
@@ -71,27 +92,7 @@ html, body {
     opacity: 1;
   }
 }
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.neumorphism-l1 {
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
-}
-
-.neumorphism-l2 {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
-}
-
-.neumorphism-l2-green {
-  box-shadow: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
-}
-
-/*---------------------- TITLES Settings ----------------------*/
+/*---------------------- TEXT Settings ----------------------*/
 h1 {
   font-size: 150px;
   line-height: 100%;
@@ -125,6 +126,10 @@ p {
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
+}
+
+#page-title {
+  display: none;
 }
 
 /*---------------------- BUTTONS Settings ----------------------*/
@@ -168,7 +173,7 @@ button.active {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
-  border-radius: 15px;
+  border-radius: 35px;
   justify-content: center;
   align-items: center;
   padding: 12px;
@@ -287,7 +292,7 @@ button.active {
   transition-timing-function: ease-out;
 }
 
-/*---------------------- HEADER Settings ----------------------*/
+/*---------------------- DESCKTOP HEADER Settings ----------------------*/
 header {
   z-index: 5;
   position: fixed;
@@ -341,6 +346,7 @@ header a:hover {
   color: black;
 }
 
+/*---------------------- MOBILE HEADER Settings ----------------------*/
 #mobile-navi-element {
   display: none;
 }
@@ -708,22 +714,8 @@ footer {
   background-color: #42D07A;
 }
 
-#page-title {
-  display: none;
-}
-
 /*---------------------- ADAPTIVITY Settings ----------------------*/
-@media (max-width: 1020px) {
-  header {
-    top: 20px;
-    left: 0;
-    transform: none;
-    margin: 0 10px;
-    width: 100%;
-    max-width: calc(100% - 20px);
-  }
-}
-@media (max-width: 855px) {
+@media (max-width: 1024px) {
   #desktop-navi-element {
     display: none;
   }
@@ -746,12 +738,14 @@ footer {
     background-color: rgba(245, 245, 245, 0.65);
     -webkit-backdrop-filter: blur(150px);
             backdrop-filter: blur(150px);
+    left: auto;
+    transform: none;
   }
-}
-@media (max-width: 767px) {
   .swiper-button-prev, .swiper-button-next {
     display: none;
   }
+}
+@media (max-width: 767px) {
   .footer-content {
     flex-direction: column-reverse;
   }

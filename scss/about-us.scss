@@ -1,6 +1,7 @@
 /*---------------------------- COLORS Variables ---------------------------*/
+
 $white: whitesmoke;
-$background-white: #F5F5F5;
+$background-white: whitesmoke;
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
@@ -8,20 +9,24 @@ $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
 $disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
-$blured-white: rgba(254, 254, 254, .50);
-$blured-white-border: 2px solid rgba(254, 254, 254, .75);
-$blur-fx: blur(100px);
+$blured-white: rgba(245, 245, 245, .65);
+$blured-white-border: 2px solid rgba(245, 245, 245, .75);
+$blur-fx: blur(150px);
+
 
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
+
+$shadow-l1: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
-$shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
+$shadow-l3: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
 $shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
-$border-radius-h1: 35px;
-$border-radius-h2: 25px;
-$border-radius-buttons: 15px;
-$list-radius: 30px;
+$border-radius-l1: 15px;
+$border-radius-l2: 25px;
+$border-radius-l3: 35px;
+$list-radius: 17px;
+
+
 
 /*---------------------- FONTS Variables ----------------------*/
 
@@ -34,29 +39,40 @@ $h1-height: 100%;
 $h2-size: 42px;
 $h2-weight: 800;
 $h2-height: 100%;
+$h2-letter-spacing: -.75px;
 
-$h3-size: 24px;
-$h3-weight: 800;
+$h3-size: 21px;
+$h3-weight: 600;
 $h3-height: 140%;
+$h3-letter-spacing: -.25px;
 
-$p-size: 16px;
-$p-weight: 400;
-$p-height: 150%;
-
-$t1-size: 16px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
-$t2-size: 16px;
-$t2-weight: 400;
-$t2-line-height: 150%;
-
-$list-txt-size: 16px;
+$list-txt-size: 14px;
 $list-txt-weight: 400;
 $list-txt-height: 150%;
 $list-addition-txt-weight: 600;
 
+
+
+/*---------------------- ANIMATIONS Settings ----------------------*/
+
+/*--- Blur animation ---*/
+@keyframes blur{
+  from {
+    filter: blur(0) opacity(100%);
+  }
+  to {
+    filter: blur(25px) opacity(50%);
+  }
+}
+
+
+
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
+
 #background-video {
   width: 100%;
   height: 80vh;
@@ -69,17 +85,10 @@ $list-addition-txt-weight: 600;
   animation-fill-mode: forwards;
 }
 
-/*--- Appear animation ---*/
-@keyframes blur{
-  from {
-    filter: blur(0) opacity(100%);
-  }
-  to {
-    filter: blur(25px) opacity(50%);
-  }
-}
+
 
 /*-------------- HERO Settings --------------*/
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -119,21 +128,19 @@ $list-addition-txt-weight: 600;
   line-height: 100%;
 }
 
+
+
 /*---------------------- CRADS GRID Settings ----------------------*/
+
 .description-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  /* Full size */
   width: 100%;
   max-width: 2550px;
   margin: 80px 0;
   padding: 0 10px;
   z-index: 1;
-
-  /* 1000px width */
-  /*width: 1000px;
-  margin: 90px auto;*/
 }
 
 .description-card-xl {
@@ -148,7 +155,7 @@ $list-addition-txt-weight: 600;
   width: 100%;
   max-width: 1255px;
   border-radius: 20px;
-  box-shadow: $shadow-l1;
+  box-shadow: $shadow-l3;
 }
 
 .card-inscription-xl {
@@ -162,7 +169,6 @@ $list-addition-txt-weight: 600;
   backdrop-filter: blur(65px);
   width: 100%;;
   padding: 0 20px;
-  /* Dependet geight */
   height: 25%;
   justify-content: center;
 }
@@ -176,7 +182,10 @@ $list-addition-txt-weight: 600;
   margin-left: 10px;
 }
 
+
+
 /*-------------- CARDS INDIVIDUAL settings --------------*/
+
 #new-hotel-card-xl {
   background-image: url("../content/images/description-cards/hotel_view.jpg");
   grid-column-start: 1;
@@ -237,7 +246,10 @@ $list-addition-txt-weight: 600;
   background-image: url("../content/images/description-cards/room.jpg");
 }
 
+
+
 /*-------------- SERVICES Settings --------------*/
+
 .services-container {
   display: flex;
   flex-direction: column;
@@ -263,6 +275,7 @@ $list-addition-txt-weight: 600;
 
 
 /*-------------- REVIEWS SWIPER Settings --------------*/
+
 .reviews-container{
   display: flex;
   flex-direction: column;
@@ -285,7 +298,7 @@ $list-addition-txt-weight: 600;
   background: $white;
   height: calc((100% - 30px) / 2) !important;
   width: fit-content;
-  border-radius: $border-radius-h2;
+  border-radius: $border-radius-l2;
   box-shadow: $shadow-l3;
   padding: 20px;
   overflow: hidden;
@@ -315,7 +328,8 @@ $list-addition-txt-weight: 600;
 
 
 /*-------------- ADAPTIVITY Settings --------------*/
-@media (max-width: 1020px){
+
+@media (max-width: 1024px){
   #hero-logo {
     width: 25.7vw; //300px
   }
@@ -356,9 +370,6 @@ $list-addition-txt-weight: 600;
   .list-dot-l-no-s{
     justify-content: center;
   }
-  .reviews-container{
-    max-width: 520px;
-  }
 }
 
 @media (max-width: 767px){
@@ -382,7 +393,7 @@ $list-addition-txt-weight: 600;
     min-width: 0;
     box-shadow: $shadow-l2;
     padding: 20px 10px 10px 10px;
-    border-radius: $border-radius-h2;
+    border-radius: $border-radius-l2;
   }
   .bubbles-list{
     gap: 20px;
@@ -406,5 +417,149 @@ $list-addition-txt-weight: 600;
 @media (max-width: 325px){
   .list-2-dot-addition-container .list-dot-addition{
     padding: 0px 5px;
+  }
+}
+
+
+
+/*---------------------- DEVICES ADAPTIVITY Settings ----------------------*/
+
+/* iPhone 5, 5S, 5C, 5 SE (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #hero-logo {
+    width: 20vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  
+  #logo-title {
+    font-size: 8vw;
+  }
+  
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+ 
+/* iPhone 6, 6S, 7, 8, SE 2020 (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
+  #hero-logo {
+    width: 20vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  
+  #logo-title {
+    font-size: 8vw;
+  }
+  
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+
+/* iPhone 6+, 7+, 8+ (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+  #hero-logo {
+    width: 20vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  
+  #logo-title {
+    font-size: 8vw;
+  }
+  
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+
+/* iPhone X, XS, 11 Pro, 13 mini (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3){ 
+  #hero-logo {
+    width: 17vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  
+  #logo-title {
+    font-size: 6vw;
+  }
+  
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+
+/* iPhone XS Max, XR, 11, 11 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3){
+  #hero-logo {
+    width: 17vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  
+  #logo-title {
+    font-size: 6vw;
+  }
+  
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+
+/* iPhone 12, 12 Pro, 13, 13 Pro (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3){
+  #hero-logo {
+    width: 17vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  
+  #logo-title {
+    font-size: 6vw;
+  }
+  
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+
+/* iPhone 12 Pro Max, 13 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3){
+  #hero-logo {
+    width: 17vw;
+  }
+  
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  
+  #logo-title {
+    font-size: 6vw;
+  }
+  
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+
+/* iPad (альбомный режим) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .hero-container{
+    margin: 13vh 0;
   }
 }

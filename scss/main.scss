@@ -1,4 +1,5 @@
 /*---------------------------- COLORS Variables ---------------------------*/
+
 $white: whitesmoke;
 $background-white: whitesmoke;
 $text-white: #FEFEFE;
@@ -13,17 +14,35 @@ $blured-white-border: 2px solid rgba(245, 245, 245, .75);
 $blur-fx: blur(150px);
 
 
+
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-$shadow-l1: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF; //10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
+
+$shadow-l1: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
-$shadow-l3: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
+$shadow-l3: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
 $shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
-$border-radius-h1: 35px;
-$border-radius-h2: 25px;
-$border-radius-buttons: 15px;
+$border-radius-l1: 15px;
+$border-radius-l2: 25px;
+$border-radius-l3: 35px;
 $list-radius: 17px;
 
+
+.neumorphism-l1{
+  box-shadow: $shadow-l1;
+}
+
+.neumorphism-l2{
+  box-shadow: $shadow-l2;
+}
+
+.neumorphism-l2-green{
+  box-shadow: $shadow-green-l2;
+}
+
+
+
 /*---------------------- FONTFACE Settings ----------------------*/
+
 @font-face {
   font-weight: 800;
   font-family: "NT Somic";
@@ -57,6 +76,8 @@ $list-radius: 17px;
   font-display: swap;
 }
 
+
+
 /*---------------------- FONTS Variables ----------------------*/
 
 $main-font: "NT Somic";
@@ -75,17 +96,9 @@ $h3-weight: 600;
 $h3-height: 140%;
 $h3-letter-spacing: -.25px;
 
-$p-size: 14px;
-$p-weight: 400;
-$p-height: 150%;
-
 $t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
-
-$t2-size: 14px;
-$t2-weight: 400;
-$t2-line-height: 150%;
 
 $list-txt-size: 14px;
 $list-txt-weight: 400;
@@ -93,6 +106,7 @@ $list-txt-height: 150%;
 $list-addition-txt-weight: 600;
 
 /*---------------------- GENERAL Settings ----------------------*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -115,6 +129,18 @@ html, body {
   animation-timing-function:cubic-bezier(0.85, 0, 0.15, 1);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+/*---------------------- ANIMATIONS Settings ----------------------*/
+
 /*--- Appear animation ---*/
 @keyframes appear{
   from {
@@ -125,30 +151,10 @@ html, body {
   }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  //height: fit-content;
-  //height: -webkit-fit-content;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  //height: 100%;
-}
 
-.neumorphism-l1{
-  box-shadow: $shadow-l1;
-}
 
-.neumorphism-l2{
-  box-shadow: $shadow-l2;
-}
+/*---------------------- TEXT Settings ----------------------*/
 
-.neumorphism-l2-green{
-  box-shadow: $shadow-green-l2;
-}
-
-/*---------------------- TITLES Settings ----------------------*/
 h1 {
   font-size: $h1-size;
   line-height: $h1-height;
@@ -176,15 +182,22 @@ h3 {
 }
 
 p {
-  font-size: $p-size;
-  font-weight: $p-weight;
-  line-height: $p-height;
+  font-size: $t1-size;
+  font-weight: $t1-weight;
+  line-height: $t1-line-height;
 }
 
+#page-title{
+  display: none;
+}
+
+
+
 /*---------------------- BUTTONS Settings ----------------------*/
+
 button {
   background-color: $accent-color;
-  border-radius: $border-radius-buttons;
+  border-radius: $border-radius-l1;
   color: $text-white;
   font-family: $main-font;
   border: none;
@@ -218,7 +231,7 @@ button.active {
   height: fit-content;
   width: fit-content;
   display: flex;
-  border-radius: $border-radius-buttons;
+  border-radius: $border-radius-l3;
   justify-content: center;
   align-items: center;
   padding: 12px;
@@ -334,7 +347,10 @@ button.active {
 
 }
 
-/*---------------------- HEADER Settings ----------------------*/
+
+
+/*---------------------- DESCKTOP HEADER Settings ----------------------*/
+
 header {
   z-index: 5;
   position: fixed;
@@ -360,8 +376,8 @@ header a{
   text-decoration: none;
   color: $dark-color;
   font-size: 14px;
-  font-weight: $t2-weight;
-  line-height: $t2-line-height;
+  font-weight: $t1-weight;
+  line-height: $t1-line-height;
   text-wrap: nowrap;
 }
 
@@ -383,6 +399,10 @@ header a:hover {
 .navi a:hover {
   color: black;
 }
+
+
+
+/*---------------------- MOBILE HEADER Settings ----------------------*/
 
 #mobile-navi-element{
   display: none;
@@ -505,7 +525,10 @@ header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(7) {
   transition-delay: 0.69s;
 }
 
+
+
 /*---------------------- FOOTER Settings ----------------------*/
+
 footer {
   background-color: $accent-color;
   display: flex;
@@ -514,8 +537,8 @@ footer {
   width: 100%;
   padding: 30px 0;
   font-size: 14px;
-  line-height: $t2-line-height;
-  font-weight: $t2-weight;
+  line-height: $t1-line-height;
+  font-weight: $t1-weight;
 }
 
 .footer-content {
@@ -585,6 +608,7 @@ footer {
 
 
 /*---------------------- list LIST Settings ----------------------*/
+
 .list-container {
   display: flex;
   width: fit-content;
@@ -609,7 +633,7 @@ footer {
   flex-direction: row;
   background-color: $white;
   color: $grey-color;
-  box-shadow: $shadow-l3;
+  box-shadow: $shadow-l1;
   border-radius: $list-radius;
   width: fit-content;
   height: fit-content;
@@ -642,7 +666,7 @@ footer {
 
 .list-dot-addition {
   background-color: $white;
-  box-shadow: $shadow-l3;
+  box-shadow: $shadow-l1;
   width: fit-content;
   height: 100%;
   align-content: center;
@@ -699,7 +723,10 @@ footer {
   line-height: $list-txt-height;
 }
 
+
+
 /*---------------------- SWIPER Settings ----------------------*/
+
 .swiper-pagination-bullet{
   background-color: $grey-color;
   transition-duration: 0.15s;
@@ -711,23 +738,10 @@ footer {
 }
 
 
-#page-title{
-  display: none;
-}
+
 /*---------------------- ADAPTIVITY Settings ----------------------*/
 
-@media (max-width: 1020px){
-  header{
-    top: 20px;
-    left: 0;
-    transform: none;
-    margin: 0 10px;
-    width: 100%;
-    max-width: calc(100% - 20px);
-  }
-}
-
-@media (max-width: 855px){
+@media (max-width: 1024px){
   #desktop-navi-element{
     display: none;
   }
@@ -749,13 +763,15 @@ footer {
     align-items: flex-start;
     background-color: $blured-white;
     backdrop-filter: $blur-fx;
+    left: auto;
+    transform: none;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    display: none;
   }
 }
 
 @media (max-width: 767px){
-  .swiper-button-prev, .swiper-button-next{
-    display: none;
-  }
   .footer-content{
     flex-direction: column-reverse;
   }

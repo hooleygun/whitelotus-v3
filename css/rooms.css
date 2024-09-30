@@ -1,6 +1,17 @@
+@charset "UTF-8";
 /*---------------------------- COLORS Variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 /*---------------------- FONTS Variables ----------------------*/
+/*---------------------- ANIMATIONS Settings ----------------------*/
+/*--- Appear animation ---*/
+@keyframes appear {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .rooms-container {
   display: flex;
   flex-direction: column;
@@ -46,15 +57,6 @@
   animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
-/*--- Appear animation ---*/
-@keyframes appear {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .room-card-galery-container {
   display: flex;
   width: -moz-fit-content;
@@ -118,7 +120,7 @@
   left: 50%;
   transform: translate(-50%);
   background-color: whitesmoke;
-  border-radius: 30px;
+  border-radius: 17px;
   padding: 10px;
 }
 
@@ -234,7 +236,7 @@
 }
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .room-info-container {
     display: flex;
     flex-direction: column;
@@ -253,12 +255,19 @@
   .swiper {
     border-radius: 25px;
   }
+  .mobile-description h2 {
+    display: none;
+  }
 }
 @media (max-width: 1000px) {
   #room-description-calendar-list {
     flex-direction: row;
     flex-wrap: wrap;
     text-wrap: nowrap;
+  }
+  .room-order-container {
+    background: none;
+    padding: 0;
   }
 }
 @media (max-width: 767px) {
@@ -275,12 +284,14 @@
   .room-description-content-container h3, .mobile-description h2 {
     text-align: start;
   }
-  .room-order-container {
-    background: none;
-    padding: 0;
-  }
   #calendar-description-list-dot {
     width: 100%;
+  }
+  .list-dot {
+    width: 100%;
+    justify-content: space-between;
+    height: 62px;
+    border-radius: 21px;
   }
 }
 @media (max-width: 525px) {
@@ -307,10 +318,15 @@
   .rooms-dot.disabled {
     background: none;
   }
+  .list-dot {
+    width: 100%;
+    justify-content: space-between;
+    height: 62px;
+  }
 }
 @media (max-width: 479px) {
   .rooms-container {
-    margin-top: 68px;
+    margin-top: 60px;
     padding-top: 0;
   }
   .list-container {
@@ -361,9 +377,6 @@
     box-shadow: none;
     padding: 0;
   }
-  .mobile-description h2 {
-    display: none;
-  }
   .room-description-content-container {
     min-width: 0;
     width: 100%;
@@ -378,5 +391,82 @@
   }
   .rooms-dot {
     padding: 7px;
+  }
+}
+/*---------------------- DEVICES ADAPTIVITY Settings ----------------------*/
+/* iPhone 5, 5S, 5C, 5 SE (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 90vw;
+  }
+}
+/* iPhone 6, 6S, 7, 8, SE 2020 (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 90vw;
+  }
+}
+/* iPhone 6+, 7+, 8+ (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 90vw;
+  }
+}
+/* iPhone X, XS, 11 Pro, 13 mini (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 75vw;
+  }
+}
+/* iPhone XS Max, XR, 11, 11 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 75vw;
+  }
+}
+/* iPhone 12, 12 Pro, 13, 13 Pro (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 75vw;
+  }
+}
+/* iPhone 12 Pro Max, 13 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  .rooms-container {
+    padding-top: 60px;
+  }
+  .swiper {
+    aspect-ratio: 17/9;
+    width: 75vw;
+  }
+}
+/* iPad (альбомный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .rooms-container {
+    padding-top: 60px;
   }
 }/*# sourceMappingURL=rooms.css.map */

@@ -1,6 +1,17 @@
+@charset "UTF-8";
 /*---------------------------- COLORS Variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 /*---------------------- FONTS Variables ----------------------*/
+/*---------------------- ANIMATIONS Settings ----------------------*/
+/*--- Blur animation ---*/
+@keyframes blur {
+  from {
+    filter: blur(0) opacity(100%);
+  }
+  to {
+    filter: blur(25px) opacity(50%);
+  }
+}
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
   width: 100%;
@@ -16,15 +27,6 @@
   animation-fill-mode: forwards;
 }
 
-/*--- Appear animation ---*/
-@keyframes blur {
-  from {
-    filter: blur(0) opacity(100%);
-  }
-  to {
-    filter: blur(25px) opacity(50%);
-  }
-}
 /*-------------- HERO Settings --------------*/
 .hero-container {
   display: flex;
@@ -73,15 +75,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  /* Full size */
   width: 100%;
   max-width: 2550px;
   margin: 80px 0;
   padding: 0 10px;
   z-index: 1;
-  /* 1000px width */
-  /*width: 1000px;
-  margin: 90px auto;*/
 }
 
 .description-card-xl {
@@ -104,14 +102,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid rgba(254, 254, 254, 0.5);
+  border: 2px solid rgba(245, 245, 245, 0.65);
   border-radius: 20px;
-  background-color: rgba(254, 254, 254, 0.5);
+  background-color: rgba(245, 245, 245, 0.65);
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
   width: 100%;
   padding: 0 20px;
-  /* Dependet geight */
   height: 25%;
   justify-content: center;
 }
@@ -236,7 +233,7 @@
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 25px;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
   padding: 20px;
   overflow: hidden;
 }
@@ -264,7 +261,7 @@
 }
 
 /*-------------- ADAPTIVITY Settings --------------*/
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   #hero-logo {
     width: 25.7vw;
   }
@@ -300,9 +297,6 @@
   }
   .list-dot-l-no-s {
     justify-content: center;
-  }
-  .reviews-container {
-    max-width: 520px;
   }
 }
 @media (max-width: 767px) {
@@ -348,5 +342,117 @@
 @media (max-width: 325px) {
   .list-2-dot-addition-container .list-dot-addition {
     padding: 0px 5px;
+  }
+}
+/*---------------------- DEVICES ADAPTIVITY Settings ----------------------*/
+/* iPhone 5, 5S, 5C, 5 SE (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  #hero-logo {
+    width: 20vw;
+  }
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  #logo-title {
+    font-size: 8vw;
+  }
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+/* iPhone 6, 6S, 7, 8, SE 2020 (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #hero-logo {
+    width: 20vw;
+  }
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  #logo-title {
+    font-size: 8vw;
+  }
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+/* iPhone 6+, 7+, 8+ (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #hero-logo {
+    width: 20vw;
+  }
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  #logo-title {
+    font-size: 8vw;
+  }
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
+/* iPhone X, XS, 11 Pro, 13 mini (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  #hero-logo {
+    width: 17vw;
+  }
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  #logo-title {
+    font-size: 6vw;
+  }
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+/* iPhone XS Max, XR, 11, 11 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  #hero-logo {
+    width: 17vw;
+  }
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  #logo-title {
+    font-size: 6vw;
+  }
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+/* iPhone 12, 12 Pro, 13, 13 Pro (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  #hero-logo {
+    width: 17vw;
+  }
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  #logo-title {
+    font-size: 6vw;
+  }
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+/* iPhone 12 Pro Max, 13 Pro Max (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  #hero-logo {
+    width: 17vw;
+  }
+  #logo-subtitle {
+    font-size: 5vw;
+  }
+  #logo-title {
+    font-size: 6vw;
+  }
+  #logo-slogan {
+    font-size: 3vw;
+  }
+}
+/* iPad (альбомный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .hero-container {
+    margin: 13vh 0;
   }
 }/*# sourceMappingURL=about-us.css.map */

@@ -47,13 +47,13 @@
 
 .contacts-title {
   color: #42D07A;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 21px;
+  font-weight: 600;
   line-height: 140%;
 }
 
 .contacts-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   cursor: pointer;
@@ -63,37 +63,4 @@
 
 #contacts-address {
   text-wrap: wrap;
-}
-
-/*---------------------- ADAPTIVITY Settings ----------------------*/
-/*@media (max-width: 1020px){
-  .contacts-txt-container{
-    display: none;
-  }
-  .contacts-container{
-    width: 100%;
-    max-width: 100vw;
-    height: 95%
-    margin: 0;
-    padding: 0;
-  }
-  .map-block{
-    border-radius: 0;
-  }
-}
-
-@media (max-width: 479px){
-  .contacts-txt-container{
-    display: none;
-  }
-  .contacts-container{
-    width: 100%;
-    max-width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  .map-block{
-    border-radius: 0;
-  }
-}*//*# sourceMappingURL=contacts.css.map */
+}/*# sourceMappingURL=contacts.css.map */
