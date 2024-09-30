@@ -299,7 +299,7 @@ $list-addition-txt-weight: 600;
   height: calc((100% - 30px) / 2) !important;
   width: fit-content;
   border-radius: $border-radius-l2;
-  box-shadow: $shadow-l3;
+  box-shadow: $shadow-l1;
   padding: 20px;
   overflow: hidden;
 }
@@ -410,7 +410,7 @@ $list-addition-txt-weight: 600;
     margin: 0;
   }
   .description-card-xl, #new-hotel-card-xl{
-    aspect-ratio: 45  /60;
+    aspect-ratio: 45 / 60;
   }
 }
 

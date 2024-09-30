@@ -233,7 +233,7 @@
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 25px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   padding: 20px;
   overflow: hidden;
 }
