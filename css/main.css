@@ -74,9 +74,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  height: -moz-fit-content;
-  height: fit-content;
-  height: -webkit-fit-content;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
