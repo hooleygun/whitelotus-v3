@@ -53,7 +53,7 @@
 
 html, body {
   position: absolute;
-  background-color: #F5F5F5;
+  background-color: whitesmoke;
   width: 100%;
   color: #1D1D1F;
   font-family: "NT Somic";
@@ -110,19 +110,21 @@ h2 {
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
+  letter-spacing: -0.75px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 600;
   line-height: 140%;
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
+  letter-spacing: -0.25px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
 }
@@ -132,6 +134,7 @@ button {
   background-color: #42D07A;
   border-radius: 15px;
   color: #FEFEFE;
+  font-family: "NT Somic";
   border: none;
   height: -moz-fit-content;
   height: fit-content;
@@ -381,7 +384,6 @@ header a:hover {
   border-radius: 3px;
   background: #42D07A;
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition-delay: 0s;
 }
 
 .bar.topBar {
@@ -414,7 +416,7 @@ header ul.mobile-menu li.mobile-menu-item a {
   display: block;
   position: relative;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 21px;
   width: 100%;
 }
 
@@ -433,7 +435,6 @@ header.menu-opened .mobile-menu {
 
 header.menu-opened .burger-container #burger .bar {
   transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition-delay: 0.2s;
 }
 
 header.menu-opened .burger-container #burger .bar.topBar {
@@ -604,7 +605,7 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   padding: 5px 15px;
@@ -634,14 +635,15 @@ footer {
 }
 
 .list-dot-addition {
-  background-color: #42D07A;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   align-content: center;
   border-radius: 17px;
-  color: #FEFEFE;
-  font-size: 16px;
+  color: #42D07A;
+  font-size: 14px;
   font-weight: 600;
   line-height: 150%;
   padding: 1px 15px;
@@ -650,13 +652,13 @@ footer {
 }
 
 .list-dot-addition::-moz-selection {
-  color: #42D07A;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: #42D07A;
 }
 
 .list-dot-addition::selection {
-  color: #42D07A;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: #42D07A;
 }
 
 .list-dot-l-no-s {
@@ -692,7 +694,7 @@ footer {
   align-items: center;
   justify-content: center;
   color: #FEFEFE;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
 }
@@ -743,7 +745,7 @@ footer {
     height: 48px;
     padding: 0 15px;
     align-items: flex-start;
-    background-color: rgba(254, 254, 254, 0.65);
+    background-color: rgba(245, 245, 245, 0.65);
     -webkit-backdrop-filter: blur(150px);
             backdrop-filter: blur(150px);
   }
@@ -758,5 +760,10 @@ footer {
   .footer-copyright-container, .footer-social-media-icons-container, .footer-contacts-container {
     align-self: center;
     text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  button {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 $white: whitesmoke;
-$background-white: #F5F5F5;
+$background-white: whitesmoke;
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
@@ -8,8 +8,8 @@ $grey-color: #6E6E73;
 $light-grey-color: #C7C7C7;
 $disabled-accent-color: #84E0A8;
 $red-color: #D14A41;
-$blured-white: rgba(254, 254, 254, .65);
-$blured-white-border: 2px solid rgba(254, 254, 254, .75);
+$blured-white: rgba(245, 245, 245, .65);
+$blured-white-border: 2px solid rgba(245, 245, 245, .75);
 $blur-fx: blur(150px);
 
 
@@ -68,24 +68,26 @@ $h1-height: 100%;
 $h2-size: 42px;
 $h2-weight: 800;
 $h2-height: 100%;
+$h2-letter-spacing: -.75px;
 
-$h3-size: 24px;
+$h3-size: 21px;
 $h3-weight: 600;
 $h3-height: 140%;
+$h3-letter-spacing: -.25px;
 
-$p-size: 16px;
+$p-size: 14px;
 $p-weight: 400;
 $p-height: 150%;
 
-$t1-size: 16px;
+$t1-size: 14px;
 $t1-weight: 400;
 $t1-line-height: 150%;
 
-$t2-size: 16px;
+$t2-size: 14px;
 $t2-weight: 400;
 $t2-line-height: 150%;
 
-$list-txt-size: 16px;
+$list-txt-size: 14px;
 $list-txt-weight: 400;
 $list-txt-height: 150%;
 $list-addition-txt-weight: 600;
@@ -160,6 +162,7 @@ h2 {
   line-height: $h2-height;
   text-align: center;
   width: fit-content;
+  letter-spacing: $h2-letter-spacing;
 }
 
 h3 {
@@ -168,6 +171,7 @@ h3 {
   line-height: $h3-height;
   text-align: center; 
   width: fit-content;
+  letter-spacing: $h3-letter-spacing;
 }
 
 p {
@@ -181,6 +185,7 @@ button {
   background-color: $accent-color;
   border-radius: $border-radius-buttons;
   color: $text-white;
+  font-family: $main-font;
   border: none;
   height: fit-content;
   width: fit-content;
@@ -417,7 +422,6 @@ header a:hover {
   border-radius: 3px;
   background: $accent-color;
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition-delay: 0s;
 }
 
 .bar.topBar {
@@ -450,7 +454,7 @@ header ul.mobile-menu li.mobile-menu-item a {
   display: block;
   position: relative;
   text-decoration: none;
-  font-size: $t1-size;
+  font-size: $h3-size;
   width: 100%;
 }
 
@@ -467,7 +471,6 @@ header.menu-opened .mobile-menu{
 }
 header.menu-opened .burger-container #burger .bar {
   transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition-delay: 0.2s;
 }
 header.menu-opened .burger-container #burger .bar.topBar {
   transform: translateY(5px) rotate(45deg);
@@ -637,12 +640,13 @@ footer {
 }
 
 .list-dot-addition {
-  background-color: $accent-color;
+  background-color: $white;
+  box-shadow: $shadow-l3;
   width: fit-content;
   height: 100%;
   align-content: center;
   border-radius: $list-radius;
-  color: $text-white;
+  color: $accent-color;
   font-size: $list-txt-size;
   font-weight: $list-addition-txt-weight;
   line-height: $list-txt-height;
@@ -652,8 +656,8 @@ footer {
 }
 
 .list-dot-addition::selection {
-  color: $accent-color;
-  background-color: $white;
+  color: $white;
+  background-color: $accent-color;
 }
 
 .list-dot-l-no-s{
@@ -757,5 +761,11 @@ footer {
   .footer-copyright-container, .footer-social-media-icons-container, .footer-contacts-container{
     align-self: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 479px){
+  button{
+    font-size: $t1-size;
   }
 }

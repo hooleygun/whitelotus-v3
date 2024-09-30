@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 120px 0 80px 0;
+  margin: auto;
+  padding: 120px 0 80px 0;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -234,10 +235,6 @@
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/
 @media (max-width: 1020px) {
-  .rooms-container {
-    height: auto;
-    margin: 80px 0;
-  }
   .room-info-container {
     display: flex;
     flex-direction: column;
@@ -295,6 +292,7 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
+    background: linear-gradient(145deg, #dddddd, #ffffff);
     width: calc(100% - 20px);
     justify-content: space-between;
   }
@@ -307,10 +305,14 @@
     background: linear-gradient(145deg, #47df83, #3bbb6e);
   }
   .rooms-dot.disabled {
-    background: whitesmoke;
+    background: none;
   }
 }
 @media (max-width: 479px) {
+  .rooms-container {
+    margin-top: 68px;
+    padding-top: 0;
+  }
   .list-container {
     min-width: 0;
   }
@@ -319,7 +321,7 @@
   }
   .list-dot {
     justify-content: space-between;
-    height: 80px;
+    height: 62px;
     border-radius: 21px;
     width: 100%;
   }
@@ -330,11 +332,8 @@
     width: 100%;
     min-width: 0;
   }
-  .rooms-buttons-chain {
-    flex-wrap: wrap;
-  }
   .rooms-dot {
-    max-width: 100%;
+    padding: 11px;
   }
   .swiper {
     aspect-ratio: 16/17;
@@ -343,7 +342,7 @@
     display: none;
   }
   .room-description-container {
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
   }
   .action-elements-room-description-container {
     justify-content: center;
@@ -362,11 +361,22 @@
     box-shadow: none;
     padding: 0;
   }
+  .mobile-description h2 {
+    display: none;
+  }
   .room-description-content-container {
     min-width: 0;
     width: 100%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
     padding: 10px;
     border-radius: 25px;
+  }
+}
+@media (max-width: 390px) {
+  .rooms-buttons-chain {
+    flex-wrap: wrap;
+  }
+  .rooms-dot {
+    padding: 7px;
   }
 }/*# sourceMappingURL=rooms.css.map */

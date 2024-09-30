@@ -22,7 +22,7 @@
     filter: blur(0) opacity(100%);
   }
   to {
-    filter: blur(25px) opacity(65%);
+    filter: blur(25px) opacity(50%);
   }
 }
 /*-------------- HERO Settings --------------*/
@@ -112,7 +112,7 @@
   width: 100%;
   padding: 0 20px;
   /* Dependet geight */
-  height: 30%;
+  height: 25%;
   justify-content: center;
 }
 
@@ -211,6 +211,59 @@
   width: 100%;
 }
 
+/*-------------- REVIEWS SWIPER Settings --------------*/
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin: 80px 0;
+}
+
+.reviews-swiper-container {
+  width: 100%;
+}
+
+#reviews-swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+#reviews-swiper .swiper-slide {
+  background: whitesmoke;
+  height: calc((100% - 30px) / 2) !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 25px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.review-content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 5px;
+}
+
+.review-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  text-overflow: ellipsis;
+  height: 100%;
+}
+
+.review-date {
+  color: #C7C7C7;
+}
+
+/*-------------- ADAPTIVITY Settings --------------*/
 @media (max-width: 1020px) {
   #hero-logo {
     width: 25.7vw;
@@ -224,14 +277,14 @@
   #logo-slogan {
     font-size: 4.8vw;
   }
-  .card-inscription-xl {
-    height: 35%;
-  }
   #services-lists-wrapper {
     padding: 0 10px;
   }
   .description-cards-grid, .services-container {
     margin: 40px 0;
+  }
+  #reviews-swiper .swiper-slide {
+    max-width: calc(100% - 20px);
   }
 }
 @media (max-width: 937px) {
@@ -247,6 +300,9 @@
   }
   .list-dot-l-no-s {
     justify-content: center;
+  }
+  .reviews-container {
+    max-width: 520px;
   }
 }
 @media (max-width: 767px) {
@@ -268,28 +324,29 @@
   .list-container {
     min-width: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     border-radius: 25px;
+  }
+  .bubbles-list {
+    gap: 20px;
   }
   .list-dot {
     justify-content: space-between;
-    height: 80px;
+    height: 62px;
     border-radius: 21px;
   }
-  .list-dot-l-2-s {
-    height: 109px;
-  }
-  .list-2-dot-addition-container {
-    flex-direction: column;
-    align-items: end;
-  }
-  .list-2-dot-addition-container .list-dot-addition {
-    height: 48px;
+  .card-inscription-xl {
+    height: 35%;
   }
   .list-container h3 {
     margin: 0;
   }
   .description-card-xl, #new-hotel-card-xl {
     aspect-ratio: 45/60;
+  }
+}
+@media (max-width: 325px) {
+  .list-2-dot-addition-container .list-dot-addition {
+    padding: 0px 5px;
   }
 }/*# sourceMappingURL=about-us.css.map */
