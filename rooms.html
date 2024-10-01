@@ -17,6 +17,57 @@
 </head>
 
 <body>
+<div class="order-module-background-wrapper">
+  <div class="order-module-container">
+    <h2>Бронирование</h2>
+    <div class="order-module-content-wrapper">
+      <div class="order-input-content-container">
+        <h3>Имя</h3>
+        <input class="order-input" type="text" name="Фамилия Имя" id="Name" placeholder="Фамилия Имя">
+      </div>
+      <div class="order-input-content-container">
+        <h3>Номер телефона</h3>
+        <input class="order-input" type="tel" name="Телефон" id="Number" placeholder="+7 (999)-999-99-99">
+      </div>
+      <div class="order-input-content-container">
+        <h3>Дата заезда</h3>
+        <input class="order-input" type="date" name="Дата заезда" id="Check-in date"  placeholder="01.10.2024">
+      </div>
+      <div class="order-input-content-container">
+        <h3>Дата везда</h3>
+        <input class="order-input" type="date" name="Дата выезда" id="Departure date" placeholder="02.10.2024">
+      </div>
+      <div class="order-input-content-container">
+        <h3>Общее количество гостей</h3>
+        <input class="order-input" type="number" name="Количество гостей" id="Guests quantity" placeholder="1">
+      </div>
+      <div class="order-input-content-container">
+        <h3>Категория номера</h3>
+        <select class="order-select" name="rooms-category" id="">
+          <option value="Стандарт">Стандарт</option>
+          <option value="Стандарт+">Стандарт+</option>
+          <option value="Семейный">Семейный</option>
+          <option value="Семейный+">Семейный+</option>
+        </select>
+
+        <!--<input class="order-input" list="rooms-category" placeholder="Стандарт">
+          <datalist id="rooms-category">
+            <option value="Стандарт">
+            <option value="Стандарт+">
+            <option value="Семейный">
+            <option value="Семейный+">
+          </datalist>-->
+      </div>
+      <div class="order-input-content-container">
+        <h3>Почта</h3>
+        <input class="order-input" type="email" name="Почта" id="email" placeholder="example@mail.ru">
+      </div>
+    </div>
+    <button class="text-button" id="order-button">Отправить</button>
+  </div>
+</div>
+
+
   <header>
     <button class="mobile-header-button" id="mobile-navi-element">
       <div class="l-icon-container"><img src="content/components-icons/navi/logotype-icon.svg" style="margin-top: 1px;"></div>
