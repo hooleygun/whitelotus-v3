@@ -80,6 +80,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 /*---------------------- ANIMATIONS Settings ----------------------*/
@@ -220,15 +221,6 @@ button.active {
   font-size: 14px;
   font-weight: 400;
   line-height: 155%;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-}
-
-.close-window-button {
-  background-color: whitesmoke;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
@@ -575,7 +567,7 @@ footer {
   background-color: whitesmoke;
 }
 
-/*---------------------- list LIST Settings ----------------------*/
+/*---------------------- LIST Settings ----------------------*/
 .list-container {
   display: flex;
   width: -moz-fit-content;
@@ -717,8 +709,11 @@ footer {
 /*---------------------- ORDER MODULE Settings ----------------------*/
 .order-module-background-wrapper {
   position: absolute;
-  display: none;
+  display: flex;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -727,9 +722,13 @@ footer {
   align-content: center;
   justify-content: center;
   background-color: whitesmoke;
+  opacity: 0%;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
 }
 
 .order-module-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   max-width: 1000px;
@@ -739,6 +738,9 @@ footer {
   border-radius: 35px;
   padding: 40px;
   gap: 40px;
+  margin-bottom: 300vh;
+  transition: all 0.4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
+  transition-delay: 0.2s;
 }
 
 .order-module-content-wrapper {
@@ -774,15 +776,16 @@ footer {
 
 input:focus-visible {
   outline: none;
-  border: solid 2px #42D07A;
+  border: none;
+  box-shadow: inset 0px 0px 0px 2px #42D07A;
 }
 
 .order-select {
   display: flex;
   padding: 15px 10px;
   width: 400px;
-  border: none;
   outline: none;
+  border: none;
   border-radius: 15px;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   background-color: whitesmoke;
@@ -794,7 +797,17 @@ input:focus-visible {
 
 .order-select:focus {
   outline: none;
-  border: solid 2px #42D07A;
+  border: none;
+  box-shadow: inset 0px 0px 0px 2px #42D07A;
+}
+
+#close-order-module-button {
+  background-color: whitesmoke;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/

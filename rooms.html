@@ -17,56 +17,6 @@
 </head>
 
 <body>
-<div class="order-module-background-wrapper">
-  <div class="order-module-container">
-    <h2>Бронирование</h2>
-    <div class="order-module-content-wrapper">
-      <div class="order-input-content-container">
-        <h3>Имя</h3>
-        <input class="order-input" type="text" name="Фамилия Имя" id="Name" placeholder="Фамилия Имя">
-      </div>
-      <div class="order-input-content-container">
-        <h3>Номер телефона</h3>
-        <input class="order-input" type="tel" name="Телефон" id="Number" placeholder="+7 (999)-999-99-99">
-      </div>
-      <div class="order-input-content-container">
-        <h3>Дата заезда</h3>
-        <input class="order-input" type="date" name="Дата заезда" id="Check-in date"  placeholder="01.10.2024">
-      </div>
-      <div class="order-input-content-container">
-        <h3>Дата везда</h3>
-        <input class="order-input" type="date" name="Дата выезда" id="Departure date" placeholder="02.10.2024">
-      </div>
-      <div class="order-input-content-container">
-        <h3>Общее количество гостей</h3>
-        <input class="order-input" type="number" name="Количество гостей" id="Guests quantity" placeholder="1">
-      </div>
-      <div class="order-input-content-container">
-        <h3>Категория номера</h3>
-        <select class="order-select" name="rooms-category" id="">
-          <option value="Стандарт">Стандарт</option>
-          <option value="Стандарт+">Стандарт+</option>
-          <option value="Семейный">Семейный</option>
-          <option value="Семейный+">Семейный+</option>
-        </select>
-
-        <!--<input class="order-input" list="rooms-category" placeholder="Стандарт">
-          <datalist id="rooms-category">
-            <option value="Стандарт">
-            <option value="Стандарт+">
-            <option value="Семейный">
-            <option value="Семейный+">
-          </datalist>-->
-      </div>
-      <div class="order-input-content-container">
-        <h3>Почта</h3>
-        <input class="order-input" type="email" name="Почта" id="email" placeholder="example@mail.ru">
-      </div>
-    </div>
-    <button class="text-button" id="order-button">Отправить</button>
-  </div>
-</div>
-
 
   <header>
     <button class="mobile-header-button" id="mobile-navi-element">
@@ -81,9 +31,9 @@
       <a href="contacts.html">Контакты</a>
     </div>
     <a class="navi-contact" href="tel:+79822201010" id="desktop-navi-element">+7 (982) 220-10-10</a>
-    <button class="text-button neumorphism-l2-green" id="desktop-navi-element">Забронировать</button>
+    <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green" id="desktop-navi-element">Забронировать</button>
     <div class="right-navi-container">
-      <button class="mobile-header-button" id="mobile-navi-element">
+      <button onclick="orderModuleOpen()" class="mobile-header-button" id="mobile-navi-element">
         <div id="l-icon-container"><img src="content/components-icons/navi/order-icon.svg" style="margin-top: 2px;"></div>
       </button>
       <div class="burger-container" id="mobile-navi-element">
@@ -118,11 +68,11 @@
     <div class="room-info-container" id="room-index-1">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-1">
-          <button onclick="roomDescriptionAnimation('1')" class="icon-button close-window-button neumorphism-l2">
+          <button onclick="roomDescriptionAnimation('1')" class="icon-button neumorphism-l2" id="close-room-description-button">
             <div class="l-icon-container">
               <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
             </div>
-            </button>
+          </button>
           <h2>Стандарт</h2>
           <div class="room-description-content-container">
             <h3>Однокомнатный двухместный номер</h3>
@@ -181,7 +131,7 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button neumorphism-l2-green">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
           <button onclick="roomDescriptionAnimation('1')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             Описание
@@ -191,7 +141,7 @@
         </div>
         <div class="room-action-elements-container">
           <div class="room-order-container">
-            <button class="text-button">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button">Забронировать</button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -273,7 +223,7 @@
           </ul>
         </div>
         <div class="action-elements-room-description-container">
-          <button class="text-button neumorphism-l2-green">Забронировать</button>
+          <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
         </div>
       </div>
     </div>
@@ -281,7 +231,7 @@
     <div class="room-info-container" id="room-index-2">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-2">
-          <button onclick="roomDescriptionAnimation('2')" class="icon-button close-window-button neumorphism-l2">
+          <button onclick="roomDescriptionAnimation('2')" class="icon-button neumorphism-l2" id="close-room-description-button">
             <div class="l-icon-container">
             <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
             </div>
@@ -353,7 +303,7 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button neumorphism-l2-green">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
           <button onclick="roomDescriptionAnimation('2')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             Описание
@@ -363,7 +313,7 @@
         </div>
         <div class="room-action-elements-container">
           <div class="room-order-container">
-            <button class="text-button">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button">Забронировать</button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -454,7 +404,7 @@
           </ul>
         </div>
         <div class="action-elements-room-description-container">
-          <button class="text-button neumorphism-l2-green">Забронировать</button>
+          <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
         </div>
       </div>
     </div>
@@ -462,7 +412,7 @@
     <div class="room-info-container" id="room-index-3">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-3">
-          <button onclick="roomDescriptionAnimation('3')" class="icon-button close-window-button neumorphism-l2">
+          <button onclick="roomDescriptionAnimation('3')" class="icon-button neumorphism-l2" id="close-room-description-button">
             <div class="l-icon-container">
               <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
             </div>
@@ -535,7 +485,7 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button neumorphism-l2-green">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
           <button onclick="roomDescriptionAnimation('3')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             Описание
@@ -545,7 +495,7 @@
         </div>
         <div class="room-action-elements-container">
           <div class="room-order-container">
-            <button class="text-button">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button">Забронировать</button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -638,7 +588,7 @@
           </ul>
         </div>
         <div class="action-elements-room-description-container">
-          <button class="text-button neumorphism-l2-green">Забронировать</button>
+          <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
         </div>
       </div>
     </div>
@@ -646,7 +596,7 @@
     <div class="room-info-container" id="room-index-4">
       <div class="swiper" id="room-swiper">
         <div class="room-description-container" id="room-txt-container-4">
-          <button onclick="roomDescriptionAnimation('4')" class="icon-button close-window-button neumorphism-l2">
+          <button onclick="roomDescriptionAnimation('4')" class="icon-button neumorphism-l2" id="close-room-description-button">
             <div class="l-icon-container">
               <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
             </div>
@@ -719,7 +669,7 @@
             </ul>
           </div>
           <div class="action-elements-room-description-container">
-            <button class="text-button neumorphism-l2-green">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
           <button onclick="roomDescriptionAnimation('4')" class="open-description-button text-icon-button" id="button-txt-down-icon">
             Описание
@@ -729,7 +679,7 @@
         </div>
         <div class="room-action-elements-container">
           <div class="room-order-container">
-            <button class="text-button">Забронировать</button>
+            <button onclick="orderModuleOpen()" class="text-button">Забронировать</button>
           </div>
         </div>
         <div class="swiper-wrapper" id="room-swiper-wrapper">
@@ -821,9 +771,56 @@
           </ul>
         </div>
         <div class="action-elements-room-description-container">
-          <button class="text-button neumorphism-l2-green">Забронировать</button>
+          <button onclick="orderModuleOpen()" class="text-button neumorphism-l2-green">Забронировать</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="order-module-background-wrapper" id="order-module-background">
+    <div class="order-module-container" id="order-module">
+      <button onclick="orderModuleClose()" class="icon-button neumorphism-l2" id="close-order-module-button">
+        <div class="l-icon-container">
+          <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+        </div>
+      </button>
+      <h2>Бронирование</h2>
+      <div class="order-module-content-wrapper">
+        <div class="order-input-content-container">
+          <h3>Имя</h3>
+          <input class="order-input" type="text" name="Фамилия Имя" id="order-name" placeholder="Фамилия Имя">
+        </div>
+        <div class="order-input-content-container">
+          <h3>Номер телефона</h3>
+          <input class="order-input" type="tel" name="Телефон" id="order-number" placeholder="+7 (999)-999-99-99">
+        </div>
+        <div class="order-input-content-container">
+          <h3>Дата заезда</h3>
+          <input class="order-input" type="date" name="Дата заезда" id="order-check-in-date"  placeholder="01.10.2024">
+        </div>
+        <div class="order-input-content-container">
+          <h3>Дата везда</h3>
+          <input class="order-input" type="date" name="Дата выезда" id="order-departure-date" placeholder="02.10.2024">
+        </div>
+        <div class="order-input-content-container">
+          <h3>Общее количество гостей</h3>
+          <input class="order-input" type="number" name="Количество гостей" id="order-guests-quantity" placeholder="1">
+        </div>
+        <div class="order-input-content-container">
+          <h3>Категория номера</h3>
+          <select class="order-select" name="rooms-category" id="order-rooms-category">
+            <option value="Стандарт">Стандарт</option>
+            <option value="Стандарт+">Стандарт+</option>
+            <option value="Семейный">Семейный</option>
+            <option value="Семейный+">Семейный+</option>
+          </select>
+        </div>
+        <div class="order-input-content-container">
+          <h3>Почта</h3>
+          <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru">
+        </div>
+      </div>
+      <button class="text-button" id="order-button">Отправить</button>
     </div>
   </div>
 
@@ -852,4 +849,5 @@
 <script src="js/room-swiper.js"></script>
 <script src="js/room_description_animation.js"></script>
 <script src="js/burger-animation.js"></script>
+<script src="js/order-module.js"></script>
 </html>

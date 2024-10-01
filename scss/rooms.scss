@@ -237,6 +237,15 @@ $list-addition-txt-weight: 600;
   box-shadow: $shadow-l2;
 }
 
+#close-room-description-button{
+  background-color: $white;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
 
 
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/

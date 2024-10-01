@@ -135,6 +135,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 
@@ -274,15 +275,6 @@ button.active {
   font-size: 14px;
   font-weight: $t1-weight;
   line-height: 155%;
-  transition-duration: 0.15s;
-  transition-timing-function: ease-out;
-}
-
-.close-window-button{
-  background-color: $white;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 }
@@ -607,7 +599,7 @@ footer {
 
 
 
-/*---------------------- list LIST Settings ----------------------*/
+/*---------------------- LIST Settings ----------------------*/
 
 .list-container {
   display: flex;
@@ -742,8 +734,11 @@ footer {
 /*---------------------- ORDER MODULE Settings ----------------------*/
 .order-module-background-wrapper{
   position: absolute;
-  display: none; //flex
+  display: flex; //flex none
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -752,9 +747,14 @@ footer {
   align-content: center;
   justify-content: center;
   background-color: $white;
+  opacity: 0%;
+  pointer-events: none;
+
+  transition: all .4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
 }
 
 .order-module-container{
+  position: absolute;
   display: flex;
   flex-direction: column;
   max-width: 1000px;
@@ -764,6 +764,9 @@ footer {
   border-radius: $border-radius-l3;
   padding: 40px;
   gap: 40px;
+  margin-bottom: 300vh;
+  transition: all .4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
+  transition-delay: .2s;
 }
 
 .order-module-content-wrapper{
@@ -799,15 +802,16 @@ footer {
 
 input:focus-visible{
   outline: none;
-  border: solid 2px $accent-color;
+  border: none;
+  box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
 
 .order-select{
   display: flex;
   padding: 15px 10px;
   width: 400px;
-  border: none;
   outline: none;
+  border: none;
   border-radius: $border-radius-l1;
   box-shadow: $shadow-l1;
   background-color: $white;
@@ -817,7 +821,18 @@ input:focus-visible{
 
 .order-select:focus{
   outline: none;
-  border: solid 2px $accent-color;
+  border: none;
+  box-shadow: inset 0px 0px 0px 2px $accent-color;
+}
+
+
+#close-order-module-button{
+  background-color: $white;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
 }
 
 

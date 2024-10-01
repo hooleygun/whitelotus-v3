@@ -184,6 +184,15 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
 }
 
+#close-room-description-button {
+  background-color: whitesmoke;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+
 /*---------------------- ROOM ACTION ELEMENTS Settings ----------------------*/
 .room-action-elements-container {
   width: calc(100% - 20px);
