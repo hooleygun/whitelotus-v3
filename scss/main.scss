@@ -807,12 +807,12 @@ footer {
 }
 
 .order-input:invalid{
-  box-shadow: inset 0px 0px 0px 2px $red-color;
+  //box-shadow: inset 0px 0px 0px 2px $red-color;
 }
 
 .order-input:valid{
   background-color: $white;
-  box-shadow: $shadow-l3;
+  box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
 
 .order-input:focus-visible{

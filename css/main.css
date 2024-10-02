@@ -780,13 +780,9 @@ footer {
   background-color: whitesmoke;
 }
 
-.order-input:invalid {
-  box-shadow: inset 0px 0px 0px 2px #D14A41;
-}
-
 .order-input:valid {
   background-color: whitesmoke;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
+  box-shadow: inset 0px 0px 0px 2px #42D07A;
 }
 
 .order-input:focus-visible {
