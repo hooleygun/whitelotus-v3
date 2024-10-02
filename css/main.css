@@ -148,6 +148,12 @@ button {
   transition: all 0.15s ease-out;
 }
 
+button:disabled {
+  background-color: #C7C7C7;
+  color: #6E6E73;
+  pointer-events: none;
+}
+
 button.disabled {
   background-color: whitesmoke;
   color: #6E6E73;
@@ -708,14 +714,14 @@ footer {
 
 /*---------------------- ORDER MODULE Settings ----------------------*/
 .order-module-background-wrapper {
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1000;
   flex-direction: column;
   align-items: center;
@@ -724,6 +730,7 @@ footer {
   background-color: whitesmoke;
   opacity: 0%;
   pointer-events: none;
+  overflow-y: scroll;
   transition: all 0.4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
 }
 
@@ -738,7 +745,6 @@ footer {
   border-radius: 35px;
   padding: 40px;
   gap: 40px;
-  margin-bottom: 300vh;
   transition: all 0.4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
   transition-delay: 0.2s;
 }
@@ -801,6 +807,16 @@ input:focus-visible {
   box-shadow: inset 0px 0px 0px 2px #42D07A;
 }
 
+#acception-radio-button {
+  width: 20px;
+}
+
+.order-action-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 #close-order-module-button {
   background-color: whitesmoke;
   position: absolute;
@@ -808,6 +824,13 @@ input:focus-visible {
   top: 15px;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
+}
+
+#close-mobile-order-module-button {
+  background: none;
+  box-shadow: none;
+  color: #6E6E73;
+  display: none;
 }
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/
@@ -843,6 +866,12 @@ input:focus-visible {
   .order-module-container {
     width: calc(100% - 40px);
   }
+  #close-order-module-button {
+    display: none;
+  }
+  #close-mobile-order-module-button {
+    display: flex;
+  }
 }
 @media (max-width: 940px) {
   .order-input-content-container {
@@ -863,6 +892,7 @@ input:focus-visible {
   .order-module-container {
     width: calc(100% - 20px);
     padding: 10px;
+    top: 20px;
   }
 }
 @media (max-width: 479px) {

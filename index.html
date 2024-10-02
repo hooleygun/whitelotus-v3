@@ -379,7 +379,7 @@
           <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
         </div>
       </button>
-      <h2>Бронирование</h2>
+      <h2>Заявка на бронирование</h2>
       <div class="order-module-content-wrapper">
         <div class="order-input-content-container">
           <h3>Имя</h3>
@@ -414,8 +414,16 @@
           <h3>Почта</h3>
           <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru">
         </div>
+        <div class="acception-container">
+          <input onclick="checkCheckbox()" type="checkbox" id="acception-radio-button" name="accept-rools" value="accept-rools"/>
+          <label for="acception-radio-button">Нажимая на эту кнопку, вы соглашаетесь с правилами проживания в отеле</label>
+        </div>
+        </div>
+        <div class="order-action-buttons-container">
+          <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
+          <button class="text-button" id="order-button" disabled>Отправить</button>
+        </div>
       </div>
-      <button class="text-button" id="order-button">Отправить</button>
     </div>
   </div>
 

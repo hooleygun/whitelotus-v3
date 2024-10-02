@@ -18,8 +18,8 @@ function orderModuleClose() {
   emailInput.value = '';
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";
-  orderModule.style.marginBottom = "300vh";
-  body.style.height = 'auto';
+  orderModule.style.top = "-300vh";
+
   body.style.overflowY = 'auto';
 }
 
@@ -29,8 +29,23 @@ function orderModuleOpen() {
   let orderModule = document.getElementById("order-module");
   orderModuleBackground.style.pointerEvents = "all";
   orderModuleBackground.style.opacity = "100%"
-  orderModule.style.marginBottom = "0";
+  if (window.screen.width <= 768){
+    orderModule.style.top = "20px";
+  }
+  else {
+    orderModule.style.top = "";
+  }
+  
 
-  body.style.height = '100vh';
   body.style.overflowY = 'clip';
+}
+
+function checkCheckbox(){
+  let checkbox = document.getElementById("acception-radio-button");
+  let orderButton = document.getElementById("order-button");
+  if (checkbox.checked) {
+    orderButton.disabled = false;
+  } else {
+    orderButton.disabled = true;
+  }
 }

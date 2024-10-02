@@ -208,6 +208,12 @@ button {
   transition: all .15s ease-out;
 }
 
+button:disabled {
+  background-color: $light-grey-color;
+  color: $grey-color;
+  pointer-events: none;
+}
+
 button.disabled {
   background-color: $white;
   color: $grey-color;
@@ -733,14 +739,14 @@ footer {
 
 /*---------------------- ORDER MODULE Settings ----------------------*/
 .order-module-background-wrapper{
-  position: absolute;
+  position: fixed;
   display: flex; //flex none
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1000;
   flex-direction: column;
   align-items: center;
@@ -749,6 +755,7 @@ footer {
   background-color: $white;
   opacity: 0%;
   pointer-events: none;
+  overflow-y: scroll;
 
   transition: all .4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
 }
@@ -764,7 +771,6 @@ footer {
   border-radius: $border-radius-l3;
   padding: 40px;
   gap: 40px;
-  margin-bottom: 300vh;
   transition: all .4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
   transition-delay: .2s;
 }
@@ -825,6 +831,15 @@ input:focus-visible{
   box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
 
+#acception-radio-button{
+  width: 20px;
+}
+
+.order-action-buttons-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 
 #close-order-module-button{
   background-color: $white;
@@ -833,6 +848,13 @@ input:focus-visible{
   top: 15px;
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
+}
+
+#close-mobile-order-module-button{
+  background: none;
+  box-shadow: none;
+  color: $grey-color;
+  display: none;
 }
 
 
@@ -870,6 +892,12 @@ input:focus-visible{
   .order-module-container{
     width: calc(100% - 40px);
   }
+  #close-order-module-button{
+    display: none;
+  }
+  #close-mobile-order-module-button{
+    display: flex;
+  }
 }
 
 @media (max-width: 940px){
@@ -892,6 +920,7 @@ input:focus-visible{
   .order-module-container{
     width: calc(100% - 20px);
     padding: 10px;
+    top: 20px;
   }
 }
 
