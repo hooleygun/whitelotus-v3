@@ -15,7 +15,7 @@ function orderModuleClose() {
   checkInDateInput.value = '';
   departureDateInput.value = '';
   guestsQuantityInput.value = '';
-  roomsCategoryInput.value = '';
+  //roomsCategoryInput.value = '';
   emailInput.value = '';
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";
@@ -24,12 +24,25 @@ function orderModuleClose() {
   orderButton.disabled = true;
 }
 
-function orderModuleOpen() {
+function orderModuleOpen(categoryValue) {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
   let orderModule = document.getElementById("order-module");
+
+  //let roomCategory = document.getElementById("order-rooms-category");
+  let roomCategory = document.getElementById("order-rooms-category").querySelectorAll('option');
+
   orderModuleBackground.style.pointerEvents = "all";
   orderModuleBackground.style.opacity = "100%"
+
+  for ( i=0; i<roomCategory.length; i++){
+    if (roomCategory[i].value == categoryValue){
+      roomCategory[i].selected = "selected";
+    } else {
+      roomCategory[i].selected = '';
+    }
+  }
+
   if (window.screen.width <= 768){
     orderModule.style.top = "20px";
   }
