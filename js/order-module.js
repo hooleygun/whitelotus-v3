@@ -2,6 +2,7 @@ function orderModuleClose() {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
   let orderModule = document.getElementById("order-module");
+  let orderButton = document.getElementById("order-button");
   let nameInput = document.getElementById("order-name");
   let numberInput = document.getElementById("order-number");
   let checkInDateInput = document.getElementById("order-check-in-date");
@@ -19,8 +20,8 @@ function orderModuleClose() {
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";
   orderModule.style.top = "-300vh";
-
   body.style.overflowY = 'auto';
+  orderButton.disabled = true;
 }
 
 function orderModuleOpen() {
@@ -35,8 +36,6 @@ function orderModuleOpen() {
   else {
     orderModule.style.top = "";
   }
-  
-
   body.style.overflowY = 'clip';
 }
 
