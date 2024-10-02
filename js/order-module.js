@@ -15,7 +15,6 @@ function orderModuleClose() {
   checkInDateInput.value = '';
   departureDateInput.value = '';
   guestsQuantityInput.value = '';
-  //roomsCategoryInput.value = '';
   emailInput.value = '';
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";
@@ -28,8 +27,6 @@ function orderModuleOpen(categoryValue) {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
   let orderModule = document.getElementById("order-module");
-
-  //let roomCategory = document.getElementById("order-rooms-category");
   let roomCategory = document.getElementById("order-rooms-category").querySelectorAll('option');
 
   orderModuleBackground.style.pointerEvents = "all";
