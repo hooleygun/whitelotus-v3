@@ -780,10 +780,10 @@ footer {
   background-color: whitesmoke;
 }
 
-/*.order-input:invalid{
+/*.order-input:invalid, .order-select:invalid{
   //box-shadow: inset 0px 0px 0px 2px $red-color;
 }*/
-.order-input:valid {
+.order-input:valid, .order-select:valid {
   background-color: whitesmoke;
   box-shadow: inset 0px 0px 0px 2px #42D07A;
 }
@@ -791,7 +791,7 @@ footer {
 .order-input:focus-visible {
   outline: none;
   border: none;
-  box-shadow: inset 0px 0px 0px 2px #42D07A;
+  box-shadow: inset 0px 0px 0px 2px #C7C7C7;
 }
 
 .order-select {
@@ -812,7 +812,7 @@ footer {
 .order-select:focus {
   outline: none;
   border: none;
-  box-shadow: inset 0px 0px 0px 2px #42D07A;
+  box-shadow: inset 0px 0px 0px 2px #C7C7C7;
 }
 
 .order-action-buttons-container {
