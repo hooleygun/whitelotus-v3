@@ -806,11 +806,11 @@ footer {
   background-color: $white;
 }
 
-/*.order-input:invalid{
+/*.order-input:invalid, .order-select:invalid{
   //box-shadow: inset 0px 0px 0px 2px $red-color;
 }*/
 
-.order-input:valid{
+.order-input:valid, .order-select:valid{
   background-color: $white;
   box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
@@ -820,8 +820,6 @@ footer {
   border: none;
   box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
-
-
 
 .order-select{
   display: flex;
