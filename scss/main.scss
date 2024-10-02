@@ -806,11 +806,22 @@ footer {
   background-color: $white;
 }
 
-input:focus-visible{
+.order-input:invalid{
+  box-shadow: inset 0px 0px 0px 2px $red-color;
+}
+
+.order-input:valid{
+  background-color: $white;
+  box-shadow: $shadow-l3;
+}
+
+.order-input:focus-visible{
   outline: none;
   border: none;
   box-shadow: inset 0px 0px 0px 2px $accent-color;
 }
+
+
 
 .order-select{
   display: flex;
@@ -829,10 +840,6 @@ input:focus-visible{
   outline: none;
   border: none;
   box-shadow: inset 0px 0px 0px 2px $accent-color;
-}
-
-#acception-radio-button{
-  width: 20px;
 }
 
 .order-action-buttons-container{
@@ -855,6 +862,13 @@ input:focus-visible{
   box-shadow: none;
   color: $grey-color;
   display: none;
+}
+
+.acception-wrapper{
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  gap: 10px;
 }
 
 

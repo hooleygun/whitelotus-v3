@@ -780,7 +780,16 @@ footer {
   background-color: whitesmoke;
 }
 
-input:focus-visible {
+.order-input:invalid {
+  box-shadow: inset 0px 0px 0px 2px #D14A41;
+}
+
+.order-input:valid {
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
+}
+
+.order-input:focus-visible {
   outline: none;
   border: none;
   box-shadow: inset 0px 0px 0px 2px #42D07A;
@@ -807,10 +816,6 @@ input:focus-visible {
   box-shadow: inset 0px 0px 0px 2px #42D07A;
 }
 
-#acception-radio-button {
-  width: 20px;
-}
-
 .order-action-buttons-container {
   display: flex;
   flex-direction: row;
@@ -831,6 +836,14 @@ input:focus-visible {
   box-shadow: none;
   color: #6E6E73;
   display: none;
+}
+
+.acception-wrapper {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/

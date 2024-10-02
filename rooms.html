@@ -788,27 +788,27 @@
       <div class="order-module-content-wrapper">
         <div class="order-input-content-container">
           <h3>Имя</h3>
-          <input class="order-input" type="text" name="Фамилия Имя" id="order-name" placeholder="Фамилия Имя">
+          <input class="order-input" type="text" name="Фамилия Имя" id="order-name" placeholder="Фамилия Имя" minlength="2" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Номер телефона</h3>
-          <input class="order-input" type="tel" name="Телефон" id="order-number" placeholder="+7 (999)-999-99-99">
+          <input class="order-input" data-tel-input type="tel" name="Телефон" id="order-number" placeholder="+7 (999)-999-99-99" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" minlength="10" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Дата заезда</h3>
-          <input class="order-input" type="date" name="Дата заезда" id="order-check-in-date"  placeholder="01.10.2024">
+          <input class="order-input" type="date" name="Дата заезда" id="order-check-in-date" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Дата выезда</h3>
-          <input class="order-input" type="date" name="Дата выезда" id="order-departure-date" placeholder="02.10.2024">
+          <input class="order-input" type="date" name="Дата выезда" id="order-departure-date" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Общее количество гостей</h3>
-          <input class="order-input" type="number" name="Количество гостей" id="order-guests-quantity" placeholder="1">
+          <input class="order-input" type="number" name="Количество гостей" id="order-guests-quantity" value="1" min="1" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Категория номера</h3>
-          <select class="order-select" name="rooms-category" id="order-rooms-category">
+          <select class="order-select" name="rooms-category" id="order-rooms-category" required onchange="validation()">
             <option value="Стандарт">Стандарт</option>
             <option value="Стандарт+">Стандарт+</option>
             <option value="Семейный">Семейный</option>
@@ -817,17 +817,22 @@
         </div>
         <div class="order-input-content-container">
           <h3>Почта</h3>
-          <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru">
+          <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" required onchange="validation()">
+        </div>
+      </div>
+      <div class="acception-wrapper">
+        <div class="acception-container">
+          <input onclick="validation()" type="checkbox" id="order-rools-acception-checkbox" name="rools-accept-rools" value="rools-accept-rools"/>
+          <label for="order-rools-acception-checkbox">Соглашаюсь с правилами проживания в отеле</label>
         </div>
         <div class="acception-container">
-          <input onclick="checkCheckbox()" type="checkbox" id="acception-radio-button" name="accept-rools" value="accept-rools"/>
-          <label for="acception-radio-button">Нажимая на эту кнопку, вы соглашаетесь с правилами проживания в отеле</label>
+          <input onclick="validation()" type="checkbox" id="order-personal-data-acception-radio-button" name="accept-personal-data" value="accept-personal-data"/>
+          <label for="order-personal-data-acception-radio-button">Соглашаюсь с обработкой персональных данных</label>
         </div>
-        </div>
-        <div class="order-action-buttons-container">
-          <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
-          <button class="text-button" id="order-button" disabled>Отправить</button>
-        </div>
+      </div>
+      <div class="order-action-buttons-container">
+        <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
+        <button class="text-button" id="order-button" disabled>Отправить</button>
       </div>
     </div>
   </div>
@@ -858,4 +863,5 @@
 <script src="js/room_description_animation.js"></script>
 <script src="js/burger-animation.js"></script>
 <script src="js/order-module.js"></script>
+<script src="js/number-input.js"></script>
 </html>
