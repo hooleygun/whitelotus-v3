@@ -818,7 +818,7 @@ footer {
 .order-input:focus-visible{
   outline: none;
   border: none;
-  box-shadow: inset 0px 0px 0px 2px $accent-color;
+  box-shadow: inset 0px 0px 0px 2px $light-grey-color;
 }
 
 .order-select{
@@ -837,7 +837,7 @@ footer {
 .order-select:focus{
   outline: none;
   border: none;
-  box-shadow: inset 0px 0px 0px 2px $accent-color;
+  box-shadow: inset 0px 0px 0px 2px $light-grey-color;
 }
 
 .order-action-buttons-container{
