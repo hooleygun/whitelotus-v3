@@ -187,11 +187,12 @@ $list-addition-txt-weight: 600;
 /*-------------- CARDS INDIVIDUAL settings --------------*/
 
 #new-hotel-card-xl {
-  background-image: url("../content/images/description-cards/hotel_view.jpg");
+  background-image: url("../content/images/description-cards/hotel.jpg");
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 54/21;
   max-width: 2530px;
+  background-position-y: 85%;
 }
 
 #bathroom-card-xl {
@@ -199,7 +200,7 @@ $list-addition-txt-weight: 600;
 }
 
 #grill-zone-card-xl {
-  background-image: url("../content/images/description-cards/grill-zone.jpg");
+  background-image: url("../content/images/description-cards/grill.JPG");
 }
 
 #w-fi-card-xl {
@@ -231,7 +232,7 @@ $list-addition-txt-weight: 600;
 }
 
 #kids-zone-card-xl {
-  background-image: url("../content/images/description-cards/kids-zone.jpg");
+  background-image: url("../content/images/description-cards/kids_zone.jpg");
 }
 
 #kitchen-card-xl {
