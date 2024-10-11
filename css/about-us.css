@@ -124,7 +124,7 @@
 
 /*-------------- CARDS INDIVIDUAL settings --------------*/
 #new-hotel-card-xl {
-  background-image: url("../content/images/description-cards/hotel_mini.jpg");
+  background-image: url("../content/images/description-cards/hotel_mini.JPG");
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 54/21;
@@ -171,7 +171,7 @@
 }
 
 #kids-zone-card-xl {
-  background-image: url("../content/images/description-cards/kids_zone_mini.jpg");
+  background-image: url("../content/images/description-cards/kids_zone_mini.JPG");
 }
 
 #kitchen-card-xl {
