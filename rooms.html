@@ -8,35 +8,34 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/rooms.css">
   <!-- Fonts preload -->
-  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_regular.woff2"
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_regular.woff2"
     type="font/woff2">
-  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_medium.woff2"
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_medium.woff2"
     type="font/woff2">
-  <link rel="prefetch" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_bold.woff2" type="font/woff2">
+  <link rel="preload" as="font" fetchpriority="high" href="/fonts/nt_somic/woff2/ntsomic_bold.woff2" type="font/woff2">
   <title>Отель Белый Лотос</title>
 </head>
 
 <body>
 
   <header>
-    <button class="mobile-header-button" id="mobile-navi-element">
-      <div class="l-icon-container"><img src="content/components-icons/navi/logotype-icon.svg" style="margin-top: 1px;"></div>
+    <button class="mobile-header-button mobile-navi-element">
+      <div class="l-icon-container"><img src="content/components-icons/navi/logotype-icon.svg" alt="logotype-icon"></div>
     </button>
-    <a class="navi-contact" href="mailto:contact@whitelotus.ru" id="desktop-navi-element">contact@whitelotus.ru</a>
-    <div class="navi" id="desktop-navi-element">
+    <a class="navi-contact desktop-navi-element" href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a>
+    <div class="navi desktop-navi-element">
       <a href="index.html">Об отеле</a>
       <a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a>
-      <!--<a href="reviews.html">Отзывы</a>-->
       <a href="galery.html">Галерея</a>
       <a href="contacts.html">Контакты</a>
     </div>
-    <a class="navi-contact" href="tel:+79822201010" id="desktop-navi-element">+7 (982) 220-10-10</a>
-    <button onclick="orderModuleOpen('')" class="text-button neumorphism-l2-green" id="desktop-navi-element">Забронировать</button>
+    <a class="navi-contact desktop-navi-element" href="tel:+79822201010">+7 (982) 220-10-10</a>
+    <button onclick="orderModuleOpen('')" class="text-button desktop-navi-element neumorphism-l2-green">Забронировать</button>
     <div class="right-navi-container">
-      <button onclick="orderModuleOpen()" class="mobile-header-button" id="mobile-navi-element">
-        <div id="l-icon-container"><img src="content/components-icons/navi/order-icon.svg" style="margin-top: 2px;"></div>
+      <button onclick="orderModuleOpen()" class="mobile-header-button mobile-navi-element">
+        <div id="l-icon-container"><img src="content/components-icons/navi/order-icon.svg" alt="order-icon"></div>
       </button>
-      <div class="burger-container" id="mobile-navi-element">
+      <div class="burger-container mobile-navi-element">
         <div id="burger">
           <div class="bar topBar"></div>
           <div class="bar btmBar"></div>
@@ -46,7 +45,6 @@
     <ul class="mobile-menu">
       <li class="mobile-menu-item"><a href="index.html">Об отеле</a></li>
       <li class="mobile-menu-item"><a href="rooms.html" style="font-weight: 600; color: #46BF76;">Номера</a></li>
-      <!--<li class="mobile-menu-item"><a href="reviews.html">Отзывы</a></li>-->
       <li class="mobile-menu-item"><a href="galery.html">Галерея</a></li>
       <li class="mobile-menu-item"><a href="contacts.html">Контакты</a></li>
       <li class="mobile-menu-item"><a class="navi-contact" href="mailto:contact@whitelotus.ru">contact@whitelotus.ru</a></li>
@@ -66,11 +64,11 @@
     </div>
 
     <div class="room-info-container" id="room-index-1">
-      <div class="swiper" id="room-swiper">
+      <div class="swiper room-swiper">
         <div class="room-description-container" id="room-txt-container-1">
-          <button onclick="roomDescriptionAnimation('1')" class="icon-button neumorphism-l2" id="close-room-description-button">
+          <button onclick="roomDescriptionAnimation('1')" class="icon-button close-room-description-button neumorphism-l2">
             <div class="l-icon-container">
-              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
             </div>
           </button>
           <h2>Стандарт</h2>
@@ -111,20 +109,20 @@
           </div>
           <div class="room-description-content-container">
             <h3>Календарь цен</h3>
-            <ul class="bubbles-list" id="room-description-calendar-list">
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <ul class="bubbles-list room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июня - 30 июня</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июля - 31 июля</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 августа - 31 августа</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 сентября - 30 сентября</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
@@ -133,10 +131,9 @@
           <div class="action-elements-room-description-container">
             <button onclick="orderModuleOpen('Стандарт')" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('1')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+          <button onclick="roomDescriptionAnimation('1')" class="open-description-button button-txt-down-icon text-icon-button">
             Описание
-            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-1"
-                src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-1" src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg" alt="arrow-down-icon-s-w"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
@@ -144,22 +141,22 @@
             <button onclick="orderModuleOpen('Стандарт')" class="text-button">Забронировать</button>
           </div>
         </div>
-        <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart/bedroom_1.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart/hall.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart/bedroom_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart/bedroom_3.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart/bathroom.jpg"></div>
+        <div class="swiper-wrapper room-swiper-wrapper">
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart/bedroom_1.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart/hall.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart/bedroom_2.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart/bedroom_3.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart/bathroom.jpg" alt="photo"></div>
         </div>
-        <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button" id="button-left-icon">
+        <div class="swiper-pagination room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button button-left-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg" alt="arrow-left-icon-l-w">
           </div>
         </div>
-        <div class="swiper-button-next icon-button" id="button-right-icon">
+        <div class="swiper-button-next icon-button button-right-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg" alt="arrow-right-icon-l-w">
           </div>
         </div>
       </div>
@@ -203,20 +200,20 @@
         </div>
         <div class="room-description-content-container">
           <h3>Календарь цен</h3>
-          <ul class="bubbles-list" id="room-description-calendar-list">
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+          <ul class="bubbles-list room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июня - 30 июня</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июля - 31 июля</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 августа - 31 августа</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 сентября - 30 сентября</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
@@ -229,11 +226,11 @@
     </div>
 
     <div class="room-info-container" id="room-index-2">
-      <div class="swiper" id="room-swiper">
+      <div class="swiper room-swiper">
         <div class="room-description-container" id="room-txt-container-2">
-          <button onclick="roomDescriptionAnimation('2')" class="icon-button neumorphism-l2" id="close-room-description-button">
+          <button onclick="roomDescriptionAnimation('2')" class="icon-button close-room-description-button neumorphism-l2">
             <div class="l-icon-container">
-            <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+            <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
             </div>
           </button>
           <h2>Стандарт+</h2>
@@ -283,20 +280,20 @@
           </div>
           <div class="room-description-content-container">
             <h3>Календарь цен</h3>
-            <ul class="bubbles-list" id="room-description-calendar-list">
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <ul class="bubbles-list room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июня - 30 июня</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июля - 31 июля</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 августа - 31 августа</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 сентября - 30 сентября</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
@@ -305,10 +302,9 @@
           <div class="action-elements-room-description-container">
             <button onclick="orderModuleOpen('Стандарт+')" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('2')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+          <button onclick="roomDescriptionAnimation('2')" class="open-description-button button-txt-down-icon text-icon-button">
             Описание
-            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-2"
-                src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-2" src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg" alt="arrow-down-icon-s-w"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
@@ -316,22 +312,22 @@
             <button onclick="orderModuleOpen('Стандарт+')" class="text-button">Забронировать</button>
           </div>
         </div>
-        <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_1.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_1_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_2_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/standart_plus/hall.jpg"></div>
+        <div class="swiper-wrapper room-swiper-wrapper">
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_1.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_1_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_2.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart_plus/bedroom_2_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/standart_plus/hall.jpg" alt="photo"></div>
         </div>
-        <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button" id="button-left-icon">
+        <div class="swiper-pagination room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button button-left-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg" alt="arrow-left-icon-l-w">
           </div>
         </div>
-        <div class="swiper-button-next icon-button" id="button-right-icon">
+        <div class="swiper-button-next icon-button button-right-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg" alt="arrow-right-icon-l-w">
           </div>
         </div>
       </div>
@@ -384,20 +380,20 @@
         </div>
         <div class="room-description-content-container">
           <h3>Календарь цен</h3>
-          <ul class="bubbles-list" id="room-description-calendar-list">
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+          <ul class="bubbles-list room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июня - 30 июня</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июля - 31 июля</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 августа - 31 августа</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 сентября - 30 сентября</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
@@ -410,11 +406,11 @@
     </div>
 
     <div class="room-info-container" id="room-index-3">
-      <div class="swiper" id="room-swiper">
+      <div class="swiper room-swiper">
         <div class="room-description-container" id="room-txt-container-3">
-          <button onclick="roomDescriptionAnimation('3')" class="icon-button neumorphism-l2" id="close-room-description-button">
+          <button onclick="roomDescriptionAnimation('3')" class="icon-button close-room-description-button neumorphism-l2">
             <div class="l-icon-container">
-              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
             </div>
           </button>
           <h2>Семейный</h2>
@@ -465,20 +461,20 @@
           </div>
           <div class="room-description-content-container">
             <h3>Календарь цен</h3>
-            <ul class="bubbles-list" id="room-description-calendar-list">
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <ul class="bubbles-list room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июня - 30 июня</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июля - 31 июля</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 августа - 31 августа</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 сентября - 30 сентября</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
@@ -487,10 +483,9 @@
           <div class="action-elements-room-description-container">
             <button onclick="orderModuleOpen('Семейный')" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('3')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+          <button onclick="roomDescriptionAnimation('3')" class="open-description-button button-txt-down-icon text-icon-button">
             Описание
-            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-3"
-                src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-3" src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg" alt="arrow-down-icon-s-w"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
@@ -498,23 +493,23 @@
             <button onclick="orderModuleOpen('Семейный')" class="text-button">Забронировать</button>
           </div>
         </div>
-        <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bedroom_1.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bedroom_1_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bedroom_1_rev_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bedroom_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bedroom_2_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family/bathroom.jpg"></div>
+        <div class="swiper-wrapper room-swiper-wrapper">
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bedroom_1.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bedroom_1_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bedroom_1_rev_2.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bedroom_2.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bedroom_2_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family/bathroom.jpg" alt="photo"></div>
         </div>
-        <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button" id="button-left-icon">
+        <div class="swiper-pagination room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button button-left-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg" alt="arrow-left-icon-l-w">
           </div>
         </div>
-        <div class="swiper-button-next icon-button" id="button-right-icon">
+        <div class="swiper-button-next icon-button button-right-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg" alt="arrow-right-icon-l-w">
           </div>
         </div>
       </div>
@@ -568,20 +563,20 @@
         </div>
         <div class="room-description-content-container">
           <h3>Календарь цен</h3>
-          <ul class="bubbles-list" id="room-description-calendar-list">
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+          <ul class="bubbles-list room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июня - 30 июня</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июля - 31 июля</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 августа - 31 августа</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 сентября - 30 сентября</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
@@ -594,11 +589,11 @@
     </div>
 
     <div class="room-info-container" id="room-index-4">
-      <div class="swiper" id="room-swiper">
+      <div class="swiper room-swiper">
         <div class="room-description-container" id="room-txt-container-4">
-          <button onclick="roomDescriptionAnimation('4')" class="icon-button neumorphism-l2" id="close-room-description-button">
+          <button onclick="roomDescriptionAnimation('4')" class="icon-button close-room-description-button neumorphism-l2">
             <div class="l-icon-container">
-              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+              <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
             </div>
           </button>
           <h2>Семейный+</h2>
@@ -649,20 +644,20 @@
           </div>
           <div class="room-description-content-container">
             <h3>Календарь цен</h3>
-            <ul class="bubbles-list" id="room-description-calendar-list">
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <ul class="bubbles-list room-description-calendar-list">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июня - 30 июня</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 июля - 31 июля</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 августа - 31 августа</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
-              <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+              <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
                 <div class="list-text">1 сентября - 30 сентября</div>
                 <div class="list-dot-addition">3000 ₽ / сут.</div>
               </li>
@@ -671,10 +666,9 @@
           <div class="action-elements-room-description-container">
             <button onclick="orderModuleOpen('Семейный+')" class="text-button neumorphism-l2-green">Забронировать</button>
           </div>
-          <button onclick="roomDescriptionAnimation('4')" class="open-description-button text-icon-button" id="button-txt-down-icon">
+          <button onclick="roomDescriptionAnimation('4')" class="open-description-button button-txt-down-icon text-icon-button">
             Описание
-            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-4"
-                src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg"></div>
+            <div class="s-icon-container"><img class="room-description-downup-icon" id="description-donwup-icon-4" src="content/components-icons/buttons/white/small/arrow-down-icon-s-w.svg" alt="arrow-down-icon-s-w"></div>
           </button>
         </div>
         <div class="room-action-elements-container">
@@ -682,22 +676,22 @@
             <button onclick="orderModuleOpen('Семейный+')" class="text-button">Забронировать</button>
           </div>
         </div>
-        <div class="swiper-wrapper" id="room-swiper-wrapper">
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_1.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_1_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_2.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_2_rev.jpg"></div>
-          <div class="swiper-slide" id="room-swiper-slide"><img src="content/images/rooms/family_plus/bathroom.jpg"></div>
+        <div class="swiper-wrapper room-swiper-wrapper">
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_1.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_1_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_2.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family_plus/bedroom_2_rev.jpg" alt="photo"></div>
+          <div class="swiper-slide room-swiper-slide"><img src="content/images/rooms/family_plus/bathroom.jpg" alt="photo"></div>
         </div>
-        <div class="swiper-pagination" id="room-swiper-pagination"></div>
-        <div class="swiper-button-prev icon-button" id="button-left-icon">
+        <div class="swiper-pagination room-swiper-pagination"></div>
+        <div class="swiper-button-prev icon-button button-left-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-left-icon-l-w.svg" alt="arrow-left-icon-l-w">
           </div>
         </div>
-        <div class="swiper-button-next icon-button" id="button-right-icon">
+        <div class="swiper-button-next icon-button button-right-icon">
           <div class="l-icon-container">
-            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg">
+            <img src="content/components-icons/buttons/white/large/arrow-right-icon-l-w.svg" alt="arrow-right-icon-l-w">
           </div>
         </div>
       </div>
@@ -751,20 +745,20 @@
         </div>
         <div class="room-description-content-container">
           <h3>Календарь цен</h3>
-          <ul class="bubbles-list" id="room-description-calendar-list">
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+          <ul class="bubbles-list room-description-calendar-list">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июня - 30 июня</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 июля - 31 июля</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 августа - 31 августа</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
-            <li class="list-dot list-dot-l-1-s" id="calendar-description-list-dot">
+            <li class="list-dot list-dot-l-1-s calendar-description-list-dot">
               <div class="list-text">1 сентября - 30 сентября</div>
               <div class="list-dot-addition">3000 ₽ / сут.</div>
             </li>
@@ -781,7 +775,7 @@
     <div class="order-module-container" id="order-module">
       <button onclick="orderModuleClose()" class="icon-button neumorphism-l2" id="close-order-module-button">
         <div class="l-icon-container">
-          <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg">
+          <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
         </div>
       </button>
       <h2>Заявка на бронирование</h2>
@@ -808,7 +802,7 @@
         </div>
         <div class="order-input-content-container">
           <h3>Категория номера</h3>
-          <select class="order-select" name="rooms-category" id="order-rooms-category" required onchange="validation()">
+          <select class="order-select" size="1" name="rooms-category" id="order-rooms-category" required onchange="validation()">
             <option value="Стандарт">Стандарт</option>
             <option value="Стандарт+">Стандарт+</option>
             <option value="Семейный">Семейный</option>
@@ -822,11 +816,11 @@
       </div>
       <div class="acception-wrapper">
         <div class="acception-container">
-          <input onclick="validation()" type="checkbox" id="order-rools-acception-checkbox" name="rools-accept-rools" value="rools-accept-rools"/>
+          <input onclick="validation()" type="checkbox" id="order-rools-acception-checkbox" name="rools-accept-rools" value="rools-accept-rools">
           <label for="order-rools-acception-checkbox">Соглашаюсь с правилами проживания в отеле</label>
         </div>
         <div class="acception-container">
-          <input onclick="validation()" type="checkbox" id="order-personal-data-acception-radio-button" name="accept-personal-data" value="accept-personal-data"/>
+          <input onclick="validation()" type="checkbox" id="order-personal-data-acception-radio-button" name="accept-personal-data" value="accept-personal-data">
           <label for="order-personal-data-acception-radio-button">Соглашаюсь с обработкой персональных данных</label>
         </div>
       </div>
@@ -843,12 +837,9 @@
         <a href="about-us.html">©&nbsp;Белый&nbsp;Лотос,&nbsp;2024г. -&nbsp;официальный&nbsp;сайт</a>
       </div>
       <div class="footer-social-media-icons-container">
-        <a href="https://vk.com/whitelotushotel" class="social-media-link"><img
-            src="content/components-icons/social-media/white/vk-icon-w.svg" alt="Вконтакте"></a>
-        <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img
-            src="content/components-icons/social-media/white/ya-icon-w.svg" alt="Яндекс.Карты"></a>
-        <a href="https://wa.me/+79822201010" class="social-media-link"><img
-            src="content/components-icons/social-media/white/wa-icon-w.svg" alt="WhatsApp"></a>
+        <a href="https://vk.com/whitelotushotel" class="social-media-link"><img src="content/components-icons/social-media/white/vk-icon-w.svg" alt="Вконтакте"></a>
+        <a href="https://yandex.ru/maps/-/CDWFyZo7" class="social-media-link"><img src="content/components-icons/social-media/white/ya-icon-w.svg" alt="Яндекс.Карты"></a>
+        <a href="https://wa.me/+79822201010" class="social-media-link"><img src="content/components-icons/social-media/white/wa-icon-w.svg" alt="WhatsApp"></a>
       </div>
       <div class="footer-contacts-container">
         <a href="tel:+79822201010">+7&nbsp;(982)&nbsp;220-10-10</a>
@@ -857,11 +848,11 @@
       </div>
     </div>
   </footer>
+  <script src="js/swiper_bundle.js"></script>
+  <script src="js/room-swiper.js"></script>
+  <script src="js/room_description_animation.js"></script>
+  <script src="js/burger-animation.js"></script>
+  <script src="js/order-module.js"></script>
+  <script src="js/number-input.js"></script>
 </body>
-<script src="js/swiper_bundle.js"></script>
-<script src="js/room-swiper.js"></script>
-<script src="js/room_description_animation.js"></script>
-<script src="js/burger-animation.js"></script>
-<script src="js/order-module.js"></script>
-<script src="js/number-input.js"></script>
 </html>

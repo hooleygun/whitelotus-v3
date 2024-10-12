@@ -101,6 +101,7 @@ h1 {
   text-align: center;
   width: -moz-fit-content;
   width: fit-content;
+  text-wrap: nowrap;
 }
 
 h2 {
@@ -244,23 +245,23 @@ button.active {
   transform: scale(1.05);
 }
 
-#button-txt-down-icon:hover .s-icon-container {
+.button-txt-down-icon:hover .s-icon-container {
   transform: translateY(3px);
 }
 
-#button-left-icon:hover .l-icon-container {
+.button-left-icon:hover .l-icon-container {
   transform: translateX(-2px);
 }
 
-#button-right-icon:hover .l-icon-container {
+.button-right-icon:hover .l-icon-container {
   transform: translateX(2px);
 }
 
-#button-left-icon:active .l-icon-container {
+.button-left-icon:active .l-icon-container {
   transform: translateX(-4px);
 }
 
-#button-right-icon:active .l-icon-container {
+.button-right-icon:active .l-icon-container {
   transform: translateX(4px);
 }
 
@@ -345,7 +346,7 @@ header a:hover {
 }
 
 /*---------------------- MOBILE HEADER Settings ----------------------*/
-#mobile-navi-element {
+.mobile-navi-element {
   display: none;
 }
 
@@ -847,10 +848,10 @@ footer {
 
 /*---------------------- ADAPTIVITY Settings ----------------------*/
 @media (max-width: 1024px) {
-  #desktop-navi-element {
+  .desktop-navi-element {
     display: none;
   }
-  #mobile-navi-element {
+  .mobile-navi-element {
     display: flex;
   }
   .right-navi-container {

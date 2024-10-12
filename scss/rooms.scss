@@ -141,14 +141,12 @@ $list-addition-txt-weight: 600;
 }
 
 .room-swiper {
-  width: 1000px;
-  height: 625px;
+  width: 100%;
+  //height: 625px;
   border-radius: $border-radius-l2;
 }
 
-#room-swiper-wrapper {
-  width: 100%;
-  height: 100%;
+.room-swiper-wrapper {
   user-select: none;
 }
 
@@ -166,12 +164,12 @@ $list-addition-txt-weight: 600;
   user-select: none;
 }
 
-#room-swiper-pagination { //#galery-swiper-pagination
+.room-swiper-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  left: 50%;
+  width: fit-content !important;
+  left: 50% !important;
   transform: translate(-50%);
   background-color: $white;
   border-radius: $list-radius;
@@ -237,7 +235,7 @@ $list-addition-txt-weight: 600;
   box-shadow: $shadow-l2;
 }
 
-#close-room-description-button{
+.close-room-description-button{
   background-color: $white;
   position: absolute;
   right: 10px;
@@ -282,7 +280,7 @@ $list-addition-txt-weight: 600;
   left: 20px;
 }
 
-#calendar-description-list-dot {
+.calendar-description-list-dot {
   width: calc(50% - 10px);
   min-width: 355px;
   gap: 0;
@@ -325,7 +323,7 @@ $list-addition-txt-weight: 600;
 }
 
 @media (max-width: 1000px) {
-  #room-description-calendar-list {
+  .room-description-calendar-list {
     flex-direction: row;
     flex-wrap: wrap;
     text-wrap: nowrap;
