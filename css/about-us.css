@@ -34,7 +34,7 @@
   position: absolute;
   z-index: -1;
   animation: blur 1s linear;
-  animation-delay: 9.3s;
+  animation-delay: 6.1s;
   animation-fill-mode: forwards;
 }
 
@@ -56,7 +56,7 @@
           user-select: none;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 10s;
+  animation-delay: 6.2s;
   animation-fill-mode: forwards;
 }
 
@@ -67,7 +67,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 10.2s;
+  animation-delay: 6.3s;
   animation-fill-mode: forwards;
 }
 
@@ -79,7 +79,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 10.4s;
+  animation-delay: 6.4s;
   animation-fill-mode: forwards;
 }
 
@@ -90,7 +90,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 10.6s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 
@@ -149,6 +149,11 @@
   margin-left: 10px;
 }
 
+.list-dot {
+  height: 62px;
+  border-radius: 21px;
+}
+
 /*-------------- CARDS INDIVIDUAL settings --------------*/
 #new-hotel-card-xl {
   background-image: url("../content/images/description-cards/hotel_mini.JPG");
@@ -179,7 +184,7 @@
 }
 
 #parking-zone-card-xl {
-  background-image: url("../content/images/description-cards/parking-zone.jpg");
+  background-image: url("../content/images/description-cards/parking.jpeg");
 }
 
 #parking-zone-card-xl > .card-inscription-xl {
