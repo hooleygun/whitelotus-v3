@@ -62,10 +62,12 @@ $list-addition-txt-weight: 600;
 /*--- Appear animation ---*/
 @keyframes roomContainerAppear{
   from {
-    opacity: .1;
+    //opacity: .1;
+    filter: blur(5px);
   }
   to {
-    opacity: 1;
+    //opacity: 1;
+    filter: blur(0px);
   }
 }
 
@@ -156,11 +158,13 @@ $list-addition-txt-weight: 600;
 
 .swiper-button-next {
   background-color: $accent-color;
+  background: linear-gradient(145deg, #47df83, #3bbb6e);
   user-select: none;
 }
 
 .swiper-button-prev {
   background-color: $accent-color;
+  background: linear-gradient(145deg, #47df83, #3bbb6e);
   user-select: none;
 }
 
@@ -238,6 +242,7 @@ $list-addition-txt-weight: 600;
 
 .close-room-description-button{
   background-color: $white;
+  background: none;
   position: absolute;
   right: 10px;
   top: 10px;

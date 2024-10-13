@@ -60,6 +60,7 @@
 
 .swiper-button-next {
   background-color: #42D07A;
+  background: linear-gradient(145deg, #47df83, #3bbb6e);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -67,6 +68,7 @@
 
 .swiper-button-prev {
   background-color: #42D07A;
+  background: linear-gradient(145deg, #47df83, #3bbb6e);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

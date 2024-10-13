@@ -208,6 +208,8 @@ p {
 
 button {
   background-color: $accent-color;
+  background: linear-gradient(145deg, #47df83, #3bbb6e);
+  box-shadow: $shadow-green-l2;
   border-radius: $border-radius-l1;
   color: $text-white;
   font-family: $main-font;
@@ -217,21 +219,6 @@ button {
   cursor: pointer;
   transition: all .15s ease-out;
 }
-
-button:disabled {
-  background-color: $light-grey-color;
-  color: $grey-color;
-  pointer-events: none;
-}
-
-button.disabled {
-  background-color: $white;
-  color: $grey-color;
-  box-shadow: $shadow-l2;
-}
-
-/*button.active {
-}*/
 
 .text-button {
   padding: 11px 21px;
@@ -323,8 +310,13 @@ button.disabled {
   transform: translateZ(0);
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
-
 }
+
+._noshadow-button{
+  box-shadow: none;
+}
+
+
 
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
 
@@ -356,6 +348,25 @@ button.disabled {
 
   .icon-button:hover .l-icon-container{
     transform: scale(1.25,1.25);
+  }
+
+  button:disabled {
+    background: none;
+    background-color: $light-grey-color;
+    color: $grey-color;
+    pointer-events: none;
+  }
+  
+  button.disabled {
+    background-color: $white;
+    background: linear-gradient(145deg, #dddddd, #ffffff);
+    color: $grey-color;
+    box-shadow: $shadow-l2;
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: scale(1) !important;
   }
 }
 
@@ -822,7 +833,7 @@ footer {
 
 .order-input{
   display: flex;
-  padding: 15px 10px;
+  padding: 15px;
   width: 400px;
   border: none;
   outline: none;
@@ -872,6 +883,7 @@ footer {
 }
 
 #close-order-module-button{
+  background: none;
   background-color: $white;
   position: absolute;
   right: 15px;
