@@ -2,6 +2,8 @@
 
 $white: whitesmoke;
 $background-white: whitesmoke;
+$white-gradient: linear-gradient(145deg, #dddddd, #ffffff);
+$green-gradient: linear-gradient(145deg, #47df83, #3bbb6e);
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
@@ -371,7 +373,7 @@ $list-addition-txt-weight: 600;
 
 
 /*-------------- ADAPTIVITY Settings --------------*/
-@media (max-width: 1280px){
+@media (max-height: 770px){
   #hero-logo {
     height: 20vw;
   }

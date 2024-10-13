@@ -328,6 +328,7 @@
   }
   .rooms-dot.disabled {
     background: none;
+    color: #6E6E73;
   }
   .list-dot {
     width: 100%;

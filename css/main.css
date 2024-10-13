@@ -285,6 +285,10 @@ button {
   box-shadow: none;
 }
 
+._nopress-button:active {
+  transform: translate(-50%, 0) !important;
+}
+
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
 @media (min-width: 1025px) {
   .text-button:hover {

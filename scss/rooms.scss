@@ -2,6 +2,8 @@
 
 $white: whitesmoke;
 $background-white: whitesmoke;
+$white-gradient: linear-gradient(145deg, #dddddd, #ffffff);
+$green-gradient: linear-gradient(145deg, #47df83, #3bbb6e);
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
@@ -158,13 +160,13 @@ $list-addition-txt-weight: 600;
 
 .swiper-button-next {
   background-color: $accent-color;
-  background: linear-gradient(145deg, #47df83, #3bbb6e);
+  background: $green-gradient;
   user-select: none;
 }
 
 .swiper-button-prev {
   background-color: $accent-color;
-  background: linear-gradient(145deg, #47df83, #3bbb6e);
+  background: $green-gradient;
   user-select: none;
 }
 
@@ -374,7 +376,7 @@ $list-addition-txt-weight: 600;
     border-radius: $border-radius-l1;
     overflow: hidden;
     box-shadow: $shadow-l2;
-    background: linear-gradient(145deg, #dddddd, #ffffff);
+    background: $white-gradient;
     width: calc(100% - 20px);
     justify-content: space-between;
   }
@@ -384,10 +386,11 @@ $list-addition-txt-weight: 600;
     width: 100%;
   }
   .rooms-dot{
-    background: linear-gradient(145deg, #47df83, #3bbb6e);
+    background: $green-gradient;
   }
   .rooms-dot.disabled{
     background: none;
+    color: $grey-color;
   }
   .list-dot{
     width: 100%;

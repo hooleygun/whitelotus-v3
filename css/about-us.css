@@ -296,7 +296,7 @@
 }
 
 /*-------------- ADAPTIVITY Settings --------------*/
-@media (max-width: 1280px) {
+@media (max-height: 770px) {
   #hero-logo {
     height: 20vw;
   }

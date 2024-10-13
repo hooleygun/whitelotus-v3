@@ -2,6 +2,8 @@
 
 $white: whitesmoke;
 $background-white: whitesmoke;
+$white-gradient: linear-gradient(145deg, #dddddd, #ffffff);
+$green-gradient: linear-gradient(145deg, #47df83, #3bbb6e);
 $text-white: #FEFEFE;
 $accent-color: #42D07A;
 $dark-color: #1D1D1F;
@@ -233,7 +235,7 @@ p {
 
 button {
   background-color: $accent-color;
-  background: linear-gradient(145deg, #47df83, #3bbb6e);
+  background: $green-gradient;
   box-shadow: $shadow-green-l2;
   border-radius: $border-radius-l1;
   color: $text-white;
@@ -341,6 +343,10 @@ button {
   box-shadow: none;
 }
 
+._nopress-button:active{
+  transform: translate(-50%, 0)!important;
+}
+
 
 
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
@@ -384,7 +390,7 @@ button {
   
   button.disabled {
     background-color: $white;
-    background: linear-gradient(145deg, #dddddd, #ffffff);
+    background: $white-gradient;
     color: $grey-color;
     box-shadow: $shadow-l2;
   }
