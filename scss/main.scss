@@ -76,6 +76,31 @@ $list-radius: 17px;
   font-display: swap;
 }
 
+@font-face {
+  font-weight: 800;
+  font-family: "White Lotus";
+  font-style: normal;
+  src: url("../fonts/white_lotus/woff2/WhiteLotus-Bold.woff2");
+  src: local("White Lotus Bd"), url("../fonts/white_lotus/woff2/WhiteLotus-Bold.woff2") format("web2"), url("../fonts/white_lotus/otf/WhiteLotus-Bold.otf") format("opentype"), url("../fonts/white_lotus/ttf/WhiteLotus-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 600;
+  font-family: "White Lotus";
+  font-style: normal;
+  src: url("../fonts/white_lotus/woff2/");
+  src: local("White Lotus Md"), url("../fonts/white_lotus/woff2/WhiteLotus-Medium.woff2") format("web2"), url("../fonts/white_lotus/otf/WhiteLotus-Medium.otf") format("opentype"), url("../fonts/white_lotus/ttf/WhiteLotus-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-weight: 400;
+  font-family: "White Lotus";
+  font-style: normal;
+  src: url("../fonts/white_lotus/woff2/");
+  src: local("White Lotus Rg"), url("../fonts/white_lotus/woff2//WhiteLotus-Regular.woff2") format("web2"), url("../fonts/white_lotus/otf/WhiteLotus-Regular.otf") format("opentype"), url("../fonts/white_lotus/ttf/WhiteLotus-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
 
 
 /*---------------------- FONTS Variables ----------------------*/
