@@ -154,6 +154,13 @@ body {
   }
 }
 
+/*-------------- SUBGLOBAL Appear Animations Settings --------------*/
+
+._element-active-l1{
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+}
+
 
 
 /*---------------------- TEXT Settings ----------------------*/
@@ -223,9 +230,8 @@ button.disabled {
   box-shadow: $shadow-l2;
 }
 
-button.active {
-  background-color: $accent-color;
-}
+/*button.active {
+}*/
 
 .text-button {
   padding: 11px 21px;
@@ -297,34 +303,6 @@ button.active {
   justify-content: center;
 }
 
-.text-button:hover {
-  transform: scale(1.05);
-}
-
-.button-txt-down-icon:hover .s-icon-container{
-  transform: translateY(3px);
-}
-
-.button-left-icon:hover .l-icon-container{
-  transform: translateX(-2px);
-}
-
-.button-right-icon:hover .l-icon-container{
-  transform: translateX(2px);
-}
-
-.button-left-icon:active .l-icon-container{
-  transform: translateX(-4px);
-}
-
-.button-right-icon:active .l-icon-container{
-  transform: translateX(4px);
-}
-
-.icon-button:hover .l-icon-container{
-  transform: scale(1.25,1.25);
-}
-
 .s-icon-container {
   height: 13px;
   width: 19px;
@@ -346,6 +324,39 @@ button.active {
   transition-duration: 0.15s;
   transition-timing-function: ease-out;
 
+}
+
+/*---------------------- BUTTONS Adaptivity Settings ----------------------*/
+
+
+@media (min-width: 1025px){
+  .text-button:hover {
+    transform: scale(1.05);
+  }
+
+  .button-txt-down-icon:hover .s-icon-container{
+    transform: translateY(3px);
+  }
+
+  .button-left-icon:hover .l-icon-container{
+    transform: translateX(-2px);
+  }
+
+  .button-right-icon:hover .l-icon-container{
+    transform: translateX(2px);
+  }
+
+  .button-left-icon:active .l-icon-container{
+    transform: translateX(-4px);
+  }
+
+  .button-right-icon:active .l-icon-container{
+    transform: translateX(4px);
+  }
+
+  .icon-button:hover .l-icon-container{
+    transform: scale(1.25,1.25);
+  }
 }
 
 

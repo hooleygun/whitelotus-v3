@@ -95,6 +95,12 @@ body {
     filter: blur(0);
   }
 }
+/*-------------- SUBGLOBAL Appear Animations Settings --------------*/
+._element-active-l1 {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+}
+
 /*---------------------- TEXT Settings ----------------------*/
 h1 {
   font-size: 150px;
@@ -163,10 +169,8 @@ button.disabled {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
 }
 
-button.active {
-  background-color: #42D07A;
-}
-
+/*button.active {
+}*/
 .text-button {
   padding: 11px 21px;
   font-size: 14px;
@@ -243,34 +247,6 @@ button.active {
   justify-content: center;
 }
 
-.text-button:hover {
-  transform: scale(1.05);
-}
-
-.button-txt-down-icon:hover .s-icon-container {
-  transform: translateY(3px);
-}
-
-.button-left-icon:hover .l-icon-container {
-  transform: translateX(-2px);
-}
-
-.button-right-icon:hover .l-icon-container {
-  transform: translateX(2px);
-}
-
-.button-left-icon:active .l-icon-container {
-  transform: translateX(-4px);
-}
-
-.button-right-icon:active .l-icon-container {
-  transform: translateX(4px);
-}
-
-.icon-button:hover .l-icon-container {
-  transform: scale(1.25, 1.25);
-}
-
 .s-icon-container {
   height: 13px;
   width: 19px;
@@ -293,6 +269,30 @@ button.active {
   transition-timing-function: ease-out;
 }
 
+/*---------------------- BUTTONS Adaptivity Settings ----------------------*/
+@media (min-width: 1025px) {
+  .text-button:hover {
+    transform: scale(1.05);
+  }
+  .button-txt-down-icon:hover .s-icon-container {
+    transform: translateY(3px);
+  }
+  .button-left-icon:hover .l-icon-container {
+    transform: translateX(-2px);
+  }
+  .button-right-icon:hover .l-icon-container {
+    transform: translateX(2px);
+  }
+  .button-left-icon:active .l-icon-container {
+    transform: translateX(-4px);
+  }
+  .button-right-icon:active .l-icon-container {
+    transform: translateX(4px);
+  }
+  .icon-button:hover .l-icon-container {
+    transform: scale(1.25, 1.25);
+  }
+}
 /*---------------------- DESCKTOP HEADER Settings ----------------------*/
 header {
   z-index: 5;

@@ -13,7 +13,7 @@
   }
 }
 /*--- Appear animation ---*/
-@keyframes appear {
+@keyframes logotypeAppear {
   from {
     opacity: 0%;
     filter: blur(25px);
@@ -34,7 +34,7 @@
   position: absolute;
   z-index: -1;
   animation: blur 1s linear;
-  animation-delay: 9s;
+  animation-delay: 9.3s;
   animation-fill-mode: forwards;
 }
 
@@ -55,7 +55,7 @@
      -moz-user-select: none;
           user-select: none;
   opacity: 0%;
-  animation: appear 0.6s linear;
+  animation: logotypeAppear 0.6s linear;
   animation-delay: 10s;
   animation-fill-mode: forwards;
 }
@@ -66,7 +66,7 @@
   text-transform: uppercase;
   line-height: 100%;
   opacity: 0%;
-  animation: appear 0.6s linear;
+  animation: logotypeAppear 0.6s linear;
   animation-delay: 10.2s;
   animation-fill-mode: forwards;
 }
@@ -78,7 +78,7 @@
   text-transform: uppercase;
   line-height: 100%;
   opacity: 0%;
-  animation: appear 0.6s linear;
+  animation: logotypeAppear 0.6s linear;
   animation-delay: 10.4s;
   animation-fill-mode: forwards;
 }
@@ -89,7 +89,7 @@
   font-weight: 400;
   line-height: 100%;
   opacity: 0%;
-  animation: appear 0.6s linear;
+  animation: logotypeAppear 0.6s linear;
   animation-delay: 10.6s;
   animation-fill-mode: forwards;
 }
@@ -110,15 +110,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("/img/test/test.jpg");
+  background-image: whitesmoke;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   aspect-ratio: 27/21;
   width: 100%;
   max-width: 1255px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.6s ease;
 }
 
 .card-inscription-xl {
@@ -165,7 +168,7 @@
 }
 
 #w-fi-card-xl {
-  background-image: url("../content/images/description-cards/wi-fi.jpg");
+  background-image: url("../content/images/description-cards/wi-fi.jpeg");
 }
 
 #w-fi-card-xl > .card-inscription-xl {
