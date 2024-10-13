@@ -25,7 +25,7 @@
 }
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
-  width: 101%;
+  width: 100%;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -33,7 +33,7 @@
      object-position: bottom;
   position: absolute;
   z-index: -1;
-  animation: blur 1s linear;
+  animation: blur 0.6s linear;
   animation-delay: 6.1s;
   animation-fill-mode: forwards;
 }
@@ -56,7 +56,7 @@
           user-select: none;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.2s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 
@@ -68,7 +68,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.3s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 
@@ -81,7 +81,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.4s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 

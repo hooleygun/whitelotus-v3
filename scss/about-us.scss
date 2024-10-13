@@ -41,7 +41,7 @@ $h1-height: 100%;
 $h2-size: 42px;
 $h2-weight: 800;
 $h2-height: 100%;
-$h2-letter-spacing: -.75px;
+$h2-letter-spacing: -.25px;
 
 $h3-size: 21px;
 $h3-weight: 600;
@@ -88,13 +88,13 @@ $list-addition-txt-weight: 600;
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 
 #background-video {
-  width: 101%;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: bottom;
   position: absolute;
   z-index: -1;
-  animation: blur 1s linear;
+  animation: blur .6s linear;
   animation-delay: 6.1s;
   animation-fill-mode: forwards;
 }
@@ -119,7 +119,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.2s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 
@@ -132,7 +132,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.3s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 
@@ -146,7 +146,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.4s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
 }
 

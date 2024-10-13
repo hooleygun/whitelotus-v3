@@ -409,8 +409,6 @@ header {
   z-index: 5;
   position: fixed;
   top: 20px;
-  //left: 50%;
-  //transform: translate(-50%, -50%);
   background-color: $white;
   display: flex;
   flex-direction: row;
@@ -424,17 +422,6 @@ header {
   align-items: center;
   transition: all .3s ease-in;
   transition-delay: .2s;
-
-  // 2nd variant
-  /*top: 0;
-  left: auto;
-  transform: none;
-  width: 100vw;
-  max-width: none;
-  justify-content: center;
-  gap: 100px;
-  background-color: $blured-white;
-  backdrop-filter: $blur-fx;*/
 }
 
 header a{
@@ -486,7 +473,7 @@ header a:hover {
   width: 48px;
   cursor: pointer;
   transform: rotate(0deg);
-  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.4s cubic-bezier(.4,0,.6,1) .1;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -507,7 +494,7 @@ header a:hover {
   position: relative;
   border-radius: 3px;
   background: $accent-color;
-  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.25s cubic-bezier(.4,0,.6,1);
 }
 
 .bar.topBar {
@@ -524,17 +511,17 @@ header a:hover {
   left: 25px;
   opacity: 0%;
   pointer-events: none;
-  transition: all .3s ease-in;
+  transition: all .24s ease-in;
 }
 
 header ul.mobile-menu li.mobile-menu-item {
-  margin-top: 10px;
+  margin-top: 15px;
   transform: scale(1.15) translateY(-30px);
   opacity: 0;
-  opacity: 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  opacity: 0.6s cubic-bezier(.4,0,.6,1), -webkit-transform 0.5s cubic-bezier(.4,0,.6,1);
+  transition: opacity .3s cubic-bezier(.4,0,.6,1), -webkit-transform 0.5s cubic-bezier(.4,0,.6,1);
+  transition: transform 0.5s cubic-bezier(.4,0,.6,1), opacity 0.6s cubic-bezier(.4,0,.6,1);
+  transition: transform 0.5s cubic-bezier(.4,0,.6,1), opacity 0.6s cubic-bezier(.4,0,.6,1), -webkit-transform 0.5s cubic-bezier(.4,0,.6,1);
 }
 header ul.mobile-menu li.mobile-menu-item a {
   display: block;
@@ -556,7 +543,7 @@ header.menu-opened .mobile-menu{
   transition: all 0s;
 }
 header.menu-opened .burger-container #burger .bar {
-  transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.25s cubic-bezier(.4,0,.6,1);
 }
 header.menu-opened .burger-container #burger .bar.topBar {
   transform: translateY(5px) rotate(45deg);
@@ -569,25 +556,25 @@ header.menu-opened ul.mobile-menu li.mobile-menu-item {
   opacity: 1;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(1) {
-  transition-delay: 0.27s;
+  transition-delay: 0.15s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(2) {
-  transition-delay: 0.34s;
+  transition-delay: 0.2s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(3) {
-  transition-delay: 0.41s;
+  transition-delay: 0.25s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(4) {
-  transition-delay: 0.48s;
+  transition-delay: 0.3s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(5) {
-  transition-delay: 0.55s;
+  transition-delay: 0.35s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(6) {
-  transition-delay: 0.62s;
+  transition-delay: 0.4s;
 }
 header.menu-opened ul.mobile-menu li.mobile-menu-item:nth-child(7) {
-  transition-delay: 0.69s;
+  transition-delay: 0.45s;
 }
 
 
