@@ -125,8 +125,8 @@ html, body {
   color: $dark-color;
   font-family: $main-font;
   scroll-behavior: smooth;
-  animation: appear 1.5s;
-  animation-timing-function:cubic-bezier(0.85, 0, 0.15, 1);
+  animation: appear 1s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
 }
 
 body {
@@ -145,10 +145,12 @@ body {
 /*--- Appear animation ---*/
 @keyframes appear{
   from {
-    opacity: 0;
+    opacity: 25%;
+    filter: blur(25px);
   }
   to {
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -353,9 +355,9 @@ button.active {
 header {
   z-index: 5;
   position: fixed;
-  top: 57px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20px;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
   background-color: $white;
   display: flex;
   flex-direction: row;
@@ -369,6 +371,17 @@ header {
   align-items: center;
   transition: all .3s ease-in;
   transition-delay: .2s;
+
+  // 2nd variant
+  /*top: 0;
+  left: auto;
+  transform: none;
+  width: 100vw;
+  max-width: none;
+  justify-content: center;
+  gap: 100px;
+  background-color: $blured-white;
+  backdrop-filter: $blur-fx;*/
 }
 
 header a{

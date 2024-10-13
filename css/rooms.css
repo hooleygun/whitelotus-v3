@@ -82,7 +82,7 @@
 
 .room-swiper {
   width: 100%;
-  border-radius: 25px;
+  border-radius: 35px;
 }
 
 .room-swiper-wrapper {
@@ -347,6 +347,7 @@
     height: 62px;
     border-radius: 21px;
     width: 100%;
+    min-width: 279px;
   }
   .list-dot-l-1-s .list-text {
     text-wrap: wrap;
@@ -393,11 +394,14 @@
   }
 }
 @media (max-width: 390px) {
-  .rooms-buttons-chain {
-    flex-wrap: wrap;
-  }
   .rooms-dot {
-    padding: 7px;
+    padding: 11px 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 330px) {
+  .rooms-dot {
+    font-size: 12px;
   }
 }
 /*---------------------- DEVICES ADAPTIVITY Settings ----------------------*/

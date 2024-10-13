@@ -143,7 +143,7 @@ $list-addition-txt-weight: 600;
 .room-swiper {
   width: 100%;
   //height: 625px;
-  border-radius: $border-radius-l2;
+  border-radius: $border-radius-l3;
 }
 
 .room-swiper-wrapper {
@@ -407,6 +407,7 @@ $list-addition-txt-weight: 600;
     height: 62px;
     border-radius: 21px;
     width: 100%;
+    min-width: 279px;
   }
 
   .list-dot-l-1-s .list-text{
@@ -459,11 +460,15 @@ $list-addition-txt-weight: 600;
 }
 
 @media (max-width: 390px){
-  .rooms-buttons-chain{
-    flex-wrap: wrap;
-  }
   .rooms-dot{
-    padding: 7px;
+    padding: 11px 0px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 330px){
+  .rooms-dot{
+    font-size: 12px;
   }
 }
 

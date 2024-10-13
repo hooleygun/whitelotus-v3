@@ -9,21 +9,32 @@
     filter: blur(0) opacity(100%);
   }
   to {
-    filter: blur(25px) opacity(50%);
+    filter: blur(25px) opacity(0%);
+  }
+}
+/*--- Appear animation ---*/
+@keyframes appear {
+  from {
+    opacity: 0%;
+    filter: blur(25px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
   }
 }
 /*---------------------- BACKGROUND VIDEO Settings ----------------------*/
 #background-video {
-  width: 100%;
-  height: 80vh;
+  width: 101%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
   position: absolute;
-  z-index: 0;
-  animation: blur 2s linear;
-  animation-delay: 2s;
+  z-index: -1;
+  animation: blur 1s linear;
+  animation-delay: 9s;
   animation-fill-mode: forwards;
 }
 
@@ -31,9 +42,8 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  margin: 25vh 0 20vh 0;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -41,11 +51,13 @@
 }
 
 #hero-logo {
-  width: 300px;
-  height: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  opacity: 0%;
+  animation: appear 0.6s linear;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
 }
 
 #logo-subtitle {
@@ -53,6 +65,10 @@
   font-weight: 600;
   text-transform: uppercase;
   line-height: 100%;
+  opacity: 0%;
+  animation: appear 0.6s linear;
+  animation-delay: 10.2s;
+  animation-fill-mode: forwards;
 }
 
 #logo-title {
@@ -61,6 +77,10 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 100%;
+  opacity: 0%;
+  animation: appear 0.6s linear;
+  animation-delay: 10.4s;
+  animation-fill-mode: forwards;
 }
 
 #logo-slogan {
@@ -68,6 +88,10 @@
   text-transform: none;
   font-weight: 400;
   line-height: 100%;
+  opacity: 0%;
+  animation: appear 0.6s linear;
+  animation-delay: 10.6s;
+  animation-fill-mode: forwards;
 }
 
 /*---------------------- CRADS GRID Settings ----------------------*/
@@ -262,9 +286,23 @@
 }
 
 /*-------------- ADAPTIVITY Settings --------------*/
+@media (max-width: 1280px) {
+  #hero-logo {
+    height: 20vw;
+  }
+  #logo-subtitle {
+    font-size: 6vw;
+  }
+  #logo-title {
+    font-size: 8vw;
+  }
+  #logo-slogan {
+    font-size: 4vw;
+  }
+}
 @media (max-width: 1024px) {
   #hero-logo {
-    width: 25.7vw;
+    height: 25.7vw;
   }
   #logo-subtitle {
     font-size: 8.3vw;
@@ -313,9 +351,6 @@
   }
 }
 @media (max-width: 479px) {
-  .hero-container {
-    margin: 30vh 0;
-  }
   .list-container {
     min-width: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
@@ -349,7 +384,7 @@
 /* iPhone 5, 5S, 5C, 5 SE (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #hero-logo {
-    width: 20vw;
+    height: 20vw;
   }
   #logo-subtitle {
     font-size: 6vw;
@@ -364,7 +399,7 @@
 /* iPhone 6, 6S, 7, 8, SE 2020 (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   #hero-logo {
-    width: 20vw;
+    height: 20vw;
   }
   #logo-subtitle {
     font-size: 6vw;
@@ -379,7 +414,7 @@
 /* iPhone 6+, 7+, 8+ (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
   #hero-logo {
-    width: 20vw;
+    height: 20vw;
   }
   #logo-subtitle {
     font-size: 6vw;
@@ -394,7 +429,7 @@
 /* iPhone X, XS, 11 Pro, 13 mini (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   #hero-logo {
-    width: 17vw;
+    height: 17vw;
   }
   #logo-subtitle {
     font-size: 5vw;
@@ -409,7 +444,7 @@
 /* iPhone XS Max, XR, 11, 11 Pro Max (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
   #hero-logo {
-    width: 17vw;
+    height: 17vw;
   }
   #logo-subtitle {
     font-size: 5vw;
@@ -424,7 +459,7 @@
 /* iPhone 12, 12 Pro, 13, 13 Pro (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
   #hero-logo {
-    width: 17vw;
+    height: 17vw;
   }
   #logo-subtitle {
     font-size: 5vw;
@@ -439,7 +474,7 @@
 /* iPhone 12 Pro Max, 13 Pro Max (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
   #hero-logo {
-    width: 17vw;
+    height: 17vw;
   }
   #logo-subtitle {
     font-size: 5vw;
@@ -451,9 +486,4 @@
     font-size: 3vw;
   }
 }
-/* iPad (альбомный режим) */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .hero-container {
-    margin: 13vh 0;
-  }
-}/*# sourceMappingURL=about-us.css.map */
+/* iPad (альбомный режим) *//*# sourceMappingURL=about-us.css.map */
