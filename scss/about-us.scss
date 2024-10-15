@@ -94,7 +94,7 @@ $list-addition-txt-weight: 600;
   object-position: bottom;
   position: absolute;
   z-index: -1;
-  animation: blur .6s linear;
+  animation: blur .3s linear;
   animation-delay: 6.1s;
   animation-fill-mode: forwards;
 }
@@ -119,7 +119,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.4s;
   animation-fill-mode: forwards;
 }
 
@@ -132,7 +132,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -146,7 +146,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -158,7 +158,7 @@ $list-addition-txt-weight: 600;
 
   opacity: 0%;
   animation: logotypeAppear .6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -188,7 +188,7 @@ $list-addition-txt-weight: 600;
   aspect-ratio: 27/21;
   width: 100%;
   max-width: 1255px;
-  border-radius: 25px;
+  border-radius: $border-radius-l3;
   box-shadow: $shadow-l2;
 
   opacity: 0;
@@ -203,7 +203,7 @@ $list-addition-txt-weight: 600;
   align-items: center;
   text-align: center;
   border: 2px solid $blured-white;
-  border-radius: 20px;
+  border-radius: calc($border-radius-l3 - 2px);
   background-color: $blured-white;
   backdrop-filter: blur(65px);
   width: 100%;;

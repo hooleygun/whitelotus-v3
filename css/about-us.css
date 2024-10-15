@@ -33,7 +33,7 @@
      object-position: bottom;
   position: absolute;
   z-index: -1;
-  animation: blur 0.6s linear;
+  animation: blur 0.3s linear;
   animation-delay: 6.1s;
   animation-fill-mode: forwards;
 }
@@ -56,7 +56,7 @@
           user-select: none;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.4s;
   animation-fill-mode: forwards;
 }
 
@@ -68,7 +68,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -81,7 +81,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -92,7 +92,7 @@
   line-height: 100%;
   opacity: 0%;
   animation: logotypeAppear 0.6s linear;
-  animation-delay: 6.5s;
+  animation-delay: 6.6s;
   animation-fill-mode: forwards;
 }
 
@@ -119,7 +119,7 @@
   aspect-ratio: 27/21;
   width: 100%;
   max-width: 1255px;
-  border-radius: 25px;
+  border-radius: 35px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
   opacity: 0;
   filter: blur(5px);
@@ -132,7 +132,7 @@
   align-items: center;
   text-align: center;
   border: 2px solid rgba(245, 245, 245, 0.65);
-  border-radius: 20px;
+  border-radius: 33px;
   background-color: rgba(245, 245, 245, 0.65);
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
