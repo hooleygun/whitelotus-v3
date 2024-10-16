@@ -296,5 +296,6 @@ function depDateMask() {
   let departureDateMask = depYearMin+"-"+depMonthMin+"-"+depDayMin;
 
   departureDateInput.min = departureDateMask;
+  departureDateInput.value = departureDateMask;
   console.log("Departure date minimum: ", departureDateInput.min);
 }
