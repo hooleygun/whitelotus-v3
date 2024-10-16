@@ -344,7 +344,7 @@
   </section>
 
   <div class="order-module-background-wrapper" id="order-module-background">
-    <div class="order-module-container" id="order-module">
+    <form class="order-module-container" id="order-module" onsubmit="submitForm(event)">
       <button onclick="orderModuleClose()" class="icon-button neumorphism-l2" id="close-order-module-button">
         <div class="l-icon-container">
           <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
@@ -354,27 +354,32 @@
       <div class="order-module-content-wrapper">
         <div class="order-input-content-container">
           <h3>Имя</h3>
-          <input class="order-input" type="text" name="Фамилия Имя" id="order-name" placeholder="Фамилия Имя" minlength="2" required onchange="validation()">
+          <input class="order-input" type="text" name="name" id="order-name" placeholder="Фамилия Имя" minlength="2" onchange="validation()">
+          <span class="form__error" data-for="name"></span>
         </div>
         <div class="order-input-content-container">
           <h3>Номер телефона</h3>
-          <input class="order-input" data-tel-input type="tel" name="Телефон" id="order-number" placeholder="+7 (999)-999-99-99" minlength="11" required onchange="validation()">
+          <input class="order-input" data-tel-input type="tel" name="phone" id="order-number" placeholder="+7 (123) 456-78-90" minlength="11" onchange="validation()">
+          <span class="form__error" data-for="phone"></span>
         </div>
         <div class="order-input-content-container">
           <h3>Дата заезда</h3>
-          <input class="order-input" type="date" name="Дата заезда" id="order-check-in-date" required onchange="validation()">
+          <input class="order-input" type="date" name="checkInDate" id="order-check-in-date" onchange="validation(), depDateMask()">
+          <span class="form__error" data-for="checkInDate"></span>
         </div>
         <div class="order-input-content-container">
           <h3>Дата выезда</h3>
-          <input class="order-input" type="date" name="Дата выезда" id="order-departure-date" required onchange="validation()">
+          <input class="order-input" type="date" name="departureDate" id="order-departure-date" onchange="validation()">
+          <span class="form__error" data-for="departureDate"></span>
         </div>
         <div class="order-input-content-container">
           <h3>Общее количество гостей</h3>
-          <input class="order-input" type="number" name="Количество гостей" id="order-guests-quantity" value="1" min="1" required onchange="validation()">
+          <input class="order-input" type="number" name="guestsQuantity" id="order-guests-quantity" value="1" min="1" onchange="validation()">
+          <span class="form__error" data-for="GuestsQuantity"></span>
         </div>
         <div class="order-input-content-container">
           <h3>Категория номера</h3>
-          <select class="order-select" size="1" name="rooms-category" id="order-rooms-category" required onchange="validation()">
+          <select class="order-select" size="1" name="roomCategory" id="order-rooms-category" onchange="validation()">
             <option value="Стандарт">Стандарт</option>
             <option value="Стандарт+">Стандарт+</option>
             <option value="Семейный">Семейный</option>
@@ -383,7 +388,8 @@
         </div>
         <div class="order-input-content-container">
           <h3>Почта</h3>
-          <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" required onchange="validation()">
+          <input class="order-input" data-email-input type="email" name="email" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" onchange="validation()">
+          <span class="form__error" data-for="email"></span>
         </div>
       </div>
       <div class="acception-wrapper">
@@ -398,9 +404,10 @@
       </div>
       <div class="order-action-buttons-container">
         <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
-        <button class="text-button" id="order-button" disabled>Отправить</button>
+        <button class="text-button" id="order-button" type="submit" disabled>Отправить</button>
+        <div class="form__send-result"></div>
       </div>
-    </div>
+    </form>
   </div>
 
   
@@ -422,11 +429,12 @@
       </div>
     </div>
   </footer>
+  <script src="js/send-form.js"></script>
   <script src="js/global-animations.js"></script>
   <script src="js/swiper_bundle.js"></script>
   <script src="js/reviews-swiper.js"></script>
   <script src="js/burger-animation.js"></script>
   <script src="js/order-module.js"></script>
-  <script src="js/number-input.js"></script>
+  <!--<script src="js/number-input.js"></script>-->
 </body>
 </html>

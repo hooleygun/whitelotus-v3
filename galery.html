@@ -87,27 +87,27 @@
       <div class="order-module-content-wrapper">
         <div class="order-input-content-container">
           <h3>Имя</h3>
-          <input class="order-input" type="text" name="Фамилия Имя" id="order-name" placeholder="Фамилия Имя" minlength="2" required onchange="validation()">
+          <input class="order-input" type="text" name="Name" id="order-name" placeholder="Фамилия Имя" minlength="2" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Номер телефона</h3>
-          <input class="order-input" data-tel-input type="tel" name="Телефон" id="order-number" placeholder="+7 (999)-999-99-99" minlength="11" required onchange="validation()">
+          <input class="order-input" data-tel-input type="tel" name="Tel" id="order-number" placeholder="+7 (999)-999-99-99" minlength="11" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Дата заезда</h3>
-          <input class="order-input" type="date" name="Дата заезда" id="order-check-in-date" required onchange="validation()">
+          <input class="order-input" type="date" name="CheckInDate" id="order-check-in-date" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Дата выезда</h3>
-          <input class="order-input" type="date" name="Дата выезда" id="order-departure-date" required onchange="validation()">
+          <input class="order-input" type="date" name="DepartureDate" id="order-departure-date" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Общее количество гостей</h3>
-          <input class="order-input" type="number" name="Количество гостей" id="order-guests-quantity" value="1" min="1" required onchange="validation()">
+          <input class="order-input" type="number" name="GuestQuant" id="order-guests-quantity" value="1" min="1" required onchange="validation()">
         </div>
         <div class="order-input-content-container">
           <h3>Категория номера</h3>
-          <select class="order-select" size="1" name="rooms-category" id="order-rooms-category" required onchange="validation()">
+          <select class="order-select" size="1" name="RoomsCat" id="order-rooms-category" required onchange="validation()">
             <option value="Стандарт">Стандарт</option>
             <option value="Стандарт+">Стандарт+</option>
             <option value="Семейный">Семейный</option>
@@ -116,7 +116,7 @@
         </div>
         <div class="order-input-content-container">
           <h3>Почта</h3>
-          <input class="order-input" type="email" name="Почта" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" required onchange="validation()">
+          <input class="order-input" type="email" name="Email" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" required onchange="validation()">
         </div>
       </div>
       <div class="acception-wrapper">
