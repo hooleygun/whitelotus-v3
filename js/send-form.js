@@ -62,7 +62,7 @@ async function sendFormData(form, formBtn, formSendResult, formDataObject) {
 }
 
 function validateForm(formData) {
-  const { name, email, phone } = formData;
+  const { name, email, phone, checkInDate, departureDate, guestsQuantity, roomCategory } = formData;
 
   //const phoneRegex = /^\+[0-9]{5,15}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -79,6 +79,22 @@ function validateForm(formData) {
       errors.push({ field: 'phone', message: 'Пожалуйста, введите номер телефона.' });
   } else if (phone.length < 11) { //else if (!phoneRegex.test(phone)) {
       errors.push({ field: 'phone', message: 'Пожалуйста, введите корректный номер телефона. Пример: +7 (123) 456-78-90' });
+  }
+
+  if(!checkInDate) {
+    errors.push({ field: 'checkInDate', message: 'Пожалуйста, введите дату заезда.' });
+  }
+
+  if(!departureDate) {
+    errors.push({ field: 'checkInDate', message: 'Пожалуйста, введите дату выезда.' });
+  }
+
+  if(!guestsQuantity) {
+    errors.push({ field: 'checkInDate', message: 'Пожалуйста, введите общее количество гостей.' });
+  }
+
+  if(!roomCategory) {
+    errors.push({ field: 'checkInDate', message: 'Пожалуйста, выберите категорию номера.' });
   }
 
   if (!email) {

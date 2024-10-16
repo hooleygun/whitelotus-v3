@@ -377,31 +377,6 @@ button {
     transform: translateY(3px);
   }
 
-  /*.button-txt-down-icon:active{
-    box-shadow: none;
-    transform: scale(1);
-  }*/
-
-  /*.button-left-icon:hover .l-icon-container{
-    transform: translateX(-2px);
-  }
-
-  .button-right-icon:hover .l-icon-container{
-    transform: translateX(2px);
-  }
-
-  .button-left-icon:active .l-icon-container{
-    transform: translateX(-4px);
-  }
-
-  .button-right-icon:active .l-icon-container{
-    transform: translateX(4px);
-  }
-
-  .icon-button:hover .l-icon-container{
-    transform: scale(1.15,1.15);
-  }*/
-
   button:disabled {
     background: none;
     background-color: $light-grey-color;

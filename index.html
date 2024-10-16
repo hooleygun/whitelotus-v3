@@ -364,7 +364,7 @@
         </div>
         <div class="order-input-content-container">
           <h3>Дата заезда</h3>
-          <input class="order-input" type="date" name="checkInDate" id="order-check-in-date" onchange="validation(), depDateMask()" required>
+          <input class="order-input" type="date" name="checkInDate" id="order-check-in-date" onchange="validation(), depDateMaskValid('mask')" required>
           <span class="form__error" data-for="checkInDate"></span>
         </div>
         <div class="order-input-content-container">
@@ -405,8 +405,8 @@
       <div class="order-action-buttons-container">
         <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
         <button class="text-button" id="order-button" type="submit" disabled>Отправить</button>
-        <div class="form__send-result"></div>
       </div>
+      <div class="form__send-result"></div>
     </form>
   </div>
 
@@ -429,7 +429,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/send-form.js"></script>
+  <!--<script src="js/send-form.js"></script>-->
   <script src="js/global-animations.js"></script>
   <script src="js/swiper_bundle.js"></script>
   <script src="js/reviews-swiper.js"></script>
