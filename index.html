@@ -344,7 +344,7 @@
   </section>
 
   <div class="order-module-background-wrapper" id="order-module-background">
-    <form class="order-module-container" id="order-module" onsubmit="submitForm(event)">
+    <form action="php/mail.php" method="POST" class="order-module-container" id="order-module">  <!--onsubmit="submitForm(event)">-->
       <button onclick="orderModuleClose()" class="icon-button neumorphism-l2" id="close-order-module-button">
         <div class="l-icon-container">
           <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
