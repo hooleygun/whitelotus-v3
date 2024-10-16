@@ -1,15 +1,23 @@
 /*---------------------------- COLORS Variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
-.neumorphism-l1 {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
+.__shadow-w-l1 {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px #FFFFFF;
 }
 
-.neumorphism-l2 {
+.__shadow-w-l2 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
 }
 
-.neumorphism-l2-green {
-  box-shadow: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
+.__shadow-w-l3 {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15), -10px -10px 15px #FFFFFF;
+}
+
+.__shadow-g-l1 {
+  box-shadow: 3px 3px 5px #A1D0B4, -3px -3px 5px #FFFFFF;
+}
+
+.__noshadow {
+  box-shadow: none;
 }
 
 /*---------------------- FONTFACE Settings ----------------------*/
@@ -170,8 +178,8 @@ p {
 button {
   background-color: #42D07A;
   background: linear-gradient(145deg, #47df83, #3bbb6e);
-  box-shadow: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
   border-radius: 15px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px #FFFFFF;
   color: #FEFEFE;
   font-family: "NT Somic";
   border: none;
@@ -281,8 +289,12 @@ button {
   transition-timing-function: ease-out;
 }
 
-._noshadow-button {
-  box-shadow: none;
+.button-right-icon .l-icon-container {
+  transform: translateX(1px);
+}
+
+.button-left-icon .l-icon-container {
+  transform: translateX(-1px);
 }
 
 ._nopress-button:active {
@@ -290,28 +302,40 @@ button {
 }
 
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
-@media (min-width: 1025px) {
-  .text-button:hover {
+@media (width > 1024px) {
+  button:active, .icon-button:active {
+    box-shadow: none;
+    transform: scale(1) !important;
+  }
+  .text-button:hover, .icon-button:hover {
     transform: scale(1.05);
   }
   .button-txt-down-icon:hover .s-icon-container {
     transform: translateY(3px);
   }
-  .button-left-icon:hover .l-icon-container {
+  /*.button-txt-down-icon:active{
+    box-shadow: none;
+    transform: scale(1);
+  }*/
+  /*.button-left-icon:hover .l-icon-container{
     transform: translateX(-2px);
   }
-  .button-right-icon:hover .l-icon-container {
+
+  .button-right-icon:hover .l-icon-container{
     transform: translateX(2px);
   }
-  .button-left-icon:active .l-icon-container {
+
+  .button-left-icon:active .l-icon-container{
     transform: translateX(-4px);
   }
-  .button-right-icon:active .l-icon-container {
+
+  .button-right-icon:active .l-icon-container{
     transform: translateX(4px);
   }
-  .icon-button:hover .l-icon-container {
-    transform: scale(1.25, 1.25);
-  }
+
+  .icon-button:hover .l-icon-container{
+    transform: scale(1.15,1.15);
+  }*/
   button:disabled {
     background: none;
     background-color: #C7C7C7;
@@ -322,11 +346,6 @@ button {
     background-color: whitesmoke;
     background: linear-gradient(145deg, #dddddd, #ffffff);
     color: #6E6E73;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
-  }
-  button:active {
-    box-shadow: none;
-    transform: scale(1) !important;
   }
 }
 /*---------------------- DESCKTOP HEADER Settings ----------------------*/
@@ -637,12 +656,11 @@ footer {
   flex-direction: row;
   background-color: whitesmoke;
   color: #6E6E73;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
-  border-radius: 17px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px #FFFFFF;
   width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 36px;
   align-items: center;
   font-size: 14px;
   font-weight: 400;
@@ -675,12 +693,12 @@ footer {
 
 .list-dot-addition {
   background-color: whitesmoke;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   align-content: center;
-  border-radius: 17px;
+  border-radius: 21px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px #FFFFFF;
   color: #42D07A;
   font-size: 14px;
   font-weight: 600;
@@ -778,8 +796,8 @@ footer {
   max-width: 1000px;
   width: 100%;
   align-items: center;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
   border-radius: 35px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px #FFFFFF;
   padding: 40px;
   gap: 40px;
   transition: all 0.4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
@@ -812,8 +830,8 @@ footer {
   width: 400px;
   border: none;
   outline: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -3px -3px 5px #FFFFFF;
   border-radius: 15px;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   background-color: whitesmoke;
 }
 
@@ -838,7 +856,6 @@ footer {
   outline: none;
   border: none;
   border-radius: 15px;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), -3px -3px 7px #FFFFFF;
   background-color: whitesmoke;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -870,7 +887,6 @@ footer {
 
 #close-mobile-order-module-button {
   background: none;
-  box-shadow: none;
   color: #6E6E73;
   display: none;
 }

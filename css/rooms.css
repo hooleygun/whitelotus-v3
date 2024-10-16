@@ -171,6 +171,10 @@
   top: calc(100% + 10px);
 }
 
+.open-description-button:active {
+  transform: translate(-50%, 0) scale(0.9) !important;
+}
+
 .mobile-description {
   display: none;
   background-color: whitesmoke;

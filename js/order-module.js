@@ -14,7 +14,7 @@ function orderModuleClose() {
   numberInput.value = '';
   checkInDateInput.value = '';
   departureDateInput.value = '';
-  guestsQuantityInput.value = '';
+  guestsQuantityInput.value = '1';
   emailInput.value = '';
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";

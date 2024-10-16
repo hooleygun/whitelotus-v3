@@ -19,26 +19,33 @@ $blur-fx: blur(150px);
 
 /*---------------------- SHADOWS & BORDERS Variables ----------------------*/
 
-$shadow-l1: 3px 3px 7px rgba(0, 0, 0, .15), -3px -3px 7px #FFFFFF;
+$shadow-l1: 3px 3px 5px rgba(0, 0, 0, .15), -3px -3px 5px #FFFFFF;
 $shadow-l2: 5px 5px 10px rgba(0, 0, 0, .15), -5px -5px 10px #FFFFFF;
 $shadow-l3: 10px 10px 15px rgba(0, 0, 0, .15), -10px -10px 15px #FFFFFF;
-$shadow-green-l2: 5px 5px 10px #A1D0B4, -5px -5px 10px #FFFFFF;
+$shadow-green-l1: 3px 3px 5px #A1D0B4, -3px -3px 5px #FFFFFF;
 $border-radius-l1: 15px;
 $border-radius-l2: 25px;
 $border-radius-l3: 35px;
-$list-radius: 17px;
+$list-radius: 21px;
 
-
-.neumorphism-l1{
+.__shadow-w-l1{
   box-shadow: $shadow-l1;
 }
 
-.neumorphism-l2{
+.__shadow-w-l2{
   box-shadow: $shadow-l2;
 }
 
-.neumorphism-l2-green{
-  box-shadow: $shadow-green-l2;
+.__shadow-w-l3{
+  box-shadow: $shadow-l3;
+}
+
+.__shadow-g-l1{
+  box-shadow: $shadow-green-l1;
+}
+
+.__noshadow{
+  box-shadow: none;
 }
 
 
@@ -236,8 +243,8 @@ p {
 button {
   background-color: $accent-color;
   background: $green-gradient;
-  box-shadow: $shadow-green-l2;
   border-radius: $border-radius-l1;
+  box-shadow: $shadow-l1;
   color: $text-white;
   font-family: $main-font;
   border: none;
@@ -339,8 +346,12 @@ button {
   transition-timing-function: ease-out;
 }
 
-._noshadow-button{
-  box-shadow: none;
+.button-right-icon .l-icon-container{
+  transform: translateX(1px);
+}
+
+.button-left-icon .l-icon-container{
+  transform: translateX(-1px);
 }
 
 ._nopress-button:active{
@@ -352,8 +363,13 @@ button {
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
 
 
-@media (min-width: 1025px){
-  .text-button:hover {
+@media (width > 1024px){
+  button:active, .icon-button:active {
+    box-shadow: none;
+    transform: scale(1) !important;
+  }
+
+  .text-button:hover, .icon-button:hover {
     transform: scale(1.05);
   }
 
@@ -361,7 +377,12 @@ button {
     transform: translateY(3px);
   }
 
-  .button-left-icon:hover .l-icon-container{
+  /*.button-txt-down-icon:active{
+    box-shadow: none;
+    transform: scale(1);
+  }*/
+
+  /*.button-left-icon:hover .l-icon-container{
     transform: translateX(-2px);
   }
 
@@ -378,8 +399,8 @@ button {
   }
 
   .icon-button:hover .l-icon-container{
-    transform: scale(1.25,1.25);
-  }
+    transform: scale(1.15,1.15);
+  }*/
 
   button:disabled {
     background: none;
@@ -392,12 +413,6 @@ button {
     background-color: $white;
     background: $white-gradient;
     color: $grey-color;
-    box-shadow: $shadow-l2;
-  }
-  
-  button:active {
-    box-shadow: none;
-    transform: scale(1) !important;
   }
 }
 
@@ -685,10 +700,10 @@ footer {
   flex-direction: row;
   background-color: $white;
   color: $grey-color;
+  border-radius: $border-radius-l2;
   box-shadow: $shadow-l1;
-  border-radius: $list-radius;
   width: fit-content;
-  height: fit-content;
+  height: 36px;
   align-items: center;
   font-size: $list-txt-size;
   font-weight: $list-txt-weight;
@@ -718,11 +733,11 @@ footer {
 
 .list-dot-addition {
   background-color: $white;
-  box-shadow: $shadow-l1;
   width: fit-content;
   height: 100%;
   align-content: center;
   border-radius: $list-radius;
+  box-shadow: $shadow-l1;
   color: $accent-color;
   font-size: $list-txt-size;
   font-weight: $list-addition-txt-weight;
@@ -821,8 +836,8 @@ footer {
   max-width: 1000px;
   width: 100%;
   align-items: center;
-  box-shadow: $shadow-l2;
   border-radius: $border-radius-l3;
+  box-shadow: $shadow-l2;
   padding: 40px;
   gap: 40px;
   transition: all .4s cubic-bezier(0.15, 0.35, 0.2, 0.95);
@@ -855,8 +870,8 @@ footer {
   width: 400px;
   border: none;
   outline: none;
-  border-radius: $border-radius-l1;
   box-shadow: $shadow-l1;
+  border-radius: $border-radius-l1;
   background-color: $white;
 }
 
@@ -882,7 +897,6 @@ footer {
   outline: none;
   border: none;
   border-radius: $border-radius-l1;
-  box-shadow: $shadow-l1;
   background-color: $white;
   appearance: none;
   background: url(/content/components-icons/buttons/accent/small/arrow-down-icon-s-g.svg)  95% / 4% no-repeat $white;
@@ -912,7 +926,6 @@ footer {
 
 #close-mobile-order-module-button{
   background: none;
-  box-shadow: none;
   color: $grey-color;
   display: none;
 }

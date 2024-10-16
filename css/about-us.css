@@ -147,13 +147,12 @@
 }
 
 .description-card-xl button {
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
 }
 
 .list-dot {
   height: 62px;
-  border-radius: 21px;
 }
 
 /*-------------- CARDS INDIVIDUAL settings --------------*/

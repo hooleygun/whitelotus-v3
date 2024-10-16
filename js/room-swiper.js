@@ -39,13 +39,13 @@ function showRoom(m){
     for(i = 0; i < rooms.length; i++){
         if (i + 1 == Number(m.slice(-1))){
           rooms[i].style.display = "block";
-          roomsDots[i].classList.remove("disabled", "neumorphism-l2-green");
-          roomsDots[i].classList.add("default", "neumorphism-l2-green");
+          roomsDots[i].classList.remove("disabled");
+          roomsDots[i].classList.add("default");
         } else {
           rooms[i].querySelector("div.room-info-container div.room-description-container").style.transform = 'translateY(-100%)';
           rooms[i].querySelector("div.room-info-container .room-description-downup-icon").style.transform ='rotate(0deg)';
-          roomsDots[i].classList.remove("default", "neumorphism-l2-green");
-          roomsDots[i].classList.add("disabled", "neumorphism-l2-green");
+          roomsDots[i].classList.remove("default");
+          roomsDots[i].classList.add("disabled");
           rooms[i].style.display = "none";
         }
     };
