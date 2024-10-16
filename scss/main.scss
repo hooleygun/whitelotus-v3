@@ -983,4 +983,9 @@ footer {
   button{
     font-size: $t1-size;
   }
+  .order-module-container{
+    width: 100vw;
+    box-shadow: none;
+    border-radius: 0px;
+  }
 }

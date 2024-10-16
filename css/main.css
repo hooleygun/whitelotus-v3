@@ -942,4 +942,9 @@ footer {
   button {
     font-size: 14px;
   }
+  .order-module-container {
+    width: 100vw;
+    box-shadow: none;
+    border-radius: 0px;
+  }
 }/*# sourceMappingURL=main.css.map */
