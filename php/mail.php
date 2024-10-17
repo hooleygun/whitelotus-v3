@@ -6,8 +6,7 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$checkInDate = $_POST['checkInDate'];
-$departureDate = $_POST['departureDate'];
+$dateRangeInput = $_POST['dateRangeInput'];
 $guestsQuantity = $_POST['guestsQuantity'];
 $roomCategory = $_POST['roomCategory'];
 $email = $_POST['email'];
@@ -37,7 +36,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 
 $mail->Subject = 'Заявка с сайта';
-$mail->Body    = 'Имя: ' .$name . '<br>Телефон: ' .$phone. '<br>Дата заезда: ' .$checkInDate. '<br>Дата выезда: ' .$departureDate. '<br>Общее количество гостей: ' .$guestsQuantity. '<br>Категория номера: ' .$roomCategory. '<br>Почта: ' .$email;
+$mail->Body    = 'Имя: ' .$name . '<br>Телефон: ' .$phone. '<br>Период проживания: ' .$dateRangeInput. '<br>Общее количество гостей: ' .$guestsQuantity. '<br>Категория номера: ' .$roomCategory. '<br>Почта: ' .$email;
 $mail->AltBody = '';
 
 

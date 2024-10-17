@@ -1,33 +1,31 @@
 function orderModuleClose() {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
-  let orderModule = document.getElementById("order-module");
   let orderButton = document.getElementById("order-button");
-  let nameInput = document.getElementById("order-name");
-  let numberInput = document.getElementById("order-number");
-  let checkInDateInput = document.getElementById("order-check-in-date");
-  let departureDateInput = document.getElementById("order-departure-date");
-  let guestsQuantityInput = document.getElementById("order-guests-quantity");
-  let roomsCategoryInput = document.getElementById("order-rooms-category");
-  let emailInput = document.getElementById("order-email");
-  nameInput.value = '';
-  numberInput.value = '';
-  checkInDateInput.value = '';
-  departureDateInput.value = '';
-  guestsQuantityInput.value = '1';
-  emailInput.value = '';
+  let roolsAccept = document.querySelector('[name="roolsAccept"]');
+  let privacyAcceptInput = document.querySelector('[name="privacyAccept"]');
+  let inputs = document.querySelectorAll('input');
+  for ( i = 0; i < inputs.length; i++){
+    inputs[i].value = '';
+  };
   orderModuleBackground.style.pointerEvents = "none";
   orderModuleBackground.style.opacity = "0%";
-  orderModule.style.top = "-300vh";
+  orderModuleBackground.style.overflowY = 'clip';
   body.style.overflowY = 'auto';
+
+  roolsAccept.checked = false;
+  privacyAcceptInput.checked = false;
   orderButton.disabled = true;
 }
 
 function orderModuleOpen(categoryValue) {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
-  let orderModule = document.getElementById("order-module");
   let roomCategory = document.getElementById("order-rooms-category").querySelectorAll('option');
+  let inputs = document.querySelectorAll('input');
+  for ( i = 0; i < inputs.length; i++){
+    inputs[i].value = '';
+  };
 
   orderModuleBackground.style.pointerEvents = "all";
   orderModuleBackground.style.opacity = "100%"
@@ -39,38 +37,33 @@ function orderModuleOpen(categoryValue) {
       roomCategory[i].selected = '';
     }
   }
-
-  if (window.screen.width <= 768){
-    orderModule.style.top = "20px";
-  }
-  else {
-    orderModule.style.top = "";
-  }
   body.style.overflowY = 'clip';
+  orderModuleBackground.style.overflowY = 'auto';
 }
 
 
 
-//Check
+//Validation
 function validation(){
-  let roolsCheckbox = document.getElementById("order-rools-acception-checkbox");
-  let personalDataCheckbox = document.getElementById("order-personal-data-acception-radio-button");
+  let nameInput = document.querySelector('[name="name"]');
+  let phoneInput = document.querySelector('[name="phone"]');
+  let dateRangeInputInput = document.querySelector('[name="dateRangeInput"]');
+  let guestsQuantityInput = document.querySelector('[name="guestsQuantity"]');
+  let roomCategoryInput = document.querySelector('[name="roomCategory"]');
+  let emailInput = document.querySelector('[name="email"]');
+  let roolsAccept = document.querySelector('[name="roolsAccept"]');
+  let privacyAcceptInput = document.querySelector('[name="privacyAccept"]');
+
   let orderButton = document.getElementById("order-button");
 
-  let nameInput = document.getElementById("order-name");
-  let numberInput = document.getElementById("order-number");
-  let checkInDateInput = document.getElementById("order-check-in-date");
-  let departureDateInput = document.getElementById("order-departure-date");
-  let guestsQuantityInput = document.getElementById("order-guests-quantity");
-  let roomsCategoryInput = document.getElementById("order-rooms-category");
-  let emailInput = document.getElementById("order-email");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if ((roolsCheckbox.checked) && (personalDataCheckbox.checked) && (nameInput.checkValidity() == true) && (numberInput.checkValidity() == true)
-    && (checkInDateInput.checkValidity() == true)  && (departureDateInput.checkValidity() == true)  && (guestsQuantityInput.checkValidity() == true)  && (roomsCategoryInput.checkValidity() == true)  && (emailInput.checkValidity() == true)) {
-    orderButton.disabled = false;
-  } else {
-    orderButton.disabled = true;
+  if ( nameInput.value.length > 2 && privacyAcceptInput.checked && roolsAccept.checked && emailRegex.test(emailInput.value) && guestsQuantityInput.value > 0) {
+    if (roomCategoryInput.value === 'Стандарт' || roomCategoryInput.value === 'Стандарт+' || roomCategoryInput.value === 'Семейный' || roomCategoryInput.value === 'Семейный+') {
+      orderButton.disabled = false;
+    }
   }
+  else orderButton.disabled = true;
 }
 
 
@@ -156,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Date pre-masking
-const date = new Date();
+/*const date = new Date();
 
 let currentDay = date.getDate();
 let currentDayPlusOne = date.getDate() + 1;
@@ -323,10 +316,10 @@ function depDateMaskValid(mode) {
       } else return(false)
     } else return(false)
   }
-}
+}*/
 
 //Send form section
-async function submitForm(event) {
+/*async function submitForm(event) {
   event.preventDefault();
   const form = event.target; //document.querySelector
   const formBtn = document.getElementById('order-button');
@@ -455,4 +448,4 @@ function displayErrors(errors) {
       const errorElement = document.querySelector(`[data-for="${field}"]`);
       errorElement.textContent = message;
   });
-}
+}*/

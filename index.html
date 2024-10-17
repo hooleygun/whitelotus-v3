@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/swiper_bundle.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/about-us.css">
+  <link rel="stylesheet" href="plugins/AirDatePicker/air-datepicker.css">
   <!-- Fonts preload -->
   <link rel="preload" as="font" fetchpriority="high" href="fonts/nt_somic/woff2/ntsomic_regular.woff2"
     type="font/woff2">
@@ -343,70 +344,52 @@
     </div>
   </section>
 
-  <div class="order-module-background-wrapper" id="order-module-background">
-    <form action="php/mail.php" method="POST" class="order-module-container" id="order-module">  <!--onsubmit="submitForm(event)">-->
-      <button onclick="orderModuleClose()" class="icon-button neumorphism-l2" id="close-order-module-button">
-        <div class="l-icon-container">
-          <img src="content/components-icons/buttons/red/large/x-icon-l-r.svg" alt="x-icon-l-r">
+  <div class="order-module-background" id="order-module-background">
+    <form action="php/mail.php" method="POST" class="order-form">
+      <h3>Заявка на бронирование</h3>
+      <div class="order-form-subcontainer">
+        <strong>Ваше имя</strong>
+        <input type="text" name="name" placeholder="Фамилия Имя" class="order-form-input" onchange="validation()">
+      </div>
+      <div class="order-form-subcontainer">
+        <strong>Телефон</strong>
+        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" class="order-form-input" onchange="validation()" data-tel-input>
+      </div>
+      <div class="order-form-subcontainer">
+        <strong>Период проживания</strong>
+        <input type="text" name="dateRangeInput" id="date-range-input" class="order-form-input" onchange="validation()">
+      </div>
+      <div class="order-form-subcontainer">
+        <strong>Общее количество гостей</strong>
+        <input type="number" name="guestsQuantity" placeholder="Количество" min="1" class="order-form-input" onchange="validation()">
+      </div>
+      <div class="order-form-subcontainer">
+        <strong>Категория номера</strong>
+        <select size="1" name="roomCategory" class="order-form-input" id="order-rooms-category" style="padding-inline: 10px;" onchange="validation()">
+          <option value="Стандарт">Стандарт</option>
+          <option value="Стандарт+">Стандарт+</option>
+          <option value="Семейный">Семейный</option>
+          <option value="Семейный+">Семейный+</option>
+        </select>
+      </div>
+      <div class="order-form-subcontainer">
+        <strong>Почта</strong>
+        <input type="text" name="email" placeholder="Почта" class="order-form-input" onchange="validation()">
+      </div>
+      <div class="order-form-subcontainer">
+        <div class="order-form-checkbox-container">
+          <input type="checkbox" name="roolsAccept" onchange="validation()">
+          <label>Соглашаюсь с правилами проживания в отеле</label>
         </div>
-      </button>
-      <h2>Заявка на бронирование</h2>
-      <div class="order-module-content-wrapper">
-        <div class="order-input-content-container">
-          <h3>Имя</h3>
-          <input class="order-input" type="text" name="name" id="order-name" placeholder="Фамилия Имя" minlength="2" onchange="validation()" required>
-          <span class="form__error" data-for="name"></span>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Номер телефона</h3>
-          <input class="order-input" data-tel-input type="tel" name="phone" id="order-number" placeholder="+7 (123) 456-78-90" minlength="11" onchange="validation()" required>
-          <span class="form__error" data-for="phone"></span>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Дата заезда</h3>
-          <input class="order-input" type="date" name="checkInDate" id="order-check-in-date" onchange="validation(), depDateMaskValid('mask')" required>
-          <span class="form__error" data-for="checkInDate"></span>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Дата выезда</h3>
-          <input class="order-input" type="date" name="departureDate" id="order-departure-date" onchange="validation()" required>
-          <span class="form__error" data-for="departureDate"></span>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Общее количество гостей</h3>
-          <input class="order-input" type="number" name="guestsQuantity" id="order-guests-quantity" value="1" min="1" onchange="validation()" required>
-          <span class="form__error" data-for="GuestsQuantity"></span>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Категория номера</h3>
-          <select class="order-select" size="1" name="roomCategory" id="order-rooms-category" onchange="validation()" required>
-            <option value="Стандарт">Стандарт</option>
-            <option value="Стандарт+">Стандарт+</option>
-            <option value="Семейный">Семейный</option>
-            <option value="Семейный+">Семейный+</option>
-          </select>
-        </div>
-        <div class="order-input-content-container">
-          <h3>Почта</h3>
-          <input class="order-input" data-email-input type="email" name="email" id="order-email" placeholder="example@mail.ru" pattern="^\S+@\S+\.\S+$" onchange="validation()" required>
-          <span class="form__error" data-for="email"></span>
+        <div class="order-form-checkbox-container">
+          <input type="checkbox" name="privacyAccept" onchange="validation()">
+          <label>Соглашаюсь с обработкой персональных данных</label>
         </div>
       </div>
-      <div class="acception-wrapper">
-        <div class="acception-container">
-          <input onclick="validation()" type="checkbox" id="order-rools-acception-checkbox" name="rools-accept-rools" value="rools-accept-rools">
-          <label for="order-rools-acception-checkbox">Соглашаюсь с правилами проживания в отеле</label>
-        </div>
-        <div class="acception-container">
-          <input onclick="validation()" type="checkbox" id="order-personal-data-acception-radio-button" name="accept-personal-data" value="accept-personal-data">
-          <label for="order-personal-data-acception-radio-button">Соглашаюсь с обработкой персональных данных</label>
-        </div>
-      </div>
-      <div class="order-action-buttons-container">
-        <button onclick="orderModuleClose()" class="text-button neumorphism-l2" id="close-mobile-order-module-button">Отменить</button>
+      <div class="order-form-submit-container">
+        <button onclick="event.preventDefault(); orderModuleClose()" class="text-button" id="close-order-module-button">Отменить</button>
         <button class="text-button" id="order-button" type="submit" disabled>Отправить</button>
       </div>
-      <div class="form__send-result"></div>
     </form>
   </div>
 
@@ -429,11 +412,11 @@
       </div>
     </div>
   </footer>
-  <!--<script src="js/send-form.js"></script>-->
   <script src="js/global-animations.js"></script>
   <script src="js/swiper_bundle.js"></script>
   <script src="js/reviews-swiper.js"></script>
   <script src="js/burger-animation.js"></script>
   <script src="js/order-module.js"></script>
+  <script src="plugins/AirDatePicker/air-datepicker.js"></script>
 </body>
 </html>
