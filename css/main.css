@@ -317,6 +317,7 @@ button {
     background: none;
     background-color: #C7C7C7;
     color: #6E6E73;
+    box-shadow: none;
     pointer-events: none;
   }
   button.disabled {

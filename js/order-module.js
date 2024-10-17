@@ -22,6 +22,8 @@ function orderModuleOpen(categoryValue) {
   let body = document.querySelector('body');
   let orderModuleBackground = document.getElementById("order-module-background");
   let roomCategory = document.getElementById("order-rooms-category").querySelectorAll('option');
+  let roolsAccept = document.querySelector('[name="roolsAccept"]');
+  let privacyAcceptInput = document.querySelector('[name="privacyAccept"]');
   let inputs = document.querySelectorAll('input');
   for ( i = 0; i < inputs.length; i++){
     inputs[i].value = '';
@@ -39,6 +41,8 @@ function orderModuleOpen(categoryValue) {
   }
   body.style.overflowY = 'clip';
   orderModuleBackground.style.overflowY = 'auto';
+  roolsAccept.checked = false;
+  privacyAcceptInput.checked = false;
 }
 
 
