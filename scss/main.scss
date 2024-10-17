@@ -845,10 +845,14 @@ footer {
   width: 400px;
   border: none;
   outline: none;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
   box-shadow: $shadow-l1;
   -webkit-box-shadow: $shadow-l1;
   -moz-box-shadow: $shadow-l1;
   border-radius: $border-radius-l1;
+
   background-color: $white;
 }
 
