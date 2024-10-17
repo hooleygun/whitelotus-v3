@@ -846,6 +846,8 @@ footer {
   border: none;
   outline: none;
   box-shadow: $shadow-l1;
+  -webkit-box-shadow: $shadow-l1;
+  -moz-box-shadow: $shadow-l1;
   border-radius: $border-radius-l1;
   background-color: $white;
 }
