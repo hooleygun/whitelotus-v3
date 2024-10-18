@@ -359,6 +359,21 @@ button {
 }
 
 
+button:disabled {
+  background: none;
+  background-color: $light-grey-color;
+  color: $grey-color;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+button.disabled {
+  background-color: $white;
+  background: $white-gradient;
+  color: $grey-color;
+}
+
+
 
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
 
@@ -375,20 +390,6 @@ button {
 
   .button-txt-down-icon:hover .s-icon-container{
     transform: translateY(3px);
-  }
-
-  button:disabled {
-    background: none;
-    background-color: $light-grey-color;
-    color: $grey-color;
-    box-shadow: none;
-    pointer-events: none;
-  }
-  
-  button.disabled {
-    background-color: $white;
-    background: $white-gradient;
-    color: $grey-color;
   }
 }
 

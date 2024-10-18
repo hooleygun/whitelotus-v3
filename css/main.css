@@ -301,6 +301,20 @@ button {
   transform: translate(-50%, 0) !important;
 }
 
+button:disabled {
+  background: none;
+  background-color: #C7C7C7;
+  color: #6E6E73;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+button.disabled {
+  background-color: whitesmoke;
+  background: linear-gradient(145deg, #dddddd, #ffffff);
+  color: #6E6E73;
+}
+
 /*---------------------- BUTTONS Adaptivity Settings ----------------------*/
 @media (width > 1024px) {
   button:active, .icon-button:active {
@@ -312,18 +326,6 @@ button {
   }
   .button-txt-down-icon:hover .s-icon-container {
     transform: translateY(3px);
-  }
-  button:disabled {
-    background: none;
-    background-color: #C7C7C7;
-    color: #6E6E73;
-    box-shadow: none;
-    pointer-events: none;
-  }
-  button.disabled {
-    background-color: whitesmoke;
-    background: linear-gradient(145deg, #dddddd, #ffffff);
-    color: #6E6E73;
   }
 }
 /*---------------------- DESCKTOP HEADER Settings ----------------------*/
