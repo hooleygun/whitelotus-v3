@@ -202,14 +202,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Form sending
-let sendForm = function() {
-  async e => {
-    e.preventDefault();
-    let response = await fetch('php/mail.php', {
-        method: 'POST',
-        body: new FormData(e.target) 
-    });
-    let result = await response.text();
-    console.log(result);
-  }
-}
+document.querySelector('form').onsubmit = async e => {
+  e.preventDefault();
+  let response = await fetch('php/mail.php', {
+      method: 'POST',
+      body: new FormData(e.target) 
+  });
+  let result = await response.text();
+  orderModuleClose();
+};
