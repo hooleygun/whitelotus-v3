@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/swiper_bundle.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/galery.css">
+  <link rel="stylesheet" href="plugins/AirDatePicker/air-datepicker.css">
   <!-- Fonts preload -->
   <link rel="preload" as="font" fetchpriority="high" href="fonts/nt_somic/woff2/ntsomic_regular.woff2"
     type="font/woff2">
@@ -81,23 +82,23 @@
       <h3>Заявка на бронирование</h3>
       <div class="order-form-subcontainer">
         <strong>Ваше имя</strong>
-        <input type="text" name="name" placeholder="Фамилия Имя" class="order-form-input">
+        <input type="text" name="name" placeholder="Фамилия Имя" class="order-form-input" onchange="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Телефон</strong>
-        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" class="order-form-input" data-tel-input>
+        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" class="order-form-input" onchange="validation()" data-tel-input>
       </div>
       <div class="order-form-subcontainer">
         <strong>Период проживания</strong>
-        <input type="text" name="dateRangeInput" id="date-range-input" class="order-form-input">
+        <input type="text" name="dateRangeInput" id="date-range-input" class="order-form-input" onchange="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Общее количество гостей</strong>
-        <input type="number" name="guestsQuantity" placeholder="Количество" min="1" class="order-form-input">
+        <input type="number" name="guestsQuantity" placeholder="Количество" min="1" class="order-form-input" onchange="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Категория номера</strong>
-        <select size="1" name="roomCategory" class="order-form-input" id="order-rooms-category" style="padding-inline: 10px;">
+        <select size="1" name="roomCategory" class="order-form-input" id="order-rooms-category" style="padding-inline: 10px;" onchange="validation()">
           <option value="Стандарт">Стандарт</option>
           <option value="Стандарт+">Стандарт+</option>
           <option value="Семейный">Семейный</option>
@@ -106,15 +107,15 @@
       </div>
       <div class="order-form-subcontainer">
         <strong>Почта</strong>
-        <input type="text" name="email" placeholder="Почта" class="order-form-input">
+        <input type="text" name="email" placeholder="Почта" class="order-form-input" onchange="validation()">
       </div>
       <div class="order-form-subcontainer">
         <div class="order-form-checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" name="roolsAccept" onchange="validation()">
           <label>Соглашаюсь с правилами проживания в отеле</label>
         </div>
         <div class="order-form-checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" name="privacyAccept" onchange="validation()">
           <label>Соглашаюсь с обработкой персональных данных</label>
         </div>
       </div>
@@ -148,5 +149,6 @@
   <script src="js/burger-animation.js"></script>
   <script src="js/order-module.js"></script>
   <script src="js/number-input.js"></script>
+  <script src="plugins/AirDatePicker/air-datepicker.js"></script>
 </body>
 </html>

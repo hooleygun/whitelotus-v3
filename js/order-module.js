@@ -50,9 +50,9 @@ function orderModuleOpen(categoryValue) {
 //Validation
 function validation(){
   const date = new Date();
-  let currentDay = date.getDate();
-  let currentMonth = date.getMonth() + 1;
-  let currentYear = date.getFullYear();
+  let currentDay = '' + date.getDate();
+  let currentMonth = '' + (date.getMonth() + 1);
+  let currentYear = '' + date.getFullYear();
 
   let nameInput = document.querySelector('[name="name"]');
   let phoneInput = document.querySelector('[name="phone"]');
@@ -80,7 +80,7 @@ function validation(){
     if (roomCategoryInput.value === 'Стандарт' || roomCategoryInput.value === 'Стандарт+' || roomCategoryInput.value === 'Семейный' || roomCategoryInput.value === 'Семейный+') {
       if (phoneInput.value != ''){
         if (dateRangeInputInput.value != ''){
-          if (firstYear >= currentYear && firstMonth >= currentMonth && firstDay >= currentDay) {
+          if (firstYear > currentYear) {
             if (secondYear > firstYear) {
               orderButton.disabled = false;
             } else if (secondYear === firstYear) {
@@ -90,12 +90,35 @@ function validation(){
                 orderButton.disabled = false;
               } else {orderButton.disabled = true; console.log("Error 1");}
             } else {orderButton.disabled = true; console.log("Error 2");}
-          } else {orderButton.disabled = true; console.log("Error 3");}
-        } else {orderButton.disabled = true; console.log("Error 4");}
-      } else {orderButton.disabled = true; console.log("Error 5");}
-    } else {orderButton.disabled = true; console.log("Error 6");}
-  } else {orderButton.disabled = true; console.log("Error 7");}
+          } else if (firstYear === currentYear) {
+            if (firstMonth > currentMonth) {
+              if (secondYear > firstYear) {
+                orderButton.disabled = false;
+              } else if (secondYear === firstYear) {
+                if (secondMonth > firstMonth){
+                  orderButton.disabled = false;
+                } else if (secondMonth === firstMonth && secondDay > firstDay) {
+                  orderButton.disabled = false;
+                } else {orderButton.disabled = true; console.log("Error 1");}
+              } else {orderButton.disabled = true; console.log("Error 2");}
+            } else if (firstMonth === currentMonth && firstDay >= currentDay){
+              if (secondYear > firstYear) {
+                orderButton.disabled = false;
+              } else if (secondYear === firstYear) {
+                if (secondMonth > firstMonth){
+                  orderButton.disabled = false;
+                } else if (secondMonth === firstMonth && secondDay > firstDay) {
+                  orderButton.disabled = false;
+                } else {orderButton.disabled = true; console.log("Error 1");}
+              } else {orderButton.disabled = true; console.log("Error 2");}
+            } else {orderButton.disabled = true; console.log("Error 3");}
+          } else {orderButton.disabled = true; console.log("Error 4");}
+        } else {orderButton.disabled = true; console.log("Error 5");}
+      } else {orderButton.disabled = true; console.log("Error 6");}
+    } else {orderButton.disabled = true; console.log("Error 7");}
+  } else {orderButton.disabled = true; console.log("Error 8");}
 }
+
 
 
 //Phone number masking
