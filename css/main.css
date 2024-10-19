@@ -814,6 +814,16 @@ footer {
   transform: scale(1.05);
 }
 
+select {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: url("/content/components-icons/buttons/accent/small/arrow-down-icon-s-g.svg") !important;
+  background-repeat: no-repeat, repeat !important;
+  background-position: right 15px top 50%, 0 0 !important;
+  background-size: 12px auto, 100% !important;
+}
+
 #close-order-module-button {
   background: none;
   border-radius: 0;

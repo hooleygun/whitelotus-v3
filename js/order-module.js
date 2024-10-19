@@ -47,80 +47,6 @@ function orderModuleOpen(categoryValue) {
 
 
 
-//Validation
-function validation(){
-  const date = new Date();
-  let currentDay = '' + date.getDate();
-  let currentMonth = '' + (date.getMonth() + 1);
-  let currentYear = '' + date.getFullYear();
-
-  let nameInput = document.querySelector('[name="name"]');
-  let phoneInput = document.querySelector('[name="phone"]');
-  let dateRangeInputInput = document.querySelector('[name="dateRangeInput"]');
-  let guestsQuantityInput = document.querySelector('[name="guestsQuantity"]');
-  let roomCategoryInput = document.querySelector('[name="roomCategory"]');
-  let emailInput = document.querySelector('[name="email"]');
-  let roolsAccept = document.querySelector('[name="roolsAccept"]');
-  let privacyAcceptInput = document.querySelector('[name="privacyAccept"]');
-
-  let firstDate = dateRangeInputInput.value.slice(0,10);
-  let firstDay = firstDate.slice(0,2);
-  let firstMonth = firstDate.slice(3,5);
-  let firstYear = firstDate.slice(6,10);
-  let secondDate = dateRangeInputInput.value.slice(13,24);
-  let secondDay = secondDate.slice(0,2);
-  let secondMonth = secondDate.slice(3,5);
-  let secondYear = secondDate.slice(6,10);
-
-  let orderButton = document.getElementById("order-button");
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if ( nameInput.value.length > 2 && privacyAcceptInput.checked && roolsAccept.checked && emailRegex.test(emailInput.value) && guestsQuantityInput.value > 0) {
-    if (roomCategoryInput.value === 'Стандарт' || roomCategoryInput.value === 'Стандарт+' || roomCategoryInput.value === 'Семейный' || roomCategoryInput.value === 'Семейный+') {
-      if (phoneInput.value != ''){
-        if (dateRangeInputInput.value != ''){
-          if (firstYear > currentYear) {
-            if (secondYear > firstYear) {
-              orderButton.disabled = false;
-            } else if (secondYear === firstYear) {
-              if (secondMonth > firstMonth){
-                orderButton.disabled = false;
-              } else if (secondMonth === firstMonth && secondDay > firstDay) {
-                orderButton.disabled = false;
-              } else {orderButton.disabled = true; console.log("Error 1");}
-            } else {orderButton.disabled = true; console.log("Error 2");}
-          } else if (firstYear === currentYear) {
-            if (firstMonth > currentMonth) {
-              if (secondYear > firstYear) {
-                orderButton.disabled = false;
-              } else if (secondYear === firstYear) {
-                if (secondMonth > firstMonth){
-                  orderButton.disabled = false;
-                } else if (secondMonth === firstMonth && secondDay > firstDay) {
-                  orderButton.disabled = false;
-                } else {orderButton.disabled = true; console.log("Error 1");}
-              } else {orderButton.disabled = true; console.log("Error 2");}
-            } else if (firstMonth === currentMonth && firstDay >= currentDay){
-              if (secondYear > firstYear) {
-                orderButton.disabled = false;
-              } else if (secondYear === firstYear) {
-                if (secondMonth > firstMonth){
-                  orderButton.disabled = false;
-                } else if (secondMonth === firstMonth && secondDay > firstDay) {
-                  orderButton.disabled = false;
-                } else {orderButton.disabled = true; console.log("Error 1");}
-              } else {orderButton.disabled = true; console.log("Error 2");}
-            } else {orderButton.disabled = true; console.log("Error 3");}
-          } else {orderButton.disabled = true; console.log("Error 4");}
-        } else {orderButton.disabled = true; console.log("Error 5");}
-      } else {orderButton.disabled = true; console.log("Error 6");}
-    } else {orderButton.disabled = true; console.log("Error 7");}
-  } else {orderButton.disabled = true; console.log("Error 8");}
-}
-
-
-
 //Phone number masking
 document.addEventListener("DOMContentLoaded", function () {
   var phoneInputs = document.querySelectorAll('input[data-tel-input]');
@@ -198,6 +124,80 @@ document.addEventListener("DOMContentLoaded", function () {
       phoneInput.addEventListener('paste', onPhonePaste, false);
   }
 })
+
+
+
+//Validation
+function validation(){
+  const date = new Date();
+  let currentDay = '' + date.getDate();
+  let currentMonth = '' + (date.getMonth() + 1);
+  let currentYear = '' + date.getFullYear();
+
+  let nameInput = document.querySelector('[name="name"]');
+  let phoneInput = document.querySelector('[name="phone"]');
+  let dateRangeInputInput = document.querySelector('[name="dateRangeInput"]');
+  let guestsQuantityInput = document.querySelector('[name="guestsQuantity"]');
+  let roomCategoryInput = document.querySelector('[name="roomCategory"]');
+  let emailInput = document.querySelector('[name="email"]');
+  let roolsAccept = document.querySelector('[name="roolsAccept"]');
+  let privacyAcceptInput = document.querySelector('[name="privacyAccept"]');
+
+  let firstDate = dateRangeInputInput.value.slice(0,10);
+  let firstDay = firstDate.slice(0,2);
+  let firstMonth = firstDate.slice(3,5);
+  let firstYear = firstDate.slice(6,10);
+  let secondDate = dateRangeInputInput.value.slice(13,24);
+  let secondDay = secondDate.slice(0,2);
+  let secondMonth = secondDate.slice(3,5);
+  let secondYear = secondDate.slice(6,10);
+
+  let orderButton = document.getElementById("order-button");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if ( nameInput.value.length > 2 && privacyAcceptInput.checked && roolsAccept.checked && emailRegex.test(emailInput.value) && guestsQuantityInput.value > 0) {
+    if (roomCategoryInput.value === 'Стандарт' || roomCategoryInput.value === 'Стандарт+' || roomCategoryInput.value === 'Семейный' || roomCategoryInput.value === 'Семейный+') {
+      if (phoneInput.value.length > 16){
+        if (dateRangeInputInput.value.length > 16){
+          if (firstYear > currentYear) {
+            if (secondYear > firstYear) {
+              orderButton.disabled = false;
+            } else if (secondYear === firstYear) {
+              if (secondMonth > firstMonth){
+                orderButton.disabled = false;
+              } else if (secondMonth === firstMonth && secondDay > firstDay) {
+                orderButton.disabled = false;
+              } else {orderButton.disabled = true; console.log("Error 1");}
+            } else {orderButton.disabled = true; console.log("Error 2");}
+          } else if (firstYear === currentYear) {
+            if (firstMonth > currentMonth) {
+              if (secondYear > firstYear) {
+                orderButton.disabled = false;
+              } else if (secondYear === firstYear) {
+                if (secondMonth > firstMonth){
+                  orderButton.disabled = false;
+                } else if (secondMonth === firstMonth && secondDay > firstDay) {
+                  orderButton.disabled = false;
+                } else {orderButton.disabled = true; console.log("Error 1");}
+              } else {orderButton.disabled = true; console.log("Error 2");}
+            } else if (firstMonth === currentMonth && firstDay >= currentDay){
+              if (secondYear > firstYear) {
+                orderButton.disabled = false;
+              } else if (secondYear === firstYear) {
+                if (secondMonth > firstMonth){
+                  orderButton.disabled = false;
+                } else if (secondMonth === firstMonth && secondDay > firstDay) {
+                  orderButton.disabled = false;
+                } else {orderButton.disabled = true; console.log("Error 1");}
+              } else {orderButton.disabled = true; console.log("Error 2");}
+            } else {orderButton.disabled = true; console.log("Error 3");}
+          } else {orderButton.disabled = true; console.log("Error 4");}
+        } else {orderButton.disabled = true; console.log("Error 5");}
+      } else {orderButton.disabled = true; console.log("Error 6");}
+    } else {orderButton.disabled = true; console.log("Error 7");}
+  } else {orderButton.disabled = true; console.log("Error 8");}
+};
 
 
 

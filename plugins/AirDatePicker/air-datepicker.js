@@ -2235,6 +2235,7 @@ if (window.innerWidth < 500){
         multipleDatesSeparator: ' - ',
         toggleSelected: false,
         range: true,
+        autoClose: true,
     });
 }
 

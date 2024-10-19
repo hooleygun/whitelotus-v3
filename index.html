@@ -349,19 +349,19 @@
       <h3>Заявка на бронирование</h3>
       <div class="order-form-subcontainer">
         <strong>Ваше имя</strong>
-        <input type="text" name="name" placeholder="Фамилия Имя" class="order-form-input" onchange="validation()">
+        <input type="text" name="name" placeholder="Фамилия Имя" class="order-form-input" oninput="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Телефон</strong>
-        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" class="order-form-input" onchange="validation()" data-tel-input>
+        <input type="tel" name="phone" placeholder="+7 (123) 456-78-90" class="order-form-input" oninput="validation()" data-tel-input>
       </div>
       <div class="order-form-subcontainer">
         <strong>Период проживания</strong>
-        <input type="text" name="dateRangeInput" id="date-range-input" class="order-form-input" onchange="validation()">
+        <input type="text" name="dateRangeInput" placeholder="Период" id="date-range-input" class="order-form-input" autocomplete="off" oninput="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Общее количество гостей</strong>
-        <input type="number" name="guestsQuantity" placeholder="Количество" min="1" class="order-form-input" onchange="validation()">
+        <input type="number" name="guestsQuantity" placeholder="Количество вместе с детьми" min="1" class="order-form-input" oninput="validation()">
       </div>
       <div class="order-form-subcontainer">
         <strong>Категория номера</strong>
@@ -374,7 +374,7 @@
       </div>
       <div class="order-form-subcontainer">
         <strong>Почта</strong>
-        <input type="text" name="email" placeholder="Почта" class="order-form-input" onchange="validation()">
+        <input type="text" name="email" placeholder="Почта" class="order-form-input" oninput="validation()">
       </div>
       <div class="order-form-subcontainer">
         <div class="order-form-checkbox-container">
@@ -392,8 +392,6 @@
       </div>
     </form>
   </div>
-
-  
 
   <footer>
     <div class="footer-content">
