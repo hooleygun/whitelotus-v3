@@ -30,7 +30,7 @@ function orderModuleOpen(categoryValue) {
   };
 
   orderModuleBackground.style.pointerEvents = "all";
-  orderModuleBackground.style.opacity = "100%"
+  orderModuleBackground.style.opacity = "100%";
 
   for ( i=0; i<roomCategory.length; i++){
     if (roomCategory[i].value == categoryValue){
@@ -43,6 +43,28 @@ function orderModuleOpen(categoryValue) {
   orderModuleBackground.style.overflowY = 'auto';
   roolsAccept.checked = false;
   privacyAcceptInput.checked = false;
+}
+
+
+
+function openThankYouOverlay() {
+  let body = document.querySelector('body');
+  let overlay = document.getElementById('overlay');
+
+  overlay.style.pointerEvents = "all";
+  overlay.style.opacity = "100%";
+  body.style.overflowY = 'clip';
+}
+
+
+
+function closeThankYouOverlay() {
+  let body = document.querySelector('body');
+  let overlay = document.getElementById('overlay');
+
+  overlay.style.pointerEvents = "none";
+  overlay.style.opacity = "0%";
+  body.style.overflowY = 'auto';
 }
 
 
@@ -209,5 +231,6 @@ document.querySelector('form').onsubmit = async e => {
       body: new FormData(e.target) 
   });
   let result = await response.text();
+  openThankYouOverlay();
   orderModuleClose();
 };
